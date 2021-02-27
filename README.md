@@ -85,9 +85,9 @@ There will be a start button, which opens a link to choose a play mode. There is
 ## **Skeleton Level**
 As mentioned above, the extra features will also be included in the wireframes. A comparison of the wireframes with the endproduct will show the implemented extra features. Also the implemented extra features will be updated in the ‘Features’ section below.
 
-Link to [wireframes]()
+Link to [wireframes](https://github.com/chizzletaz/MSP2-TriviaQuiz/blob/master/assets/documents/Wireframes%20MSP2.pdf)
 
-Service Level
+## **Service Level**
 Design choices. Note why you use certain fonts, color and design choices.
 **Colors**  
 
@@ -97,20 +97,19 @@ Design choices. Note why you use certain fonts, color and design choices.
 
 
 
-Features
+# **Features**
 In this section, you should go over the different parts of your project, and describe each in a sentence or so.
 
-Existing Features
+**Existing Features**
 Feature 1 - allows users X to achieve Y, by having them fill out Z
 ...
 For some/all of your features, you may choose to reference the specific project files that implement them, although this is entirely optional.
 In addition, you may also use this section to discuss plans for additional features to be implemented in the future:
 
-Features Left to Implement
-A timer: the questions have to be answered in a certain time, e.g 10 seconds.
-The score is linked to how fast a user answers the question.
+**Features Left to Implement**
+- A timer: the questions have to be answered in a certain time, e.g 10 seconds.
+- The score is linked to how fast a user answers the question.
 
-Technologies Used
 ## **Technologies used**
 
 **languages used**  
@@ -131,7 +130,7 @@ Technologies Used
 - [Chrome Developer Tools](https://developers.google.com/web/tools/chrome-devtools)
 was used to debug and checking/testing the website.
 
-Testing
+# **Testing**
 In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your user stories from the UX section and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
 Whenever it is feasible, prefer to automate your tests, and if you've done so, provide a brief explanation of your approach, link to the test file(s) and explain how to run them.
 For any scenarios that have not been automated, test the user stories manually and provide as much detail as is relevant. A particularly useful form for describing your testing process is via scenarios, such as:
@@ -149,7 +148,6 @@ If this section grows too long, you may want to split it off into a separate fil
 Use the HTML an CSS online validators.
 Use Chrome Dev Tools: right click -> inspect -> search/select Lighthouse from the top screen.
 
-Deployment
 ## **Deployment**
 
 To deploy this website to GitHub, I followed the these steps:
@@ -170,15 +168,14 @@ Local Clone:
 
 For more info on how to clone a repository check [here](https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
 
-Credits
-
-Content
+# **Credits**
+### Content
 The text for section Y was copied from the Wikipedia article Z
 
-Media
+### Media
 The photos used in this site were obtained from ...
 
-Acknowledgements
+# Acknowledgements
 I received inspiration for this project from X
 
 
