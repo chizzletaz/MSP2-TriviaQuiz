@@ -22,7 +22,15 @@ h1 {
     flex-direction: column;
 }
 /* Colours */
+.gradient1 {
+    background-color: rgb(170, 0, 254);
+    background-image: url('/assets/img/purple_background.jpg');
+    background-size: cover;
+}
 
+.gradient2 {
+    background-image: linear-gradient(to top, rgb(170, 0, 254), rgb(112,0,196)); 
+}
 
 /* Buttons */
 .button {
