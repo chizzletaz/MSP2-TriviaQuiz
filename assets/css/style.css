@@ -7,3 +7,38 @@
 .hidden {
     display: none;
 }
+
+h1 {
+    font-size: 36px;
+    margin: 5px;
+}
+
+.container {
+    justify-content: center;
+    align-items: center;
+    max-width: 800px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+}
+/* Colours */
+
+
+/* Buttons */
+.button {
+    background-color: #fafafa;
+    border-radius: 15px;
+    font-size: 32px;
+    padding: 2px;
+    margin: 1px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.button:hover {
+    cursor: pointer;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+    transform: translate(-0.1rem, 0.1rem);
+    transition: transform 150ms;
+    background-color:  rgb(254, 237, 204);
+}
