@@ -13,13 +13,12 @@
     <div class="container">
         <h1>Triviata</h1>
         <!-- Button trigger modal -->
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#gameMode">
-  START PLAYING
-</button>
-        <a href="highScores.html"></a>
+        <a href="#gameMode" data-bs-toggle="modal" class="btn btn-primary">Start Playing</a>
+        <a href="highScores.html" class="btn btn-primary">High Scores</a>
+        <a href="#gameExplanation" data-bs-toggle="modal" class="btn btn-primary">How to play?</a>
     </div>
 
-    <!-- Modal -->
+    <!-- Modal for choosing player mode -->
 <div class="modal fade" id="gameMode" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -30,6 +29,25 @@
       <div class="modal-body">
         <button><a href="challenge.html">CHALLENGE</a></button>
         <button><a href="challenge.html">PRACTICE</a></button>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Understood</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal for the explanation of the game -->
+<div class="modal fade" id="gameExplanation" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel2" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel2">How to play the game:</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ...
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
