@@ -169,6 +169,9 @@ Local Clone:
 For more info on how to clone a repository check [here](https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
 
 # **Credits**
+### code
+Changing the colour of the hamburger icon.
+[Amirreza Mohammadi](https://stackoverflow.com/questions/42586729/bootstrap-4-change-hamburger-toggler-color)
 ### Content
 The text for section Y was copied from the Wikipedia article Z
 

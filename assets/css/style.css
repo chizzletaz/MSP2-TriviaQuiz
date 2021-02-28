@@ -2,13 +2,12 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    color: #000;
+    color: #fff;
 }
 
 h1 {
     font-size: 64px;
     margin: 100px;
-    color: #fff;
 }
 
 /* Colours */
@@ -54,4 +53,9 @@ h1 {
     transform: translate(-0.1rem, 0.1rem);
     transition: transform 150ms;
     background-color:  rgb(254, 237, 204);
+}
+
+.navbar-toggler {
+    border: 2px solid #fff !important;
+    border-radius: 8px !important;
 }
