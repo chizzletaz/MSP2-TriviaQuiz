@@ -6,10 +6,38 @@
     <title>Triviata</title>
     <!-- Bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <!--Font Awesome-->
+    <script src="https://kit.fontawesome.com/2a8c19c224.js" crossorigin="anonymous"></script>
+
 
 </head>
 <body>
-    <nav></nav>
+    <!-- Bootstrap navbar-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Triviata</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <i class="fas fa-toggle-off">Light Mode</i>
+                        <i class="fas fa-toggle-on">Dark Mode</i>
+                    </li>
+                    <li class="nav-item">
+                       <i class="fas fa-music">Music</i>
+                    </li>
+                    <li class="nav-item">
+                        <i class="fas fa-volume-up">Sound On</i>
+                        <i class="fas fa-volume-mute">Sound Off</i>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
     <div class="container">
         <h1>Triviata</h1>
         <!-- Button trigger modal -->
