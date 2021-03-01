@@ -29,5 +29,11 @@
 }
 
 .controls {
+    display: flex;
+    flex-direction: row;
     margin: 0 auto;
+}
+
+.controls i {
+    color: #000;
 }
