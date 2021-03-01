@@ -15,6 +15,7 @@
 h1 {
     font-size: 64px;
     margin: 100px;
+    text-align: center;
 }
 
 h2 {
@@ -92,6 +93,8 @@ h2 {
     border: 2px solid #fff !important;
     border-radius: 8px !important;
 }
+
+/* Modals */
 
 .modal-content {
     background-color: rgb(247, 236, 211);
