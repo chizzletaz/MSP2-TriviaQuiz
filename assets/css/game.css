@@ -25,6 +25,11 @@
     text-align: center;
 }
 
+.game-info {
+    display: flex;
+    justify-content: space-between;
+}
+
 #question {
     padding: 5px;
     margin: 10px;
