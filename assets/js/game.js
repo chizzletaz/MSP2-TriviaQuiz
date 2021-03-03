@@ -62,5 +62,8 @@ function getNewQuestion() {
         const number = answer.dataset.number;
         answer.innerHTML = currentQuestion['option' + number]
     });
+
+    //remove used question from available questions
+    availableQuestions.splice(questionIndex, 1);
 }
 
