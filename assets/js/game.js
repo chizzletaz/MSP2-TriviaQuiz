@@ -13,10 +13,13 @@ fetch("https://opentdb.com/api.php?amount=10&difficulty=easy&type=multiple")
                 question: loadedQuestion.question                     //question object
             };
             
-            const answers = [...loadedQuestion.incorrect_answers];    //get incorrect answers from API
+            const answersOption = [...loadedQuestion.incorrect_answers];    //get incorrect answers from API
             formattedQuestion.answer = Math.floor(Math.random() * 3) + 1; //make the index of the correct answer random
-            answers.splice(formattedQuestion.answer -1, 0, loadedQuestion.correct_answer);  // add the correct answer to the array of incorrect answers
-
-            console.log(answers);
+            answersOption.splice(formattedQuestion.answer -1, 0, loadedQuestion.correct_answer);  // add the correct answer to the array of incorrect answers
+            
+            answersOption.forEach((optiom, index) => {                       //add answers to formattedQuestions object
+                formattedQuestion["option" + (index + 1)] = option;
+            });
+            console.log(formattedQuestion);
     });
 });
