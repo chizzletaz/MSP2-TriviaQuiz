@@ -56,5 +56,11 @@ function getNewQuestion() {
     const questionIndex = Math.floor(availableQuestions.length*Math.random());
     currentQuestion = availableQuestions[questionIndex];
     question.innerHTML = currentQuestion.question;
+
+    //Add answers to the challenge.html page
+    answers.forEach(answer => {
+        const number = answer.dataset.number;
+        answer.innerHTML = currentQuestion['option' + number]
+    });
 }
 
