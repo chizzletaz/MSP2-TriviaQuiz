@@ -4,6 +4,10 @@ const answers = Array.from(document.getElementsByClassName('answer-text'));
 
 
 let questions = [];         // an Array of questions and answers
+let score = 0;
+let questionCounter = 0;
+let availableQuestions = [];
+let currentQuestion = {};
 
 // get questions from API - credit: James Q Quick: https://www.youtube.com/watch?v=3aKOQn2NPFs
 fetch("https://opentdb.com/api.php?amount=10&difficulty=easy&type=multiple")
@@ -16,27 +20,37 @@ fetch("https://opentdb.com/api.php?amount=10&difficulty=easy&type=multiple")
                 question: loadedQuestion.question                     //question object
             };
             
-            const answersOption = [...loadedQuestion.incorrect_answers];    //get the incorrect answers from API
+            const answerOptions = [...loadedQuestion.incorrect_answers];    //get the incorrect answers from API
             formattedQuestion.answer = Math.floor(Math.random() * 3) + 1;   //make the index of the correct answer random
-            answersOption.splice(formattedQuestion.answer -1, 0, loadedQuestion.correct_answer);  // add the correct answer to the array of incorrect answers
+            answerOptions.splice(formattedQuestion.answer -1, 0, loadedQuestion.correct_answer);  // add the correct answer to the array of incorrect answers
             
-            answersOption.forEach((option, index) => {                       //add answers to formattedQuestions object
+            answerOptions.forEach((option, index) => {                       //add answers to formattedQuestions object
                 formattedQuestion["option" + (index + 1)] = option;
             });
             
             return formattedQuestion;
+            });
+    startGame();
     })
     .catch(error => {
         console.log(error);
-});
+    });
+
+// Constants 
+const correct_Points = 10;
+const max_Questions = 3; //will be 10 when everything functions.
 
 function startGame() {
-    counter = 0;
+    questionCounter = 0;
     score = 0;
     availableQuestions = [...questions];
     getNewQuestion();
 }
 
 function getNewQuestion() {
+    if (availableQuestions.length === 0 || questionCounter >= max_Questions) {
+        // go to end modal
+    };
     
 }
+
