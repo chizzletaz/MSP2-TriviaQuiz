@@ -51,6 +51,10 @@ function getNewQuestion() {
     if (availableQuestions.length === 0 || questionCounter >= max_Questions) {
         // go to end modal
     };
-    
+    questionCounter++;
+    //get a random question from available questions
+    const questionIndex = Math.floor(availableQuestions.length*Math.random());
+    currentQuestion = availableQuestions[questionIndex];
+    console.log(currentQuestion.question);
 }
 
