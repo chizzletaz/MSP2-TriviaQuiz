@@ -81,7 +81,10 @@ answers.forEach(option => {
         //Add green colour to correct answer and red colour to incorrect answer.
         selectedChoice.parentElement.classList.add(classToApply);
         
-        
-        getNewQuestion();
-    })
-})
+        // remove classtoApply after 2 seconds
+        setTimeout( () => {
+            selectedChoice.parentElement.classList.remove(classToApply);
+            getNewQuestion();
+        }, 2000);
+    });
+});
