@@ -3,13 +3,13 @@ const answers = Array.from(document.getElementsByClassName('answer-text'));
 
 
 
-let questions = [];         // an Array of questions and answers
+let questions = [];         /* an Array of questions and answers */
 let score = 0;
 let questionCounter = 0;
 let availableQuestions = [];
 let currentQuestion = {};
 
-// get questions from API - credit: James Q Quick: https://www.youtube.com/watch?v=3aKOQn2NPFs
+/* get questions from API - credit: James Q Quick: https://www.youtube.com/watch?v=3aKOQn2NPFs */
 fetch("https://opentdb.com/api.php?amount=10&difficulty=easy&type=multiple")
     .then(response => {
         return response.json()
@@ -65,5 +65,15 @@ function getNewQuestion() {
 
     //remove used question from available questions
     availableQuestions.splice(questionIndex, 1);
-}
+};
 
+/* Add eventlistener on which answer is given */
+answers.forEach(option => {
+    option.addEventListener('click', event => {
+        console.log(event.target);
+        // const selectedOption = event.target;
+        // const selectedAnswer = selectedOption.dataset.number;
+        // console.log(selectedAnswer);
+        
+    })
+})
