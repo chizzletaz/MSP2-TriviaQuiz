@@ -20,7 +20,8 @@
 
 .answer-text {
     color: #000;
-    font-size: 24px;
+    font-size: 20px;
+    margin-bottom: 0;
     width: 100%;
     text-align: center;
 }
