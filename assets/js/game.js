@@ -70,10 +70,12 @@ function getNewQuestion() {
 /* Add eventlistener on which answer is given */
 answers.forEach(option => {
     option.addEventListener('click', event => {
-        console.log(event.target);
-        // const selectedOption = event.target;
-        // const selectedAnswer = selectedOption.dataset.number;
-        // console.log(selectedAnswer);
+        const selectedAnswer = event.target.dataset.number;     //get the number of the selected answer.
         
+        let classToApply = 'incorrect';
+        if (selectedAnswer == currentQuestion.answer) {
+            classToApply = 'correct';
+        };
+        console.log(classToApply);
     })
 })
