@@ -70,12 +70,18 @@ function getNewQuestion() {
 /* Add eventlistener on which answer is given */
 answers.forEach(option => {
     option.addEventListener('click', event => {
-        const selectedAnswer = event.target.dataset.number;     //get the number of the selected answer.
+        const selectedChoice = event.target;
+        const selectedAnswer = selectedChoice.dataset.number;     //get the number of the selected answer.
         
         let classToApply = 'incorrect';
         if (selectedAnswer == currentQuestion.answer) {
             classToApply = 'correct';
-        };
-        console.log(classToApply);
+        }
+            
+        //Add green colour to correct answer and red colour to incorrect answer.
+        selectedChoice.parentElement.classList.add(classToApply);
+        
+        
+        getNewQuestion();
     })
 })

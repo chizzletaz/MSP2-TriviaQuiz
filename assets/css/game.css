@@ -45,3 +45,11 @@
 .controls i {
     color: #000;
 }
+
+.correct {
+    background-color: green;
+}
+
+.incorrect {
+    background-color: red;
+}
