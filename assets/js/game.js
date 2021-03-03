@@ -6,14 +6,17 @@ let questions = [];         // an Array of questions and answers
 fetch("https://opentdb.com/api.php?amount=10&difficulty=easy&type=multiple")
     .then(response => {
         return response.json()
-    })                                                //credit: James Q Quick: https://www.youtube.com/watch?v=3aKOQn2NPFs
-    .then(loadedQuestions => {                         
-        questions = loadedQuestions.results.map(loadedQuestion => {   //format the data from API to the format that we need, an Array of objects.
+    })                                                
+    .then(loadedQuestions => {                                        //credit: James Q Quick: https://www.youtube.com/watch?v=3aKOQn2NPFs
+        questions = loadedQuestions.results.map(loadedQuestion => {   //format the data from the API to the format that we need, an Array of objects.
             const formattedQuestion  = {                     
-                question: loadedQuestion.question                   //question object
+                question: loadedQuestion.question                     //question object
             };
-        
-            const answers = [...loadedQuestion.incorrect_answers];
+            
+            const answers = [...loadedQuestion.incorrect_answers];    //get incorrect answers from API
+            formattedQuestion.answer = Math.floor(Math.random() * 3) + 1; //make the index of the correct answer random
+            answers.splice(formattedQuestion.answer -1, 0, loadedQuestion.correct_answer);  // add the correct answer to the array of incorrect answers
+
             console.log(answers);
     });
 });
