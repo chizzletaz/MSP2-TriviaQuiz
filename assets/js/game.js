@@ -88,3 +88,4 @@ answers.forEach(option => {
         }, 1500);
     });
 });
+
