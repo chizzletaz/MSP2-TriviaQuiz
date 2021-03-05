@@ -35,6 +35,14 @@ h2 {
     background-image: linear-gradient(to top, rgb(170, 0, 254), rgb(112,0,196)); 
 }
 
+.black {
+    color: #000;
+}
+
+.white {
+    color: #fff;
+}
+
 /* Classes and ID's */
 .hidden {
     display: none;
@@ -87,6 +95,12 @@ h2 {
     transform: translate(-0.1rem, 0.1rem);
     transition: transform 150ms;
     background-color:  rgb(254, 237, 204);
+}
+
+.button[disabled]:hover {
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
 }
 
 .navbar-toggler {

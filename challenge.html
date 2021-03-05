@@ -91,7 +91,7 @@
                 </div>
             </div>
             <div class="controls">
-                <a href="index.html" class="button button-small"><i class="fas fa-home"></i></a>
+                <a href="index.html" class="button button-small"><i class="fas fa-home black"></i></a>
                 <p class="button">Next Question</p>
             </div>
 
@@ -113,14 +113,16 @@
                 </div>
                 <div class="modal-body">
                     <div id="end">
-                    <label>Enter your name to save your score:</label>
-                    <form>
-                        <input type="text" name="username" id="username" placeholder="username">
-                        <button class="button" type="submit" id="saveScoreBtn" onclick="saveHighScore(event)" disabled>Save</button>
-                    </form>
-                    <a href="challenge.html" class="button">Play Again</a>
-                    <a href="highscores.html">High Scores</a>
-                    <a href="index.html" class="button button-small"><i class="fas fa-home"></i></a>
+                        <label class="black">Enter your name to save your score:</label>
+                        <form>
+                            <input type="text" name="username" id="username" placeholder="username">
+                            <button type="submit" class="button" id="saveScoreBtn" onclick="saveHighScore(event)" disabled>
+                                Save
+                            </button>
+                        </form>
+                        <a href="challenge.html" class="button">Play Again</a>
+                        <a href="highscores.html" class="button">High Scores</a>
+                        <a href="index.html" class="button button-small"><i class="fas fa-home black"></i></a>
                     </div>
                 </div>
             </div>
