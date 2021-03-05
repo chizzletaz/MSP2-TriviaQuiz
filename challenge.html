@@ -70,7 +70,7 @@
             <div>
                 <h3 id="question">Question</h3>
             </div>
-            
+
 
             <div class="row">
                 <div class="col-lg-6">
@@ -94,14 +94,37 @@
                 <a href="index.html" class="button button-small"><i class="fas fa-home"></i></a>
                 <p class="button">Next Question</p>
             </div>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+  Launch static backdrop modal
+</button>
+        </div>
+    </div>
+    
+    <!-- Bootstrap Modal for End of Game -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div>
+                    <h2 class="modal-title" id="staticBackdropLabel">Your final Score:</h2>
+                    <h1 id="finalScore"></h1>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Understood</button>
+                </div>
             </div>
-            </div>
+        </div>
+    </div>
 
     <!-- Bootstrap Javascript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
         crossorigin="anonymous"></script>
-        <script src="assets/js/game.js"></script>
+    <script src="assets/js/game.js"></script>
 </body>
 
 </html>
