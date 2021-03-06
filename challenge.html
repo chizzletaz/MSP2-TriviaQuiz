@@ -8,14 +8,13 @@
     <!-- Bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+        <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/game.css">
     <!--Font Awesome-->
     <script src="https://kit.fontawesome.com/2a8c19c224.js" crossorigin="anonymous"></script>
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
-
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/game.css">
 </head>
 
 <body class="gradient2">
@@ -56,8 +55,8 @@
     </nav>
 
     <div class="container">
-        <div class="loader">Loading...</div>
-        <div id="game" class="justify-center flex-column">
+        <div id="loader"></div>
+        <div id="game" class="hidden">
             <div class="game-info">
                 <div class="game-item">
                     <p id="questionCounter" class="white"></p>
@@ -70,26 +69,26 @@
                     <h2 id="score" class="white">0</h2>
                 </div>
             </div>
+            
             <div>
-                <h3 id="question">Question</h3>
+                <h3 id="question"></h3>
             </div>
-
 
             <div class="row">
                 <div class="col-lg-6">
                     <div class="answer-container">
-                        <p class="answer-text" data-number="1">Answer 1</p>
+                        <p class="answer-text" data-number="1"></p>
                     </div>
                     <div class="answer-container">
-                        <p class="answer-text" data-number="2">Answer 2</p>
+                        <p class="answer-text" data-number="2"></p>
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="answer-container">
-                        <p class="answer-text" data-number="3">Answer 3</p>
+                        <p class="answer-text" data-number="3"></p>
                     </div>
                     <div class="answer-container">
-                        <p class="answer-text" data-number="4">Answer 4</p>
+                        <p class="answer-text" data-number="4"></p>
                     </div>
                 </div>
             </div>
@@ -97,11 +96,6 @@
                 <a href="index.html" class="button button-small"><i class="fas fa-home black"></i></a>
                 <!-- <p class="button">Next Question</p> add this button later when there is time left -->
             </div>
-
-            <!-- Temporary button to check modal -->
-            <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-  Launch static backdrop modal
-</button> -->
         </div>
     </div>
     

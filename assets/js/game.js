@@ -1,5 +1,3 @@
-//
-
 const question = document.getElementById('question');
 const answers = Array.from(document.getElementsByClassName('answer-text')); 
 
@@ -7,6 +5,8 @@ const questionCounterText = document.getElementById("questionCounter");
 const scoreText = document.getElementById("score");
 
 const progressBarFull = document.getElementById("progressBarFull");
+const loader = document.getElementById("loader");
+const game = document.getElementById("game");
 
 let questions = [];         /* an Array of questions and answers */
 let score = 0;
@@ -50,6 +50,9 @@ function startGame() {
     score = 0;
     availableQuestions = [...questions];    
     getNewQuestion();
+    loader.classList.add('hidden');
+    game.classList.remove('hidden');
+    
 }
 
 
