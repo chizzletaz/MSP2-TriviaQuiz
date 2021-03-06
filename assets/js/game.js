@@ -55,7 +55,6 @@ function getNewQuestion() {
     };
     questionCounter++;
     questionCounterText.innerText =  `Question: ${questionCounter}/${max_Questions}`;
-    console.log(questionCounterText.innerText);
 
     //get a random question from available questions
     const questionIndex = Math.floor(availableQuestions.length*Math.random());
@@ -82,7 +81,11 @@ answers.forEach(option => {
         if (selectedAnswer == currentQuestion.answer) {
             classToApply = 'correct';
         }
-            
+        
+        if (classToApply === 'correct') {
+            incrementScore(correct_Points);
+        }
+
         //Add green colour to correct answer and red colour to incorrect answer.
         selectedChoice.parentElement.classList.add(classToApply);
         
