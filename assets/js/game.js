@@ -1,6 +1,8 @@
 const question = document.getElementById('question');
 const answers = Array.from(document.getElementsByClassName('answer-text')); 
 
+const questionCounterText = document.getElementById("questionCounter");
+const scoreText = document.getElementById("score");
 
 
 let questions = [];         /* an Array of questions and answers */
@@ -52,6 +54,9 @@ function getNewQuestion() {
         // go to end modal
     };
     questionCounter++;
+    questionCounterText.innerText = questionCounter + "/" + max_Questions;
+    console.log(questionCounterText.innerText);
+
     //get a random question from available questions
     const questionIndex = Math.floor(availableQuestions.length*Math.random());
     currentQuestion = availableQuestions[questionIndex];
