@@ -54,7 +54,7 @@ function getNewQuestion() {
         // go to end modal
     };
     questionCounter++;
-    questionCounterText.innerText = questionCounter + "/" + max_Questions;
+    questionCounterText.innerText =  `Question: ${questionCounter}/${max_Questions}`;
     console.log(questionCounterText.innerText);
 
     //get a random question from available questions
