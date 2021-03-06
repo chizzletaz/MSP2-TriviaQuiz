@@ -94,3 +94,7 @@ answers.forEach(option => {
     });
 });
 
+function incrementScore(num) {
+    score += num;
+    scoreText.innerText = score;
+}
