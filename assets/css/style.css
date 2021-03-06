@@ -24,6 +24,9 @@ h2 {
     color: #000;
 }
 
+p {
+    margin: 0;
+}
 /* Colours */
 .gradient1 {
     background-color: rgb(170, 0, 254);

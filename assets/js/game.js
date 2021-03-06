@@ -1,9 +1,12 @@
+//
+
 const question = document.getElementById('question');
 const answers = Array.from(document.getElementsByClassName('answer-text')); 
 
 const questionCounterText = document.getElementById("questionCounter");
 const scoreText = document.getElementById("score");
 
+const progressBarFull = document.getElementById("progressBarFull");
 
 let questions = [];         /* an Array of questions and answers */
 let score = 0;
@@ -45,21 +48,24 @@ const max_Questions = 3;    //will be 10 when everything functions.
 function startGame() {
     questionCounter = 0;
     score = 0;
-    availableQuestions = [...questions];
+    availableQuestions = [...questions];    
     getNewQuestion();
 }
+
 
 function getNewQuestion() {
     if (availableQuestions.length === 0 || questionCounter >= max_Questions) {
         let mostRecentScore = score;
         const finalScore = document.getElementById('finalScore');
         finalScore.innerText = mostRecentScore;
-        // localStorage.setItem('mostRecentScore', score);     //save score to localStorage.
+        
         // go to end modal. credit: https://www.w3schools.com/bootstrap/bootstrap_ref_js_modal.asp
         $("#staticBackdrop").modal('show');      
     };
     questionCounter++;
     questionCounterText.innerText =  `Question: ${questionCounter}/${max_Questions}`;
+    // update the progress bar. credit James Q Quick: https://www.youtube.com/watch?v=4bctmtuZVcM
+    progressBarFull.style.width = `${(questionCounter / max_Questions) * 100}%`;
 
     //get a random question from available questions
     const questionIndex = Math.floor(availableQuestions.length*Math.random());
