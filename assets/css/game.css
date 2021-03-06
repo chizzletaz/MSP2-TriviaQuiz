@@ -45,6 +45,12 @@
     margin: 20px auto;
 }
 
+#progress-bar {
+    width: 200px;
+    height: 20px;
+    border: 3px solid #eea722; 
+}
+
 /* .controls i, .modal i {
     color: #000;
 } */
@@ -87,3 +93,4 @@ input {
 input::placeholder {
     color: #bbb;
 }
+
