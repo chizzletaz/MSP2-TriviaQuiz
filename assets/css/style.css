@@ -14,7 +14,7 @@
 
 h1 {
     font-size: 64px;
-    margin: 100px;
+    margin: 10px;
     text-align: center;
 }
 
@@ -71,6 +71,10 @@ h2 {
 .flex-center {
     justify-content: center;
     align-items: center;
+}
+
+#title {
+    margin: 100px;
 }
 
 .button {
