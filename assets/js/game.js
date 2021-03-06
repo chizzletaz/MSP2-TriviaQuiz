@@ -40,7 +40,7 @@ fetch("https://opentdb.com/api.php?amount=10&difficulty=easy&type=multiple")
 
 // Constants 
 const correct_Points = 10;
-const max_Questions = 3; //will be 10 when everything functions.
+const max_Questions = 3;    //will be 10 when everything functions.
 
 function startGame() {
     questionCounter = 0;
@@ -51,6 +51,7 @@ function startGame() {
 
 function getNewQuestion() {
     if (availableQuestions.length === 0 || questionCounter >= max_Questions) {
+        localStorage.setItem('mostRecentScore', score);     //save score to localStorage.
         // go to end modal. credit: https://www.w3schools.com/bootstrap/bootstrap_ref_js_modal.asp
         $("#staticBackdrop").modal('show');      
     };

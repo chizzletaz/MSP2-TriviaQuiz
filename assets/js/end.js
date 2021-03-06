@@ -1,6 +1,9 @@
 const username = document.getElementById("username");
 const saveScoreBtn = document.getElementById("saveScoreBtn");
 
+const mostRecentScore = localStorage.getItem('mostRecentScore');
+const finalScore = document.getElementById('finalScore');
+finalScore.innerText = mostRecentScore;
 
 //remove disables from Save-button when user types in name.
 //credit: James Q Quick: https://www.youtube.com/watch?v=o3MF_JmQxYg
