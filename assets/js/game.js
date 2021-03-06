@@ -51,7 +51,10 @@ function startGame() {
 
 function getNewQuestion() {
     if (availableQuestions.length === 0 || questionCounter >= max_Questions) {
-        localStorage.setItem('mostRecentScore', score);     //save score to localStorage.
+        let mostRecentScore = score;
+        const finalScore = document.getElementById('finalScore');
+        finalScore.innerText = mostRecentScore;
+        // localStorage.setItem('mostRecentScore', score);     //save score to localStorage.
         // go to end modal. credit: https://www.w3schools.com/bootstrap/bootstrap_ref_js_modal.asp
         $("#staticBackdrop").modal('show');      
     };
