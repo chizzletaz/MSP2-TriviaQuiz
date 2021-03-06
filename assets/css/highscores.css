@@ -1,0 +1,15 @@
+#highScoresList {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 30px;
+}
+
+.high-score {
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+/* credit James Q Quick: https://www.youtube.com/watch?v=jfOv18lCMmw */
+.high-score:hover {
+    transform: scale(1.05);
+}
