@@ -102,7 +102,7 @@ answers.forEach(option => {
 
         //Add green colour to correct answer and red colour to incorrect answer.
         selectedChoice.parentElement.classList.add(classToApply);
-        
+        showRightAnswer();
         // remove classtoApply after 1.5 seconds
         setTimeout( () => {
             selectedChoice.parentElement.classList.remove(classToApply);
@@ -110,6 +110,23 @@ answers.forEach(option => {
         }, 1500);
     });
 });
+
+function showRightAnswer () {
+     const numb = currentQuestion.answer;
+     console.log(numb);
+     const answers = document.querySelectorAll('[data-number]');
+     console.log(answers);
+     console.log(answers[0].parentElement);
+ 
+
+    //  for (let i=0; i < answers.length; answer.forEach) {
+     
+    //      if (anwers.dataset.number == numb) {
+    //     rightAnswer.parentElement.classList.add('correct');
+    //  }
+    // }; // parentElement.classList.add('correct');
+        
+};
 
 function incrementScore(num) {
     score += num;
