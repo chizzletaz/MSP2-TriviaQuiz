@@ -51,7 +51,8 @@ function startGame() {
 
 function getNewQuestion() {
     if (availableQuestions.length === 0 || questionCounter >= max_Questions) {
-        // go to end modal
+        // go to end modal. credit: https://www.w3schools.com/bootstrap/bootstrap_ref_js_modal.asp
+        $("#staticBackdrop").modal('show');      
     };
     questionCounter++;
     questionCounterText.innerText =  `Question: ${questionCounter}/${max_Questions}`;
