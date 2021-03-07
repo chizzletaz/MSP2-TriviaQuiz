@@ -14,6 +14,7 @@
 
 .answer-container:hover {
     cursor: pointer;
+    border: 3px solid #eea722;
     box-shadow: 0 0.4rem 1.4rem 0 rgba(86, 185, 235, 0.5);
     transform: translate(-0.1rem, 0.1rem);
     transition: transform 150ms;
