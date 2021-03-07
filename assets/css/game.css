@@ -59,13 +59,11 @@
     width: 0%;
 }
 
-#score, #questionCounter {
+#score  {
+    font-size: 30px;
     margin: 0;
+    text-shadow: 2px 2px 5px white, 4px 4px 10px #000;
 }
-
-/* .controls i, .modal i {
-    color: #000;
-} */
 
 .correct {
     background-color: green;

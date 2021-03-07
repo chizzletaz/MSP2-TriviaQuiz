@@ -102,6 +102,7 @@ answers.forEach(option => {
 
         //Add green colour to correct answer and red colour to incorrect answer.
         selectedChoice.parentElement.classList.add(classToApply);
+        
         showRightAnswer();
         // remove classtoApply after 1.5 seconds
         setTimeout( () => {
@@ -111,23 +112,14 @@ answers.forEach(option => {
     });
 });
 
+// this function I made and worked out all by myself! 
 function showRightAnswer () {
      const numb = currentQuestion.answer;
-     console.log(numb);
      const answers = document.querySelectorAll('[data-number]');
      answers[numb - 1].parentElement.classList.add('correct');
      setTimeout( () => {
         answers[numb -1].parentElement.classList.remove('correct');
-        }, 1500);
- 
-
-    //  for (let i=0; i < answers.length; answer.forEach) {
-     
-    //      if (anwers.dataset.number == numb) {
-    //     rightAnswer.parentElement.classList.add('correct');
-    //  }
-    // }; // parentElement.classList.add('correct');
-        
+        }, 1500);      
 };
 
 function incrementScore(num) {
