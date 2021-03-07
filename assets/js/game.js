@@ -8,6 +8,8 @@ const progressBarFull = document.getElementById("progressBarFull");
 const loader = document.getElementById("loader");
 const game = document.getElementById("game");
 
+const music = document.getElementById("music");
+
 let questions = [];         /* an Array of questions and answers */
 let score = 0;
 let questionCounter = 0;
@@ -126,3 +128,12 @@ function incrementScore(num) {
     score += num;
     scoreText.innerText = score;
 }
+
+function playMusic() {
+    music.play();
+}
+
+function muteMusic() {
+    music.pause();
+}
+
