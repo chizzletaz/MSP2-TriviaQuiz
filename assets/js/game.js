@@ -8,7 +8,8 @@ const progressBarFull = document.getElementById("progressBarFull");
 const loader = document.getElementById("loader");
 const game = document.getElementById("game");
 
-const music = document.getElementById("music");
+const musicOn = document.getElementById("music-on");
+const musicOff = document.getElementById("music-off");
 
 let questions = [];         /* an Array of questions and answers */
 let score = 0;
@@ -131,9 +132,14 @@ function incrementScore(num) {
 
 function playMusic() {
     music.play();
+    musicOn.parentElement.classList.add('hidden');
+    musicOff.parentElement.classList.remove('hidden');
+
 }
 
 function muteMusic() {
     music.pause();
+    musicOn.parentElement.classList.remove('hidden');
+    musicOff.parentElement.classList.add('hidden');
 }
 
