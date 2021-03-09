@@ -11,6 +11,8 @@ const game = document.getElementById("game");
 const musicOn = document.getElementById("music-on");
 const musicOff = document.getElementById("music-off");
 
+const nextQuestion = document.getElementById("next-question");
+
 let questions = [];         /* an Array of questions and answers */
 let score = 0;
 let questionCounter = 0;
@@ -107,6 +109,12 @@ answers.forEach(option => {
         selectedChoice.parentElement.classList.add(classToApply);
         
         showRightAnswer();
+        // nextQuestion.addEventListener('click', (event) => {
+        //     selectedChoice.parentElement.classList.remove(classToApply);
+        //     choices[numb -1].parentElement.classList.remove('correct');
+        //     getNewQuestion();
+        // })
+
         // remove classtoApply after 1.5 seconds
         setTimeout( () => {
             selectedChoice.parentElement.classList.remove(classToApply);
@@ -117,9 +125,9 @@ answers.forEach(option => {
 
 // this function I made and worked out all by myself! 
 function showRightAnswer () {
-     const numb = currentQuestion.answer;
-     const answers = document.querySelectorAll('[data-number]');
-     answers[numb - 1].parentElement.classList.add('correct');
+    const numb = currentQuestion.answer;
+    const choices = document.querySelectorAll('[data-number]');
+     choices[numb - 1].parentElement.classList.add('correct');
      setTimeout( () => {
         answers[numb -1].parentElement.classList.remove('correct');
         }, 1500);      
