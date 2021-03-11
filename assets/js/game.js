@@ -89,7 +89,7 @@ function getNewQuestion() {
     availableQuestions.splice(questionIndex, 1);
 };
 
-/* Add eventlistener on which answer is given */
+/* Add eventlistener to which answer is given */
 answers.forEach(option => {
     option.addEventListener('click', event => {
         const selectedChoice = event.target;
@@ -133,7 +133,7 @@ function incrementScore(num) {
     scoreText.innerText = score;
 }
 
-// these functions I made and worked out all by myself! 
+// these functions I made and worked myself:
 function showRightAnswer () {
     const numb = currentQuestion.answer;
     const choices = document.querySelectorAll('[data-number]');

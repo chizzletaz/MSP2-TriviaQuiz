@@ -25,9 +25,11 @@ h2 {
     color: #000;
 }
 
-p {
-    margin: 0;
+li {
+    font-size: 0.8rem;
+    padding: 5px 10px;
 }
+
 /* Colours */
 .gradient1 {
     background-color: rgb(170, 0, 254);
