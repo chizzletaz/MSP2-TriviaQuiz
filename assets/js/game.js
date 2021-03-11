@@ -60,7 +60,6 @@ function startGame() {
     
 }
 
-
 function getNewQuestion() {
     if (availableQuestions.length === 0 || questionCounter >= max_Questions) {
         let mostRecentScore = score;
@@ -99,8 +98,14 @@ answers.forEach(option => {
         let classToApply = 'incorrect';
         if (selectedAnswer == currentQuestion.answer) {
             classToApply = 'correct';
+            let audioCorrect = new Audio('assets/music/correct_answer.mp3');
+            audioCorrect.play();
         }
-        
+        else {
+            let audioIncorrect = new Audio('assets/music/incorrect_answer.mp3');
+            audioIncorrect.play();
+        };
+
         if (classToApply === 'correct') {
             incrementScore(correct_Points);
         }
@@ -123,7 +128,12 @@ answers.forEach(option => {
     });
 });
 
-// this function I made and worked out all by myself! 
+function incrementScore(num) {
+    score += num;
+    scoreText.innerText = score;
+}
+
+// these functions I made and worked out all by myself! 
 function showRightAnswer () {
     const numb = currentQuestion.answer;
     const choices = document.querySelectorAll('[data-number]');
@@ -132,11 +142,6 @@ function showRightAnswer () {
         answers[numb -1].parentElement.classList.remove('correct');
         }, 1500);      
 };
-
-function incrementScore(num) {
-    score += num;
-    scoreText.innerText = score;
-}
 
 function playMusic() {
     music.play();
