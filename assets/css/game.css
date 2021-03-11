@@ -45,6 +45,7 @@
 .controls {
     display: flex;
     flex-direction: row;
+    justify-content:space-around;
     margin: 20px auto;
 }
 
@@ -73,6 +74,11 @@
 
 .incorrect {
     background-color: red;
+}
+
+#next-question {
+    font-size: 20px;
+    width: 200px;
 }
 
 /* End of game modal */
