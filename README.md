@@ -170,13 +170,33 @@ For more info on how to clone a repository check [here](https://docs.github.com/
 
 # **Credits**
 ### code
-Changing the colour of the hamburger icon.
+- Changing the colour of the hamburger icon.  
 [Amirreza Mohammadi](https://stackoverflow.com/questions/42586729/bootstrap-4-change-hamburger-toggler-color)
+- [Loader](https://www.w3schools.com/howto/howto_css_loader.asp)  
+- How to play audio for correct/incorrect answer:
+[Uri](https://stackoverflow.com/questions/9419263/how-to-play-audio)
+
 ### Content
 The text for section Y was copied from the Wikipedia article Z
 
 ### Media
-The photos used in this site were obtained from ...
+Images  
+- [Background image](https://pixabay.com/illustrations/game-background-sky-game-landscape-4956017/
+) of index.html page.  
+- [Trophy image](https://gallery.yopriceville.com/Free-Clipart-Pictures/Trophy-and-Medals-PNG/Trophy_Cup_PNG_Clipart)  
+- Icon music on: Icon by <a href="https://freeicons.io/profile/6156">Reda</a> on <a href="https://freeicons.io">freeicons.io</a>  
+- Icon music off: Icon by <a href="https://freeicons.io/profile/6156">Reda</a> on <a href="https://freeicons.io">freeicons.io</a>
+                                  
+Music  
+- [background music](https://www.chosic.com/download-audio/?t=27247)
+Monkeys Spinning Monkeys Kevin MacLeod (incompetech.com)  
+Licensed under Creative Commons: By Attribution 3.0 License
+http://creativecommons.org/licenses/by/3.0/  
+Music promoted by https://www.chosic.com/  
+
+sounds:  
+- Correct answer: [Correct answer 9](https://www.dreamstime.com/stock-music-sound-effect/correct-answer.html)  
+- Wrong answer: [Gameshow wrong answer fail buzzer bleep](https://www.dreamstime.com/stock-music-sound-effect/wrong-answer.html)
 
 # Acknowledgements
 I received inspiration for this project from X
