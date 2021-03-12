@@ -114,6 +114,8 @@ answers.forEach(option => {
         selectedChoice.parentElement.classList.add(classToApply);
         
         showRightAnswer();
+
+        goToNextQuestion();
         // nextQuestion.addEventListener('click', (event) => {
         //     selectedChoice.parentElement.classList.remove(classToApply);
         //     choices[numb -1].parentElement.classList.remove('correct');
@@ -121,10 +123,10 @@ answers.forEach(option => {
         // })
 
         // remove classtoApply after 1.5 seconds
-        setTimeout( () => {
-            selectedChoice.parentElement.classList.remove(classToApply);
-            getNewQuestion();
-        }, 1500);
+        // setTimeout( () => {
+        //     selectedChoice.parentElement.classList.remove(classToApply);
+        //     getNewQuestion();
+        // }, 1500);
     });
 });
 
@@ -138,9 +140,9 @@ function showRightAnswer () {
     const numb = currentQuestion.answer;
     const choices = document.querySelectorAll('[data-number]');
      choices[numb - 1].parentElement.classList.add('correct');
-     setTimeout( () => {
-        answers[numb -1].parentElement.classList.remove('correct');
-        }, 1500);      
+    //  setTimeout( () => {
+    //     choices[numb -1].parentElement.classList.remove('correct');
+    //     }, 1500);      
 };
 
 function playMusic() {
@@ -156,3 +158,12 @@ function muteMusic() {
     musicOff.parentElement.classList.add('hidden');
 }
 
+function goToNextQuestion() {
+    nextQuestion.addEventListener('click', () => {
+        const numb = currentQuestion.answer;
+        const choices = document.querySelectorAll('[data-number]');
+        choices[numb -1].parentElement.classList.remove('correct');
+        getNewQuestion();
+    });
+    
+}
