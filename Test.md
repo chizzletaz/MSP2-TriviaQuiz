@@ -36,3 +36,12 @@ nextQuestion.addEventListener('click', () => {
 });
 
 This works, but the end-modal is shown 1 question too soon (after 2 instead of 3 questions).
+When using console.log(availableQuestions.length), after question 1 the number is 9, after question 2, 
+the number is 8 and goes directly to 7. 
+After consulting with Tutor assistance, the issue seemed that after each question I was adding another
+eventListener. 
+The solution was to remove the eventListener after use. 
+According to [Developer.Mozilla](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener)
+you can add {once: true}, this indicates that the listener should be invoked at most once after being added. 
+If true, the listener would be automatically removed when invoked.
+

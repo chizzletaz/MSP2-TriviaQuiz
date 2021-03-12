@@ -58,7 +58,7 @@ function startGame() {
     loader.classList.add('hidden');
     game.classList.remove('hidden');
     
-}
+};
 
 function getNewQuestion() {
     if (availableQuestions.length === 0 || questionCounter >= max_Questions) {
@@ -84,7 +84,7 @@ function getNewQuestion() {
         const number = answer.dataset.number;
         answer.innerHTML = currentQuestion['option' + number]
     });
-
+    
     //remove used question from available questions
     availableQuestions.splice(questionIndex, 1);
 };
@@ -122,10 +122,9 @@ answers.forEach(option => {
             choices[numb -1].parentElement.classList.remove('correct');
 
             selectedChoice.parentElement.classList.remove(classToApply);
-            console.log(availableQuestions.length);
             
             getNewQuestion();
-        });
+        }, {once: true});
     });
 });
 
@@ -138,10 +137,7 @@ function incrementScore(num) {
 function showRightAnswer () {
     const numb = currentQuestion.answer;
     const choices = document.querySelectorAll('[data-number]');
-     choices[numb - 1].parentElement.classList.add('correct');
-    //  setTimeout( () => {
-    //     choices[numb -1].parentElement.classList.remove('correct');
-    //     }, 1500);      
+     choices[numb - 1].parentElement.classList.add('correct');  
 };
 
 function playMusic() {
