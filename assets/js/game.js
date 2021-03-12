@@ -12,7 +12,7 @@ const musicOn = document.getElementById("music-on");
 const musicOff = document.getElementById("music-off");
 const soundOn = document.getElementById('sound-on');
 const soundOff = document.getElementById('sound-off');
-console.log(soundOff.parentElement);
+console.log(soundOn.parentElement.classList.value);
 
 const nextQuestion = document.getElementById("next-question");
 
@@ -101,12 +101,12 @@ answers.forEach(option => {
         let classToApply = 'incorrect';
         if (selectedAnswer == currentQuestion.answer) {
             classToApply = 'correct';
-            if (soundOff.parentElement.classList == 'hidden') {
+            if (soundOn.parentElement.classList.value === 'hidden') {
             let audioCorrect = new Audio('assets/music/correct_answer.mp3');
             audioCorrect.play();
             };
         }
-        else {
+        else if (soundOn.parentElement.classList.value === 'hidden') {
             let audioIncorrect = new Audio('assets/music/incorrect_answer.mp3');
             audioIncorrect.play();
         };
