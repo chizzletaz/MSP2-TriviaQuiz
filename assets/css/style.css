@@ -121,6 +121,11 @@ li {
     justify-content: center;
 }
 
+.home:hover, #next-question:hover {
+    border: 2px solid rgb(242, 93, 45);
+    background-image: linear-gradient(to right, rgb(242, 93, 45), rgb(246, 170, 56));
+}
+
 i.fa-home {
     font-size: 20px;
 }
