@@ -12,7 +12,6 @@ const musicOn = document.getElementById("music-on");
 const musicOff = document.getElementById("music-off");
 const soundOn = document.getElementById('sound-on');
 const soundOff = document.getElementById('sound-off');
-console.log(soundOn.parentElement.classList.value);
 
 const nextQuestion = document.getElementById("next-question");
 
