@@ -10,6 +10,9 @@ const game = document.getElementById("game");
 
 const musicOn = document.getElementById("music-on");
 const musicOff = document.getElementById("music-off");
+const soundOn = document.getElementById('sound-on');
+const soundOff = document.getElementById('sound-off');
+console.log(soundOff.parentElement);
 
 const nextQuestion = document.getElementById("next-question");
 
@@ -98,8 +101,10 @@ answers.forEach(option => {
         let classToApply = 'incorrect';
         if (selectedAnswer == currentQuestion.answer) {
             classToApply = 'correct';
+            if (soundOff.parentElement.classList == 'hidden') {
             let audioCorrect = new Audio('assets/music/correct_answer.mp3');
             audioCorrect.play();
+            };
         }
         else {
             let audioIncorrect = new Audio('assets/music/incorrect_answer.mp3');
@@ -144,7 +149,6 @@ function playMusic() {
     music.play();
     musicOn.parentElement.classList.add('hidden');
     musicOff.parentElement.classList.remove('hidden');
-
 }
 
 function muteMusic() {
@@ -153,5 +157,13 @@ function muteMusic() {
     musicOff.parentElement.classList.add('hidden');
 }
 
+function playSound() {
+    soundOn.parentElement.classList.add('hidden');
+    soundOff.parentElement.classList.remove('hidden');
+}
 
+function muteSound() {
+    soundOn.parentElement.classList.remove('hidden');
+    soundOff.parentElement.classList.add('hidden');
+}
     
