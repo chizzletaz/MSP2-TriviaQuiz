@@ -115,18 +115,17 @@ answers.forEach(option => {
         
         showRightAnswer();
 
-        goToNextQuestion();
-        // nextQuestion.addEventListener('click', (event) => {
-        //     selectedChoice.parentElement.classList.remove(classToApply);
-        //     choices[numb -1].parentElement.classList.remove('correct');
-        //     getNewQuestion();
-        // })
+        //Remove green an red background from answer-containers and go to next Question.
+        nextQuestion.addEventListener('click', () => {
+            const numb = currentQuestion.answer;
+            const choices = document.querySelectorAll('[data-number]');
+            choices[numb -1].parentElement.classList.remove('correct');
 
-        // remove classtoApply after 1.5 seconds
-        // setTimeout( () => {
-        //     selectedChoice.parentElement.classList.remove(classToApply);
-        //     getNewQuestion();
-        // }, 1500);
+            selectedChoice.parentElement.classList.remove(classToApply);
+            console.log(availableQuestions.length);
+            
+            getNewQuestion();
+        });
     });
 });
 
@@ -158,12 +157,5 @@ function muteMusic() {
     musicOff.parentElement.classList.add('hidden');
 }
 
-function goToNextQuestion() {
-    nextQuestion.addEventListener('click', () => {
-        const numb = currentQuestion.answer;
-        const choices = document.querySelectorAll('[data-number]');
-        choices[numb -1].parentElement.classList.remove('correct');
-        getNewQuestion();
-    });
+
     
-}
