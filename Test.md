@@ -45,3 +45,6 @@ According to [Developer.Mozilla](https://developer.mozilla.org/en-US/docs/Web/AP
 you can add {once: true}, this indicates that the listener should be invoked at most once after being added. 
 If true, the listener would be automatically removed when invoked.
 
+----------------------
+The user can turn on/off the sound and/or background music. The functions for this work, however,
+when a user changes the default setting and refreshes the page, the user's changes don't stay and the default settings return.
