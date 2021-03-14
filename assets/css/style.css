@@ -34,7 +34,7 @@ li {
 /* Colours */
 .gradient1 {
     background-color: rgb(170, 0, 254);
-    background-image: url('assets/img/purple_background.jpg');
+    background-image: url('/assets/img/purple_background.jpg');
     background-size: cover;
 }
 
