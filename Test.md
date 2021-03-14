@@ -1,3 +1,4 @@
+SOLVED
 Making a function: when clicking 'next question'-button, the green and red backgrounds of the answers 
 are removed and a new question is loaded.
 
@@ -46,9 +47,16 @@ you can add {once: true}, this indicates that the listener should be invoked at 
 If true, the listener would be automatically removed when invoked.
 
 ----------------------
+UNSOLVED
 The user can turn on/off the sound and/or background music. The functions for this work, however,
 when a user changes the default setting and refreshes the page, the user's changes don't stay and the default settings return.
 
 
 
 ----------------------
+UNSOLVED
+I made three levels of the game. After the number of questions for level 1, the game automatically goes to level 2 (and from level 2
+to level 3). 
+However at the end the questionindicator adds another question and the progressBar goes [outside](/workspace/MSP2-TriviaQuiz/assets/documents/questionindicator-flaw.png) it's container.
+
+
