@@ -52,7 +52,10 @@ fetch("https://opentdb.com/api.php?amount=10&difficulty=easy&type=multiple")
     });
 
 // Constants 
-const correct_Points = 10;
+const correct_PointsL1 = 10;
+const correct_PointsL2 = 20;
+const correct_PointsL3 = 30;
+
 const max_Questions = 3;    //will be 10 when everything functions.
 
 function startGame() {
@@ -127,8 +130,18 @@ answers.forEach(option => {
         };
 
         if (classToApply === 'correct') {
-            incrementScore(correct_Points);
-        }
+            switch (level) {
+                case 1:
+                    incrementScore(correct_PointsL1);
+                break;
+                case 2:
+                    incrementScore(correct_PointsL2);
+                break;
+                case 3:
+                    incrementScore(correct_PointsL3);
+                break;
+            }
+        };
 
         //Add green colour to correct answer and red colour to incorrect answer.
         selectedChoice.parentElement.classList.add(classToApply);
