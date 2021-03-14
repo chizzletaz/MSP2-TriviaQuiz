@@ -67,13 +67,23 @@ function startGame() {
 
 function getNewQuestion() {
     if (availableQuestions.length === 0 || questionCounter >= max_Questions) {
+        level++;
+        switch (level) {
+            case 2:
+                startGame2();
+            break;
+            case 3:
+                startGame3();
+            break;
+            default:
         
         let mostRecentScore = score;
         const finalScore = document.getElementById('finalScore');
         finalScore.innerText = mostRecentScore;
         
         // go to end modal. credit: https://www.w3schools.com/bootstrap/bootstrap_ref_js_modal.asp
-        $("#staticBackdrop").modal('show');      
+        $("#staticBackdrop").modal('show'); 
+        }     
     };
 
     levelText.innerHTML = `Level: ${level}`;
@@ -172,3 +182,68 @@ function muteSound() {
     soundOff.parentElement.classList.add('hidden');
 }
     
+// LEVEL 2
+function startGame2() {
+    fetch("https://opentdb.com/api.php?amount=10&difficulty=medium&type=multiple")
+        .then(response => {
+            return response.json()
+        })
+        .then(loadedQuestions => {
+            questions = loadedQuestions.results.map(loadedQuestion => {   //format the data from the API to the format that we need, an Array of objects.
+                const formattedQuestion = {
+                    question: loadedQuestion.question                     //question object
+                };
+
+                const answerOptions = [...loadedQuestion.incorrect_answers];    //get the incorrect answers from API
+                formattedQuestion.answer = Math.floor(Math.random() * 3) + 1;   //make the index of the correct answer random
+                answerOptions.splice(formattedQuestion.answer - 1, 0, loadedQuestion.correct_answer);  // add the correct answer to the array of incorrect answers
+
+                answerOptions.forEach((option, index) => {                       //add answers to formattedQuestions object
+                    formattedQuestion["option" + (index + 1)] = option;
+                });
+
+                return formattedQuestion;
+            });
+            questionCounter = 0;
+            availableQuestions = [...questions];
+            getNewQuestion();
+            loader.classList.add('hidden');
+            game.classList.remove('hidden');
+        })
+        .catch(error => {
+            console.log(error);
+        });
+};
+
+// LEVEL 3
+function startGame3() {
+    fetch("https://opentdb.com/api.php?amount=10&difficulty=hard&type=multiple")
+    .then(response => {
+        return response.json()
+    })                                                
+    .then(loadedQuestions => {                                        
+        questions = loadedQuestions.results.map(loadedQuestion => {   //format the data from the API to the format that we need, an Array of objects.
+            const formattedQuestion  = {                     
+                question: loadedQuestion.question                     //question object
+            };
+            
+            const answerOptions = [...loadedQuestion.incorrect_answers];    //get the incorrect answers from API
+            formattedQuestion.answer = Math.floor(Math.random() * 3) + 1;   //make the index of the correct answer random
+            answerOptions.splice(formattedQuestion.answer -1, 0, loadedQuestion.correct_answer);  // add the correct answer to the array of incorrect answers
+            
+            answerOptions.forEach((option, index) => {                       //add answers to formattedQuestions object
+                formattedQuestion["option" + (index + 1)] = option;
+            });
+            
+            return formattedQuestion;
+            });
+            questionCounter = 0;
+            availableQuestions = [...questions];
+            getNewQuestion();
+            loader.classList.add('hidden');
+            game.classList.remove('hidden');
+        })
+    .catch(error => {
+        console.log(error);
+    });
+};
