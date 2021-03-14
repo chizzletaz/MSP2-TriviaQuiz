@@ -10,6 +10,7 @@
         integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/game.css">
+    <link rel="stylesheet" href="assets/css/practice.css">
     <!--Font Awesome-->
     <script src="https://kit.fontawesome.com/2a8c19c224.js" crossorigin="anonymous"></script>
     <!-- jQuery -->
@@ -107,23 +108,25 @@
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div id="selection">
-                <h1>Test Quiz</h1>
-                <select id="categories" class="select-css">
-                    <option value="9">General Knowledge</option>
-                    <option value="11">Film</option>
-                    <option value="12">Music</option>
-                    <option value="17">Science & Nature </option>
-                    <option value="22">Geography</option>
-                    <option value="23">History</option>
-                </select>
-                <select id="difficulties" class="select-css">
-                    <option value="easy">Easy</option>
-                    <option value="medium">Medium</option>
-                    <option value="hard">Hard</option>
-                </select>
-                <button id="start" class="btn" onclick="cat_length()">Start</button>
-                <button id="change_color" class="btn">Change Background Color</button>
-            </div>
+                    <h1>Practice Mode</h1>
+                    <h2>Choose your category:</h2>
+                    <select id="categories" class="select-css">
+                        <option value="9">General Knowledge</option>
+                        <option value="11">Film</option>
+                        <option value="12">Music</option>
+                        <option value="17">Science & Nature </option>
+                        <option value="22">Geography</option>
+                        <option value="23">History</option>
+                    </select>
+                    <h2>Choose your difficulty:</h2>
+                    <select id="difficulties" class="select-css">
+                        <option value="easy">Easy</option>
+                        <option value="medium">Medium</option>
+                        <option value="hard">Hard</option>
+                    </select>
+                    <button id="start" class="button" onclick="playGame()">Start</button>
+                    <a href="index.html" class="button home"><i class="fas fa-home black"></i></a>
+                </div>
             </div>
         </div>
     </div>
