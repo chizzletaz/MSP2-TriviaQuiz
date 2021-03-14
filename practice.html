@@ -4,22 +4,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Triviata - practice</title>
+    <title>Triviata - challenge</title>
     <!-- Bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-    <!--Font Awesome-->
-    <script src="https://kit.fontawesome.com/2a8c19c224.js" crossorigin="anonymous"></script>
-
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/game.css">
+    <!--Font Awesome-->
+    <script src="https://kit.fontawesome.com/2a8c19c224.js" crossorigin="anonymous"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
 </head>
 
 <body class="gradient2">
     <!-- Bootstrap navbar-->
     <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container-fluid">
-            <h3>Triviata - Challenge</h3>
+            <h3>Triviata - Practice</h3>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon">
@@ -32,72 +34,133 @@
                     <li>
                         <a><i class="fas fa-toggle-off"></i><br>Light Mode</a>
                     </li>
-                    <li>
+                    <li class="hidden">
                         <a><i class="fas fa-toggle-on"></i><br>Dark Mode</a>
                     </li>
                     <li>
-                        <a><i class="fas fa-music"></i><br>Music On</a>
+                        <a id="music-on"><img src="assets/img/music-off.png" alt="music off icon" width="18px"
+                                height="16px" onclick="playMusic()"><br>Music</a>
+                    </li>
+                    <li class="hidden">
+                        <a id="music-off"><img src="assets/img/music-on.png" alt="music on icon" width="18px"
+                                height="16px" onclick="muteMusic()"><br>Music</a>
+                    </li>
+                    <li class="hidden">
+                        <a id="sound-on"><i class="fas fa-volume-mute" onclick="playSound()"></i><br>Sound</a>
                     </li>
                     <li>
-                        <a><i class="fas fa-music"></i><br>Music Off</a>
-                    </li>
-                    <li>
-                        <a><i class="fas fa-volume-up"></i><br>Sound On</a>
-                    </li>
-                    <li>
-                        <a class="hidden"><i class="fas fa-volume-mute"></i><br>Sound Off</a>
+                        <a id="sound-off"><i class="fas fa-volume-up" onclick="muteSound()"></i><br>Sound</a>
                     </li>
                 </ul>
             </div>
+            <audio id="music" src="assets/music/Monkeys-Spinning-Monkeys.mp3"></audio>
         </div>
     </nav>
 
     <div class="container">
-        <div id="game" class="justify-center flex-column">
-            <h3>Practice Mode</h3>
+        <!-- <div id="loader"></div> -->
+        <div id="game">
             <div class="game-info">
                 <div class="game-item">
-                    <p>Question: 1/3</p>
-                    <div class="progress-bar">
-
+                    <p id="category"></p>
+                    <p id="difficulty"></p>
+                    <p id="questionCounter" class="white"></p>
+                    <div id="progress-bar">
+                        <div id="progressBarFull"></div>
                     </div>
                 </div>
                 <div class="game-item">
                     <p>Score:</p>
-                    <div id="score">10</div>
+                    <h2 id="score" class="white">0</h2>
                 </div>
             </div>
-            <h3 id="question">Question</h3>
 
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="answer-container">
-                        <p class="answer-text">Answer 1</p>
-                    </div>
-                    <div class="answer-container">
-                        <p class="answer-text">Answer 2</p>
-                    </div>
+            <div>
+                <h3 id="question"></h3>
+            </div>
+
+            <div id="answers">
+                <div class="answer-container">
+                    <p class="answer-text" data-number="1"></p>
                 </div>
-                <div class="col-md-6">
-                    <div class="answer-container">
-                        <p class="answer-text">Answer 3</p>
-                    </div>
-                    <div class="answer-container">
-                        <p class="answer-text">Answer 4</p>
-                    </div>
+                <div class="answer-container">
+                    <p class="answer-text" data-number="2"></p>
+                </div>
+                <div class="answer-container">
+                    <p class="answer-text" data-number="3"></p>
+                </div>
+                <div class="answer-container">
+                    <p class="answer-text" data-number="4"></p>
                 </div>
             </div>
             <div class="controls">
-                <a href="index.html" class="button button-small"><i class="fas fa-home"></i></a>
-                <p class="button">Next Question</p>
+                <a href="index.html" class="button home"><i class="fas fa-home black"></i></a>
+                <p id="next-question" class="button">Next Question</p>
+                <!-- add this button later when there is time left -->
             </div>
+        </div>
+    </div>
+
+    <!-- Modal for choosing player mode -->
+    <div class="modal fade" id="gameSelect" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div id="selection">
+                <h1>Test Quiz</h1>
+                <select id="categories" class="select-css">
+                    <option value="9">General Knowledge</option>
+                    <option value="11">Film</option>
+                    <option value="12">Music</option>
+                    <option value="17">Science & Nature </option>
+                    <option value="22">Geography</option>
+                    <option value="23">History</option>
+                </select>
+                <select id="difficulties" class="select-css">
+                    <option value="easy">Easy</option>
+                    <option value="medium">Medium</option>
+                    <option value="hard">Hard</option>
+                </select>
+                <button id="start" class="btn" onclick="cat_length()">Start</button>
+                <button id="change_color" class="btn">Change Background Color</button>
             </div>
+        </div>
+    </div>
+
+
+    <!-- Bootstrap Modal for End of Game -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div>
+                    <h2 class="modal-title" id="staticBackdropLabel">Your final Score:</h2>
+                    <h1 id="finalScore"></h1>
+                </div>
+                <div class="modal-body">
+                    <div id="end">
+                        <label class="black">Enter your name to save your score:</label>
+                        <form>
+                            <input type="text" name="username" id="username" class="black" placeholder="username">
+                            <button type="submit" class="button" id="saveScoreBtn" onclick="saveHighScore(event)"
+                                disabled>
+                                Save
+                            </button>
+                        </form>
+                        <a href="challenge.html" class="button">Play Again</a>
+                        <a href="highscores.html" class="button">High Scores</a>
+                        <a href="index.html" class="button home"><i class="fas fa-home black"></i></a>
+                    </div>
+                </div>
             </div>
+        </div>
+    </div>
 
     <!-- Bootstrap Javascript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
         crossorigin="anonymous"></script>
+    <script src="assets/js/practice.js"></script>
+    <script src="assets/js/end.js"></script>
 </body>
 
 </html>
