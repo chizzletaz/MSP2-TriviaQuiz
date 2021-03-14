@@ -67,6 +67,7 @@ function startGame() {
 
 function getNewQuestion() {
     if (availableQuestions.length === 0 || questionCounter >= max_Questions) {
+        
         let mostRecentScore = score;
         const finalScore = document.getElementById('finalScore');
         finalScore.innerText = mostRecentScore;
@@ -74,6 +75,8 @@ function getNewQuestion() {
         // go to end modal. credit: https://www.w3schools.com/bootstrap/bootstrap_ref_js_modal.asp
         $("#staticBackdrop").modal('show');      
     };
+
+    levelText.innerHTML = `Level: ${level}`;
     questionCounter++;
     questionCounterText.innerText =  `Question: ${questionCounter}/${max_Questions}`;
     // update the progress bar. credit James Q Quick: https://www.youtube.com/watch?v=4bctmtuZVcM
