@@ -14,12 +14,15 @@ const soundOn = document.getElementById('sound-on');
 const soundOff = document.getElementById('sound-off');
 
 const nextQuestion = document.getElementById("next-question");
+const levelText = document.getElementById('level');
 
 let questions = [];         /* an Array of questions and answers */
 let score = 0;
 let questionCounter = 0;
 let availableQuestions = [];
 let currentQuestion = {};
+
+let level = 1;
 
 /* get questions from API - credit: James Q Quick: https://www.youtube.com/watch?v=3aKOQn2NPFs */
 fetch("https://opentdb.com/api.php?amount=10&difficulty=easy&type=multiple")
