@@ -1,10 +1,7 @@
-// $(document).ready(function() {
+$(document).ready(function() {
+    $('#gameSelect').modal('show');
+});
 
-//   if(window.location.href.indexOf('#gameSelect') != -1) {
-//     $('#gameSelect').modal('show');
-//   }
-
-// });
 
 // const question = document.getElementById('question');
 // const answers = Array.from(document.getElementsByClassName('answer-text'));
