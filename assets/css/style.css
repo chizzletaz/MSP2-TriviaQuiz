@@ -31,7 +31,7 @@ li {
     text-align: center;
 }
 
-p, h4 {
+.modal p, .modal h4 {
     color: black;
     padding: 10px;
 }

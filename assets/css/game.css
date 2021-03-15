@@ -34,6 +34,10 @@
     margin-bottom: 2px;
 }
 
+#level {
+    color: white;
+}
+
 #question {
     height: 80px;
     font-size: 1.2rem;
