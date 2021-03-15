@@ -2,7 +2,6 @@ $(document).ready(function() {
     $('#gameSelect').modal('show');
 });
 
-
 const question = document.getElementById('question');
 const answers = Array.from(document.getElementsByClassName('answer-text'));
 
@@ -19,14 +18,12 @@ const soundOn = document.getElementById('sound-on');
 const soundOff = document.getElementById('sound-off');
 
 const nextQuestion = document.getElementById("next-question");
-const levelText = document.getElementById('level');
 
 let questions = [];         /* an Array of questions and answers */
 let score = 0;
 let questionCounter = 0;
 let availableQuestions = [];
 let currentQuestion = {};
-
 
 function playGame() {
     const chosenCategory = document.getElementById('categories').value;
@@ -71,6 +68,8 @@ function fetchQuestions(url) {
 
 // Constants 
 const correct_PointsL1 = 10;
+const correct_PointsL2 = 20;
+const correct_PointsL3 = 30;
 
 const max_Questions = 3;    //will be 10 when everything functions.
 
@@ -129,14 +128,14 @@ answers.forEach(option => {
         };
 
         if (classToApply === 'correct') {       /* increment Score according to the level the user is playing */
-            switch (level) {
-                case 1:
+            switch (chosenDifficulty) {
+                case 'easy':
                     incrementScore(correct_PointsL1);
                     break;
-                case 2:
+                case 'medium':
                     incrementScore(correct_PointsL2);
                     break;
-                case 3:
+                case 'hard':
                     incrementScore(correct_PointsL3);
                     break;
             }
