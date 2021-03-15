@@ -27,9 +27,12 @@ let questionCounter = 0;
 let availableQuestions = [];
 let currentQuestion = {};
 
-const category = document.getElementById('categories').value;
-const difficulty = document.getElementById('difficulties').value;
-console.log(difficulty);
+function playGame() {
+    const category = document.getElementById('categories').value;
+    const difficulty = document.getElementById('difficulties').value;
+    const chosenUrl = `https://opentdb.com/api.php?amount=10&category=${category}&difficulty=${difficulty}&type=multiple`
+    fetchQuestions(chosenUrl);
+}
 
 
 /* get questions from API - credit: James Q Quick: https://www.youtube.com/watch?v=3aKOQn2NPFs */
