@@ -90,9 +90,9 @@ function startGame() {
 };
 
 function getNewQuestion() {
-    levelText.innerHTML = `Level: ${level}`;    /* update the level the user is playing */
+    levelText.innerHTML = `${level}`;    /* update the level the user is playing */
     questionCounter++;
-    questionCounterText.innerText = `Question: ${questionCounter}/${max_Questions}`;
+    questionCounterText.innerText = `${questionCounter} of ${max_Questions}`;
     // update the progress bar. credit James Q Quick: https://www.youtube.com/watch?v=4bctmtuZVcM
     progressBarFull.style.width = `${(questionCounter / max_Questions) * 100}%`;
 
