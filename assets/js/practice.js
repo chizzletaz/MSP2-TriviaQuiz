@@ -29,14 +29,17 @@ let availableQuestions = [];
 let currentQuestion = {};
 
 function playGame() {
-    const chosenCategory = document.getElementById('categories').value;
-    const chosenDifficulty = document.getElementById('difficulties').value;
-    localStorage.setItem('chosenCategory', chosenCategory);
-    localStorage.setItem('chosenDifficulty', chosenDifficulty);
-    const chosenUrl = `https://opentdb.com/api.php?amount=10&category=${chosenCategory}&difficulty=${chosenDifficulty}&type=multiple`
+    const chosenCategoryValue = document.getElementById('categories').value;        //Get the value of the category to insert in chosenUrl
+    const chosenDifficultyValue = document.getElementById('difficulties').value;    //Get the value of the difficulty to insert in chosenUrl
+    const chosenCategoryName = $('#categories option:selected').text();             //Get the name of the category to be stored in localStorage
+    const chosenDifficultyName = $('#difficulties option:selected').text();         //Get the name of the difficulty level to be stored in localStorage
+
+    localStorage.setItem('chosenCategoryName', chosenCategoryName);     //store category and difficulty so they can be recalled later
+    localStorage.setItem('chosenDifficultyName', chosenDifficultyName);
+    const chosenUrl = `https://opentdb.com/api.php?amount=10&category=${chosenCategoryValue}&difficulty=${chosenDifficultyValue}&type=multiple`
     $('#gameSelect').modal('hide');
-    $('#gameSelect').on('hidden.bs.modal', function() {
-        fetchQuestions(chosenUrl);
+    $('#gameSelect').on('hidden.bs.modal', function() {     //code for invoking a function after modal closes.
+        fetchQuestions(chosenUrl);                          //Credit: [user4639281](https://stackoverflow.com/questions/39323598/execute-code-after-modal-closes-if-okay-button-clicked)
     });
 };
 
@@ -60,8 +63,6 @@ function fetchQuestions(url) {
                     formattedQuestion["option" + (index + 1)] = option;
                 });
 
-                currentCategory = loadedQuestion.category;
-                return currentCategory;
                 return formattedQuestion;
             });
             startGame();
@@ -82,10 +83,10 @@ function startGame() {
     questionCounter = 0;
     score = 0;
     availableQuestions = [...questions];
-    chosenCategory = localStorage.getItem('chosenCategory');
-    chosenDifficulty = localStorage.getItem('chosenDifficulty');
-    category.innerHTML = `Category: ${currentCategory}`;
-    difficulty.innerHTML = `Difficulty: ${chosenDifficulty}`;
+    chosenCategoryName = localStorage.getItem('chosenCategoryName');
+    chosenDifficultyName = localStorage.getItem('chosenDifficultyName');
+    category.innerHTML = `Category: ${chosenCategoryName}`;
+    difficulty.innerHTML = `Difficulty: ${chosenDifficultyName}`;
     getNewQuestion();
     loader.classList.add('hidden');
     game.classList.remove('hidden');
@@ -141,7 +142,7 @@ answers.forEach(option => {
         };
 
         if (classToApply === 'correct') {       /* increment Score according to the level the user is playing */
-            switch (chosenDifficulty) {
+            switch (chosenDifficultyName) {
                 case 'easy':
                     incrementScore(correct_PointsL1);
                     break;

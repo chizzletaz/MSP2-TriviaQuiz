@@ -4,6 +4,8 @@ const answers = Array.from(document.getElementsByClassName('answer-text'));
 const questionCounterText = document.getElementById("questionCounter");
 const scoreText = document.getElementById("score");
 
+const category = document.getElementById('category');
+
 const progressBarFull = document.getElementById("progressBarFull");
 const loader = document.getElementById("loader");
 const game = document.getElementById("game");
@@ -49,7 +51,7 @@ function fetchQuestions(url) {
                 answerOptions.forEach((option, index) => {                       //add answers to formattedQuestions object
                     formattedQuestion["option" + (index + 1)] = option;
                 });
-
+                
                 return formattedQuestion;
             });
             switch (level) {
