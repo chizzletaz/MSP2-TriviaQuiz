@@ -88,6 +88,14 @@ function startGame() {
 };
 
 function getNewQuestion() {
+    if (availableQuestions.length === 0 || questionCounter >= max_Questions) {
+                        let mostRecentScore = score;
+                        const finalScore = document.getElementById('finalScore');
+                        finalScore.innerText = mostRecentScore;
+
+                        // go to end modal. credit: https://www.w3schools.com/bootstrap/bootstrap_ref_js_modal.asp
+                        $("#staticBackdrop").modal('show');
+                };
     questionCounter++;
     questionCounterText.innerText = `Question: ${questionCounter}/${max_Questions}`;
     // update the progress bar. credit James Q Quick: https://www.youtube.com/watch?v=4bctmtuZVcM
@@ -153,28 +161,8 @@ answers.forEach(option => {
             choices[numb - 1].parentElement.classList.remove('correct');
 
             selectedChoice.parentElement.classList.remove(classToApply);
-
-            // go to next level when previous level is over. go to end-modal when all levels are played.
-            if (availableQuestions.length === 0 || questionCounter >= max_Questions) {
-                level++;
-                switch (level) {
-                    case 2:
-                        fetchQuestions(urlMedium);
-                        break;
-                    case 3:
-                        fetchQuestions(urlHard);
-                        break;
-                    default:
-                        let mostRecentScore = score;
-                        const finalScore = document.getElementById('finalScore');
-                        finalScore.innerText = mostRecentScore;
-
-                        // go to end modal. credit: https://www.w3schools.com/bootstrap/bootstrap_ref_js_modal.asp
-                        $("#staticBackdrop").modal('show');
-                };
-            } else {
+      
                 getNewQuestion();
-            };
 
         }, { once: true });
     });
