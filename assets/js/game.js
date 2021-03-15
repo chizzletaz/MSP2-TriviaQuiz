@@ -24,6 +24,11 @@ let currentQuestion = {};
 
 let level = 1;
 
+let cat2Use = [9, 10, 11, 12, 13, 14, 17, 18, 19, 20, 21, 22, 23, 25, 26, 27, 28, 29, 30]; //Id's of the categories I want to use in the game.
+const randomCat = cat2Use[Math.floor(Math.random() * cat2Use.length)];  //get a random Id from the array of categories.
+const randomUrl = `https://opentdb.com/api.php?amount=10&category=${randomCat}&difficulty=easy&type=multiple`;
+console.log(randomUrl);
+
 const urlEasy = "https://opentdb.com/api.php?amount=10&difficulty=easy&type=multiple";
 const urlMedium = "https://opentdb.com/api.php?amount=10&difficulty=medium&type=multiple";
 const urlHard = "https://opentdb.com/api.php?amount=10&difficulty=hard&type=multiple";
