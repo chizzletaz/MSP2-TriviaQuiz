@@ -8,6 +8,9 @@ const answers = Array.from(document.getElementsByClassName('answer-text'));
 const questionCounterText = document.getElementById("questionCounter");
 const scoreText = document.getElementById("score");
 
+const category = document.getElementById('category');
+const difficulty = document.getElementById('difficulty');
+
 const progressBarFull = document.getElementById("progressBarFull");
 const loader = document.getElementById("loader");
 const game = document.getElementById("game");
@@ -48,7 +51,7 @@ function fetchQuestions(url) {
                 const formattedQuestion = {
                     question: loadedQuestion.question                     //question object
                 };
-
+                
                 const answerOptions = [...loadedQuestion.incorrect_answers];    //get the incorrect answers from API
                 formattedQuestion.answer = Math.floor(Math.random() * 3) + 1;   //make the index of the correct answer random
                 answerOptions.splice(formattedQuestion.answer - 1, 0, loadedQuestion.correct_answer);  // add the correct answer to the array of incorrect answers
@@ -57,6 +60,8 @@ function fetchQuestions(url) {
                     formattedQuestion["option" + (index + 1)] = option;
                 });
 
+                currentCategory = loadedQuestion.category;
+                return currentCategory;
                 return formattedQuestion;
             });
             startGame();
@@ -79,8 +84,8 @@ function startGame() {
     availableQuestions = [...questions];
     chosenCategory = localStorage.getItem('chosenCategory');
     chosenDifficulty = localStorage.getItem('chosenDifficulty');
-    console.log(chosenCategory);
-    console.log(chosenDifficulty);
+    category.innerHTML = `Category: ${currentCategory}`;
+    difficulty.innerHTML = `Difficulty: ${chosenDifficulty}`;
     getNewQuestion();
     loader.classList.add('hidden');
     game.classList.remove('hidden');
