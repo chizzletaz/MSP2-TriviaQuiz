@@ -171,7 +171,7 @@ answers.forEach(option => {
                         let mostRecentScore = score;
                         const finalScore = document.getElementById('finalScore');
                         finalScore.innerText = mostRecentScore;
-
+                        localStorage.setItem('mostRecentScore', score);
                         // go to end modal. credit: https://www.w3schools.com/bootstrap/bootstrap_ref_js_modal.asp
                         $("#staticBackdrop").modal('show');
                 };
