@@ -1,8 +1,6 @@
 const username = document.getElementById("username");
 const saveScoreBtn = document.getElementById("saveScoreBtn");
 
-const mostRecentScore = localStorage.getItem('mostRecentScore');
-
 const highScores = JSON.parse(localStorage.getItem('highScores')) || []; //items in localStorage are strings -> user JSON.parse() credit: James Q Quick: https://www.youtube.com/watch?v=DFhmNLKwwGw
 
 //remove disables from Save-button when user types in name.
@@ -14,6 +12,7 @@ username.addEventListener('keyup', () => {
 // Credit: James Q Quick: https://www.youtube.com/watch?v=DFhmNLKwwGw
 function saveHighScore(event) {
     event.preventDefault();
+    const mostRecentScore = localStorage.getItem('mostRecentScore');
     //create an object with keys of 'score' and 'name'
     const score = {
         score: mostRecentScore,
