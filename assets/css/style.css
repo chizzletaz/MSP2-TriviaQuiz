@@ -135,11 +135,6 @@ i.fa-home {
     font-size: 20px;
 }
 
-.navbar-toggler {
-    border: 2px solid #fff !important;
-    border-radius: 8px !important;
-}
-
 /* Modals */
 .modal-content {
     background-color: rgb(247, 236, 211);
