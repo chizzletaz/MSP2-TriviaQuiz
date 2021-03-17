@@ -37,6 +37,7 @@ function playGame() {
     localStorage.setItem('chosenCategoryName', chosenCategoryName);     //store category and difficulty so they can be recalled later
     localStorage.setItem('chosenDifficultyName', chosenDifficultyName);
     const chosenUrl = `https://opentdb.com/api.php?amount=10&category=${chosenCategoryValue}&difficulty=${chosenDifficultyValue}&type=multiple`
+    
     $('#gameSelect').modal('hide');
     $('#gameSelect').on('hidden.bs.modal', function() {     //code for invoking a function after modal closes.
         fetchQuestions(chosenUrl);                          //Credit: [user4639281](https://stackoverflow.com/questions/39323598/execute-code-after-modal-closes-if-okay-button-clicked)
@@ -143,13 +144,13 @@ answers.forEach(option => {
 
         if (classToApply === 'correct') {       /* increment Score according to the level the user is playing */
             switch (chosenDifficultyName) {
-                case 'easy':
+                case 'Easy':
                     incrementScore(correct_PointsL1);
                     break;
-                case 'medium':
+                case 'Medium':
                     incrementScore(correct_PointsL2);
                     break;
-                case 'hard':
+                case 'Hard':
                     incrementScore(correct_PointsL3);
                     break;
             }
