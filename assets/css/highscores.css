@@ -13,3 +13,11 @@
 .high-score:hover {
     transform: scale(1.05);
 }
+
+#highScores > img {
+    margin: 20px 0 30px;
+}
+
+#finalScore {
+    font-size: 50px;
+}
