@@ -86,8 +86,8 @@ function startGame() {
     availableQuestions = [...questions];
     chosenCategoryName = localStorage.getItem('chosenCategoryName');
     chosenDifficultyName = localStorage.getItem('chosenDifficultyName');
-    category.innerHTML = `Category: ${chosenCategoryName}`;
-    difficulty.innerHTML = `Difficulty: ${chosenDifficultyName}`;
+    category.innerHTML = `<span style="color:#eea722;">CATEGORY:</span> ${chosenCategoryName}`;
+    difficulty.innerHTML = `<span style="color:#eea722;">DIFFICULTY:</span> ${chosenDifficultyName}`;
     getNewQuestion();
     loader.classList.add('hidden');
     game.classList.remove('hidden');
