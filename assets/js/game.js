@@ -34,6 +34,7 @@ window.onload = fetchQuestions(urlEasy);
 
 /* get questions from API - credit: James Q Quick: https://www.youtube.com/watch?v=3aKOQn2NPFs */
 function fetchQuestions(url) {
+    checkMusic();
     fetch(url)
         .then(response => {
             return response.json()
@@ -200,23 +201,39 @@ function playMusic() {
     music.play();
     musicOn.parentElement.classList.add('hidden');
     musicOff.parentElement.classList.remove('hidden');
+    localStorage.setItem('music', 'on');
 }
 
 function muteMusic() {
     music.pause();
     musicOn.parentElement.classList.remove('hidden');
     musicOff.parentElement.classList.add('hidden');
+    localStorage.setItem('music', 'off');
 }
 
 function playSound() {
     soundOn.parentElement.classList.add('hidden');
     soundOff.parentElement.classList.remove('hidden');
+    localStorage.setItem('sound', 'on');
 }
 
 function muteSound() {
     soundOn.parentElement.classList.remove('hidden');
     soundOff.parentElement.classList.add('hidden');
+    localStorage.setItem('sound', 'off');
 }
+
+// credit: my mentor Antonio Rodriguez.
+function checkMusic(){
+    if ((localStorage.getItem("music") === null) || (localStorage.getItem("music") === 'off')) {
+        console.log('music is off');
+    }
+    else{
+        console.log('music is on');
+        playMusic();
+    }
+};
+
 
 // LEVEL 2
 function startGame2() {
