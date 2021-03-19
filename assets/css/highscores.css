@@ -1,7 +1,9 @@
 #highScoresTable {
     list-style: none;
     padding-left: 0;
-    margin-bottom: 30px;
+    margin: 30px;
+    position: relative;
+    left: -30px;
 }
 
 .high-score {
@@ -15,6 +17,7 @@
 }
 td {
     width: 7rem;
+    padding: 10px;
 }
 
 .tal {
@@ -27,6 +30,16 @@ td {
 
 .tar {
     text-align: right;
+}
+.rank {
+    border: 4px solid #eea722;
+    border-radius:50%;
+    display:block;
+    height:40px;
+    width:40px;
+    margin:auto;
+    line-height:32px;
+    text-align:center
 }
 
 #highScores > img {
