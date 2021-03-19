@@ -3,7 +3,7 @@ const highScores = JSON.parse(localStorage.getItem("highScores")) || [];  //get 
 
 
 // Add highscores to highscore.html. Credit: James Q Quick: https://www.youtube.com/watch?v=jfOv18lCMmw
-highScoresList.innerHTML = highScores.map(score => {
-    return `<li class="high-score">${score.name} - ${score.score}</li>`;
+highScoresTable.innerHTML = highScores.map(score => {
+    return `<tr class="high-score"><td class="tal">${score.name}</td> <td class="tac"> - </td> <td class="tar">${score.score}</td></tr>`;
 })
 .join("");

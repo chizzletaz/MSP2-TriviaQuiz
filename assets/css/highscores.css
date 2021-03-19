@@ -1,4 +1,4 @@
-#highScoresList {
+#highScoresTable {
     list-style: none;
     padding-left: 0;
     margin-bottom: 30px;
@@ -12,6 +12,21 @@
 /* credit James Q Quick: https://www.youtube.com/watch?v=jfOv18lCMmw */
 .high-score:hover {
     transform: scale(1.05);
+}
+td {
+    width: 5rem;
+}
+
+.tal {
+    text-align: left;
+}
+
+.tac {
+    text-align: center;
+}
+
+.tar {
+    text-align: right;
 }
 
 #highScores > img {
