@@ -47,6 +47,7 @@ function playGame() {
 /* get questions from API - credit: James Q Quick: https://www.youtube.com/watch?v=3aKOQn2NPFs */
 function fetchQuestions(url) {
     checkMusic();
+    checkSound();
     fetch(url)
         .then(response => {
             return response.json()
@@ -222,5 +223,15 @@ function checkMusic(){
     else{
         console.log('music is on');
         playMusic();
+    }
+};
+
+function checkSound(){
+    if ((localStorage.getItem("sound") === null) || (localStorage.getItem("sound") === 'off')) {
+        console.log('sound is off');
+    }
+    else{
+        console.log('sound is on');
+        playSound();
     }
 };
