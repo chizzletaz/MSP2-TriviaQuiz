@@ -70,9 +70,13 @@ I want to add a Session Token to the URL, so the user doesn't get the same quest
 To do this I made a function that gets a Session Token from the API and adds it to the URL.
 In order to get the Session Token before fetching the questions, the window.onload should load the getToken function first.
 So the fetchQuestions function is put inside the getToken function.
+
 This works, but now every time a new level is reached, a new session token is retrieved. This could still give the same questions,
 because the condition that the same question is not used is valid per token.
-Idea: get the token on loading the index.html page and set to localStorage.
+
+Idea: Get the token on loading the index.html page and set to localStorage.
+This works. However, everytime the user goes to the home page, a new Session Token is retrieved.
+
 According to the API documentation, a session token is deleted (i.e. unusable) after 6 hours.
-Check the time stamp of the token: if it is older than 6 hours; get a new token. 
+IDEA:Check the time stamp of the token: if it is older than 6 hours; get a new token. 
 Else use the token in localStorage.
