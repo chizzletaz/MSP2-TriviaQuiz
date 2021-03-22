@@ -26,12 +26,13 @@ let currentQuestion = {};
 
 let level = 1;
 
-const urlEasy = "https://opentdb.com/api.php?amount=10&difficulty=easy&type=multiple";
-const urlMedium = "https://opentdb.com/api.php?amount=10&difficulty=medium&type=multiple";
-const urlHard = "https://opentdb.com/api.php?amount=10&difficulty=hard&type=multiple";
+// const urlEasy = "https://opentdb.com/api.php?amount=10&difficulty=easy&type=multiple";
+// const urlMedium = "https://opentdb.com/api.php?amount=10&difficulty=medium&type=multiple";
+// const urlHard = "https://opentdb.com/api.php?amount=10&difficulty=hard&type=multiple";
 
-window.onload = fetchQuestions(urlEasy);
+window.onload = getToken();
 
+function getToken() {
 fetch('https://opentdb.com/api_token.php?command=request')
     .then( response => {
        return response.json();
@@ -39,7 +40,22 @@ fetch('https://opentdb.com/api_token.php?command=request')
     .then (newToken => {
         token = newToken.token;
         console.log(token);
+
+        switch (level) {
+            case 1:
+                diff = 'easy';
+                break;
+            case 2:
+                diff = 'medium';
+                break;
+            case 3:
+                diff = 'hard';
+                break;
+        }
+        gameUrl = `https://opentdb.com/api.php?amount=10&difficulty=${diff}&type=multiple&token=${token}`;
+        fetchQuestions(gameUrl);
     })
+};
 
 /* get questions from API - credit: James Q Quick: https://www.youtube.com/watch?v=3aKOQn2NPFs */
 function fetchQuestions(url) {
