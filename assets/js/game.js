@@ -189,10 +189,10 @@ answers.forEach(option => {
                 level++;
                 switch (level) {
                     case 2:
-                        fetchQuestions(urlMedium);
+                        getToken();
                         break;
                     case 3:
-                        fetchQuestions(urlHard);
+                        getToken();
                         break;
                     case 4:
                         let mostRecentScore = score;
