@@ -32,6 +32,15 @@ const urlHard = "https://opentdb.com/api.php?amount=10&difficulty=hard&type=mult
 
 window.onload = fetchQuestions(urlEasy);
 
+fetch('https://opentdb.com/api_token.php?command=request')
+    .then( response => {
+       return response.json();
+    })
+    .then (newToken => {
+        token = newToken.token;
+        console.log(token);
+    })
+
 /* get questions from API - credit: James Q Quick: https://www.youtube.com/watch?v=3aKOQn2NPFs */
 function fetchQuestions(url) {
     checkMusic();
