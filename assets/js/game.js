@@ -26,7 +26,8 @@ let currentQuestion = {};
 
 let level = 1;
 
-const token = localStorage.getItem('Token');
+var object = JSON.parse(localStorage.getItem('key'));
+let token = object.token;
 
 const urlEasy = `https://opentdb.com/api.php?amount=10&difficulty=easy&type=multiple&token=${token}`;
 const urlMedium = `https://opentdb.com/api.php?amount=10&difficulty=medium&type=multiple&token=${token}`;

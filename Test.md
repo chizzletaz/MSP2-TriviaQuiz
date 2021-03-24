@@ -65,7 +65,7 @@ Fix: I've put the condition to go the next level (if (availableQuestions.length 
 (inside the nextQuestion-eventListener), in stead of in the function getNewQuestion itself. This seems to have solved the problem.
 
 ----------------------
-UNSOLVED
+SOLVED
 I want to add a Session Token to the URL, so the user doesn't get the same question twice.
 To do this I made a function that gets a Session Token from the API and adds it to the URL.
 In order to get the Session Token before fetching the questions, the window.onload should load the getToken function first.
@@ -79,4 +79,9 @@ This works. However, everytime the user goes to the home page, a new Session Tok
 
 According to the API documentation, a session token is deleted (i.e. unusable) after 6 hours.
 IDEA:Check the time stamp of the token: if it is older than 6 hours; get a new token. 
-Else use the token in localStorage.
+Else use the token in localStorage. 
+Using and modifying the localStorage example with timestamp [Credit:dotspencer](https://gist.github.com/dotspencer/a99e004a31cbd93fa8f7828bece58708),
+I added the a timestamp to the token and saved it as an object to localStorage.
+In the game.js the token is retrieved to be used in the game.
+
+-----------------------
