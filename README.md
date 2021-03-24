@@ -169,29 +169,30 @@ Local Clone:
 For more info on how to clone a repository check [here](https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
 
 # **Credits**
-### code
-- Changing the colour of the hamburger icon.  
-[Amirreza Mohammadi](https://stackoverflow.com/questions/42586729/bootstrap-4-change-hamburger-toggler-color)
-- [Loader](https://www.w3schools.com/howto/howto_css_loader.asp)  
+- A large part of the html, css and javascript was based on the [youtube tutorial](https://www.youtube.com/watch?v=u98ROZjBWy8&list=PLDlWc9AfQBfZIkdVaOQXi1tizJeNJipEx) of James Q Quick. See also his [GitHub page](https://github.com/jamesqquick/Build-A-Quiz-App-With-HTML-CSS-and-JavaScript) for the code.
+- How to build a [Loader](https://www.w3schools.com/howto/howto_css_loader.asp).  
 - How to play audio for correct/incorrect answer:
-[Uri](https://stackoverflow.com/questions/9419263/how-to-play-audio)
+[Uri](https://stackoverflow.com/questions/9419263/how-to-play-audio).
+- [Removing the eventListener](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener) after it is invoked.
+- How to add an event after a modal closes: [user4639281](https://stackoverflow.com/questions/39323598/execute-code-after-modal-closes-if-okay-button-clicked)
+- How to get the text value of a [selected option](https://learn.jquery.com/using-jquery-core/faq/how-do-i-get-the-text-value-of-a-selected-option/)
+
 
 ### Content
 The text for section Y was copied from the Wikipedia article Z
 
 ### Media
 Images  
-- [Background image](https://pixabay.com/illustrations/game-background-sky-game-landscape-4956017/
-) of index.html page.  
-- [Trophy image](https://gallery.yopriceville.com/Free-Clipart-Pictures/Trophy-and-Medals-PNG/Trophy_Cup_PNG_Clipart)  
+- [Background image](https://wallpaper-house.com/wallpaper-id-488333.php) of index.html page.  
+- [Trophy image](https://iconarchive.com/show/noto-emoji-activities-icons-by-google/52725-trophy-icon.html)  
 - Icon music on: Icon by <a href="https://freeicons.io/profile/6156">Reda</a> on <a href="https://freeicons.io">freeicons.io</a>  
 - Icon music off: Icon by <a href="https://freeicons.io/profile/6156">Reda</a> on <a href="https://freeicons.io">freeicons.io</a>
-                                  
+Icon [settings](https://www.iconfinder.com/icons/4200781/cogwheel_configuration_gear_settings_icon)                        
+
 Music  
 - [background music](https://www.chosic.com/download-audio/?t=27247)
 Monkeys Spinning Monkeys Kevin MacLeod (incompetech.com)  
-Licensed under Creative Commons: By Attribution 3.0 License
-http://creativecommons.org/licenses/by/3.0/  
+Licensed under Creative Commons: By Attribution 3.0 License http://creativecommons.org/licenses/by/3.0/  
 Music promoted by https://www.chosic.com/  
 
 sounds:  
