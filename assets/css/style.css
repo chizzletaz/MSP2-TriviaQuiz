@@ -106,9 +106,10 @@ li {
     cursor: pointer;
     border: 3px solid #eea722;
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+    color: white;
     transform: translate(-0.1rem, 0.1rem);
     transition: transform 150ms;
-    background-color:  rgb(254, 237, 204);
+    background-color: rgba(0, 0, 0, 0.3);;
 }
 
 .button[disabled]:hover {
