@@ -35,19 +35,19 @@ li {
 }
 
 .modal p, .modal h4 {
-    color: black;
+    color: #000;
     padding: 10px;
 }
 
 /* Colours */
 .gradient1 {
-    background-color: rgb(170, 0, 254);
+    background-color: #aa00fe;
     background-image: url('../img/purple-background.jpg');
     background-size: cover;
 }
 
 .gradient2 {
-    background-image: linear-gradient(to top, rgb(170, 0, 254), rgb(112,0,196)); 
+    background-image: linear-gradient(to top, #aa00fe, #7000c4); 
 }
 
 .black {
@@ -110,7 +110,7 @@ li {
     cursor: pointer;
     border: 3px solid #eea722;
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
-    color: white;
+    color: #fff;
     transform: translate(-0.1rem, 0.1rem);
     transition: transform 150ms;
     background-color: rgba(0, 0, 0, 0.3);;
@@ -132,8 +132,8 @@ li {
 }
 
 .home:hover, #next-question:hover {
-    border: 2px solid rgb(242, 93, 45);
-    background-image: linear-gradient(to right, rgb(242, 93, 45), rgb(246, 170, 56));
+    border: 2px solid #f25d2d  ;
+    background-image: linear-gradient(to right, #f25d2d, #eea722);
 }
 
 i.fa-home {
@@ -142,7 +142,7 @@ i.fa-home {
 
 /* Modals */
 .modal-content {
-    background-color: rgb(247, 236, 211);
+    background-color: #feeccc;
     border: 1px solid #000;
     border-radius: 15px;
     color: #000;

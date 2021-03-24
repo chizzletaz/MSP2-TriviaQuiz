@@ -8,7 +8,7 @@
     height: 60px;
     border: 1px solid rgba(33, 33, 33, 0.6);
     border-radius: 40px;
-    background-color: white;
+    background-color: #fff;
 }
 
 .answer-container:hover {
@@ -43,7 +43,7 @@ a, option, .game-info p, #question-info p {
 } 
 
 #level {
-    color: white;
+    color: #fff;
 }
 
 #questionCounter {
@@ -83,15 +83,15 @@ a, option, .game-info p, #question-info p {
 #score  {
     font-size: 30px;
     margin: 0;
-    text-shadow: 2px 2px 5px white, 4px 4px 10px #000;
+    text-shadow: 2px 2px 5px #fff, 4px 4px 10px #000;
 }
 
 .correct {
-    background-color: green;
+    background-color: #64bf2c;
 }
 
 .incorrect {
-    background-color: red;
+    background-color: #f01f0a;
 }
 
 #next-question {
@@ -122,7 +122,7 @@ input {
     font-size: 20px;
     border: none;
     border-radius: 10px;
-    box-shadow: 0px 1px 10px 1px rgba(170, 0, 254,0.5);
+    box-shadow: 0px 1px 10px 1px rgba(170, 0, 254,0.5);     /* #aa00fe with opacity */
     width: 250px;
 }
 
@@ -132,7 +132,7 @@ input::placeholder {
 
 /* Loader credit: W3Schools: https://www.w3schools.com/howto/howto_css_loader.asp */
 #loader {
-    border: 15px solid white;
+    border: 15px solid #fff;
     border-radius: 50%;
     border-top: 16px solid #eea722;
     width: 120px;
