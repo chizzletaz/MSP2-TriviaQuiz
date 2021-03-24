@@ -1,18 +1,20 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;700&family=Montserrat:wght@300;400;500;600;700&display=swap');
 
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     color: #fff;
-    font-family: "Ubuntu", sans-serif;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
 }
 .h1, h2, h3, h4, h5 {
     text-align: center;
 }
 
 h1 {
+    font-family: "Josefin Sans", sans-serif;
     font-size: 64px;
     margin: 10px;
     text-align: center;
@@ -20,6 +22,7 @@ h1 {
 }
 
 h2 {
+    font-family: "Josefin Sans", sans-serif;
     padding: 5px;
     margin: 10px;
     color: #000;
@@ -86,6 +89,7 @@ li {
 }
 
 #title {
+    font-family: "Josefin Sans", sans-serif;
     margin: 100px;
 }
 

@@ -38,6 +38,10 @@
     font-size: 14px;
 }
 
+a, option, .game-info p, #question-info p {
+    font-weight: 400;
+} 
+
 #level {
     color: white;
 }
