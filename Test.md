@@ -83,5 +83,6 @@ Else use the token in localStorage.
 Using and modifying the localStorage example with timestamp [Credit:dotspencer](https://gist.github.com/dotspencer/a99e004a31cbd93fa8f7828bece58708),
 I added the a timestamp to the token and saved it as an object to localStorage.
 In the game.js the token is retrieved to be used in the game.
-
+Issue: the first time there is no key in localStorage, this gives an error. So I made a function for checking the token and invoking this function on
+window.onload.
 -----------------------
