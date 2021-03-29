@@ -10,10 +10,11 @@ My personal goal is to show the coding skills I learned sofar (HTML, CSS and Jav
 
 
 ### **user stories**
-**first time users:**  
+*first time users:*  
 - As a first time user, I want to navigate easily across the website.  
-- As a first time user, I want to know what the game is about, so I can play the game with ease.
-**returning users:** 
+- As a first time user, I want to know what the game is about, so I can play the game with ease.  
+
+*returning users:*
 - As a user, I want to play the game on different screen sizes.
 - As a user, I want to have some control over the game, so I can play the game in my own pace.
 - As a user, I want to see/hear if my answer is correct or not.
@@ -22,13 +23,13 @@ My personal goal is to show the coding skills I learned sofar (HTML, CSS and Jav
 - As a user, I want to save my score and see the high scores, so I challenge myself to play better.
 - As a user, I want to choose different game modes, so the game is more versatile.
 
-**developer stories:**
+### **developer stories:**
 - As a developer I want to give feedback and control to the users before, during and after the game, for a better playing experience.
 - As a developer I want to challenge the user, so they will come back and play some more.
 - As a developer I want my users to be able to play on all devices.
 
 ## **Scope level**
-Considering that I don’t have enough experience and therefore insight into how much time it costs and how difficult implementing some features are, I’ve decided to plan for a *Minimal Viable Project* first and then add the extra features, depending on how much time was left.  
+Considering that I don’t have enough experience and therefore insight into how much time it costs and how difficult implementing some features are, I’ve decided to plan for a *Minimal Viable Project* first and then add the extra features, depending on how much time is left.  
 **The requirements for the Minimal Viable Project:**
 1. An explanation of the game.
 2. Good navigation indications by use of buttons and icons.
@@ -77,16 +78,21 @@ A landing page, a practice selection page, a game page for practice mode, a game
 Each page will have the same header, with options to change sound, music and light/dark mode.
 Except for the landing page, all pages have a button to go back home to the landing page.
 
-**The landing page** will have an option to see the explanation of the game. 
+**The landing page**  
+will have an option to see the explanation of the game. 
 There will be a start button, which opens a link to choose a play mode. There is a link to go to the high scores page. The settings are displayed at the top of the page.
 
-**The practice selection page** has the option for the user to choose the category and difficulty level of the game.
+**The practice selection page**  
+has the option for the user to choose the category and difficulty level of the game.
 
-**The game page for challenge mode** will have a question and answer area. There will be an indicator of the score and which question the user is at. After round 1 and round 2 a modal will pop up to indicate that the user is going to another level. When all the three rounds are finished, a modal pops up. In the modal there will be an endscore, the option to save the user’s score, the option to play again and a link to the high scores page. 
+**The game page for challenge mode**  
+will have a question and answer area. There will be an indicator of the score and which question the user is at. After round 1 and round 2 a modal will pop up to indicate that the user is going to another level. When all the three rounds are finished, a modal pops up. In the modal there will be an endscore, the option to save the user’s score, the option to play again and a link to the high scores page. 
 
-**The game page for practice mode** will be the same as the challenge mode page, except that there is only 1 round.
+**The game page for practice mode**  
+will be the same as the challenge mode page, except that there is only 1 round.
 
-**The high scores page** will have an overview of the top 5 players with names and scores.
+**The high scores page**  
+will have an overview of the top 5 players with names and scores.
 
 ## **Skeleton Level**
 As mentioned above, the extra features will also be included in the wireframes. A comparison of the wireframes with the endproduct will show the implemented extra features. Also the implemented extra features will be updated in the ‘Features’ section below.
@@ -94,26 +100,38 @@ As mentioned above, the extra features will also be included in the wireframes. 
 Link to [wireframes](https://github.com/chizzletaz/MSP2-TriviaQuiz/blob/master/assets/documents/Wireframes%20MSP2.pdf)
 
 ## **Service Level**
-Design choices. Note why you use certain fonts, color and design choices.
+
 **Colors**  
+The main colours are #aa00fe (Vivid Violet) and #7000c4 (Purple). These are used as a gradient
+for the background colour. 
+For secondary colours I’ve used shades of orange, as this complements the purple colour well.
+The shades used are #eea722 (Marigold), #f25d2d (Portland Orange) and #feeccc (Blanched
+Almond).  
+![colour palette:](assets/img/colour-palette.png)
+
+Furthermore green (#64bf2c) and red (#f01f0a) are used for the background colour for the right
+and wrong answer respectively.
 
 
 **Fonts**  
+As a main font I've chosen Montserrat. This is a sans-serif typeface, which due to it's clarity and legibility, is good to use for the main text on all screen sizes. 
+I've used this particular font to convey simplicity and minimalism and because I found this font to suit the game best.
 
-
+For the title and game info indicators(level, score, etc) I've used the Josefin Sans font.
+This is also a sans-serif typeface, which is geometric, elegant, with a vintage feeling. I liked the contrast between the typefaces. 
 
 
 # **Features**
 In this section, you should go over the different parts of your project, and describe each in a sentence or so.
 
-**Existing Features**
+**Existing Features**  
 Feature 1 - allows users X to achieve Y, by having them fill out Z
 ...
 For some/all of your features, you may choose to reference the specific project files that implement them, although this is entirely optional.
-In addition, you may also use this section to discuss plans for additional features to be implemented in the future:
+
 
 **Features Left to Implement**
-- A timer: the questions have to be answered in a certain time, e.g 10 seconds.
+- A timer: the questions have to be answered within a certain time limit, e.g 10 seconds.
 - The score is linked to how fast a user answers the question.
 
 ## **Technologies used**
