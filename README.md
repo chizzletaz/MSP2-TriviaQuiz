@@ -1,48 +1,53 @@
 # La Triviata
-This is a trivia game. The user can choose between challenge mode and practice mode. In challenge mode the user plays three rounds with increasing difficulty, with questions from every category. In practice mode, the user can choose the category and difficulty level.
+Triviata is a trivia game. When playing the game, the user can choose between challenge mode and practice mode. In challenge mode the user plays three rounds with increasing difficulty and with questions from every category. In practice mode, the user can choose the category and difficulty level.
+
+# Table of Content
 
 # UX
 ## **Strategic level**
-The website is for people who want to play a fun or a challenging game and at the same time test their knowledge.
-Another goal is to show the coding skills I learned solar (HTML, CSS and Javascript).
+This website is for people who want to play a fun or challenging game and at the same time test their knowledge.
+My personal goal is to show the coding skills I learned sofar (HTML, CSS and Javascript).
 
-Game idea/explanation?
 
 ### **user stories**
 **first time users:**  
 - As a first time user, I want to navigate easily across the website.  
-- As a first time user, I want to know what the game is about, so I can play the game with ease. 
+- As a first time user, I want to know what the game is about, so I can play the game with ease.
+**returning users:** 
 - As a user, I want to play the game on different screen sizes.
-- As a user I want to have some control over the game, so I can play the game in my own pace.
-- As a user I want to get feedback on how I am doing, in particular if my answer is correct and how many points I have.
-- As a user I want to save my score and see the high scores, so I challenge myself to play better.
-- As a user I want to choose different game modes, so the game is more versatile.
-
-NOTE: is it better to be as precise as possible on the user stories, or can you groups some stories into general user stories? For instance ‘user story e’ is more general and leaves room for more implementations/features. Should I split this up in different stories?
+- As a user, I want to have some control over the game, so I can play the game in my own pace.
+- As a user, I want to see/hear if my answer is correct or not.
+- As a user, I want to see the right answer, when I gave a wrong answer, so I can learn from my mistakes.
+- As a user, I want to see how many points I have.
+- As a user, I want to save my score and see the high scores, so I challenge myself to play better.
+- As a user, I want to choose different game modes, so the game is more versatile.
 
 **developer stories:**
-- As a developer I want to give feedback and control to the users before, during and after the game, so that the user keeps on playing.
+- As a developer I want to give feedback and control to the users before, during and after the game, for a better playing experience.
 - As a developer I want to challenge the user, so they will come back and play some more.
 - As a developer I want my users to be able to play on all devices.
 
 ## **Scope level**
 Considering that I don’t have enough experience and therefore insight into how much time it costs and how difficult implementing some features are, I’ve decided to plan for a *Minimal Viable Project* first and then add the extra features, depending on how much time was left.  
-Minimal Viable Project, what requirements are needed?
-1. Provide an explanation of the game.
-2. Provide good navigation indications with use of buttons and icons.
-3. Have a responsive design.
-4. Provide a game 
-5. An option to choose the next question
-6. An option to change settings.
-7. Provide information on score, correct/incorrect answer and which question the user is on.
-8. An option to save the score.
-9. Provide high scores.
+**The requirements for the Minimal Viable Project:**
+1. An explanation of the game.
+2. Good navigation indications by use of buttons and icons.
+3. A responsive design.
+4. A game area with question and answers. 
+5. Indication whether the given answer is correct or incorrect.
+6. Indication what level the user is playing.
+7. Score indication.
+8. Indication on which question the user is on.
+9. An option to save the score.
+10. Provide high scores.
 
 **Extra requirements:**  
-1. An option to show the right answer.
-2. Provide different player modes: practice/fun mode: the user can choose the category and difficulty level.
-3. Sound effect and background music and the option to turn them on/off.
-4. Option to switch between dark and light mode.
+1. Show the right answer.
+2. Sound effects and background music and the option to turn them on/off.
+3. Different player modes -> Add practice mode (the user can choose the category and difficulty level).
+4. Indication of category and difficulty in practice mode.
+5. An option to choose the next question.
+6. Option to switch between dark and light mode.
 
 
 ## **Structure Level**  
@@ -54,12 +59,13 @@ The overall look is kept the same for consistency:
 - The buttons are styled in a similar way.
 
 The navigation is kept simple:   
-- There are buttons to navigate the game, such as a button go to a next question, buttons navigate to other pages like the landing/home page or the high scores page. 
+- There are buttons to navigate the game, such as a button go to a next question, buttons to navigate to other pages like the landing/home page. 
 
 The user is given feedback, in order to enhance a pleasant user experience:  
 - This translates to visual and audio feedback during certain actions (like focusing on, clicking on or hovering over buttons or links). Examples are: the displacement of the answer box, when hovering over it. Or change of colour when clicking a button or link.
 - The answer box changes colour in case of a right or wrong answer. 
 - A sound is played after giving a correct or wrong answer.
+- There are indications of level, category, difficulty, question number and score.
 
 All the information should be easily visible:
 - Visual aids are used, like icons and complementary colours.
