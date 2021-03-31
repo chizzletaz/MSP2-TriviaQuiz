@@ -1,3 +1,7 @@
+/* Credit: https://developers.google.com/web/updates/2017/11/overscroll-behavior */
+body {
+    overscroll-behavior-y: contain;
+}
 
 .answer-container {
     display: flex;

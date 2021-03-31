@@ -226,6 +226,8 @@ Local Clone:
 For more info on how to clone a repository check [here](https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
 
 # **Credits**
+### code
+
 - A large part of the html, css and javascript was based on the [youtube tutorial](https://www.youtube.com/watch?v=u98ROZjBWy8&list=PLDlWc9AfQBfZIkdVaOQXi1tizJeNJipEx) of James Q Quick. See also his [GitHub page](https://github.com/jamesqquick/Build-A-Quiz-App-With-HTML-CSS-and-JavaScript) for the code.
 - How to build a [Loader](https://www.w3schools.com/howto/howto_css_loader.asp).  
 - How to play audio for correct/incorrect answer:
@@ -233,7 +235,7 @@ For more info on how to clone a repository check [here](https://docs.github.com/
 - [Removing the eventListener](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener) after it is invoked.
 - How to add an event after a modal closes: [user4639281](https://stackoverflow.com/questions/39323598/execute-code-after-modal-closes-if-okay-button-clicked)
 - How to get the text value of a [selected option](https://learn.jquery.com/using-jquery-core/faq/how-do-i-get-the-text-value-of-a-selected-option/)
-
+- How to [prevent pull-to-refresh](https://developers.google.com/web/updates/2017/11/overscroll-behavior) on (most) mobile devices.
 
 ### Content
 The text for section Y was copied from the Wikipedia article Z
