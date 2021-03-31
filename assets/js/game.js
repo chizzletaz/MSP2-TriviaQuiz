@@ -167,10 +167,10 @@ answers.forEach(option => {
                 level++;
                 switch (level) {
                     case 2:
-                        fetchQuestions(urlMedium);
+                        $('#goToLevel2').modal('show');
                         break;
                     case 3:
-                        fetchQuestions(urlHard);
+                        $('#goToLevel3').modal('show');
                         break;
                     case 4:
                         let mostRecentScore = score;
@@ -266,3 +266,11 @@ function startGame3() {
     loader.classList.add('hidden');
     game.classList.remove('hidden');
 };
+
+function goToLevel2() {
+    fetchQuestions(urlMedium);
+}
+
+function goToLevel3() {
+    fetchQuestions(urlHard);
+}
