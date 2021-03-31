@@ -1,4 +1,4 @@
-# La Triviata
+# Triviata
 Triviata is a trivia game. When playing the game, the user can choose between challenge mode and practice mode. In challenge mode the user plays three rounds with increasing difficulty and with questions from every category. In practice mode, the user can choose the category and difficulty level.
 
 # Table of Content
@@ -99,6 +99,15 @@ As mentioned above, the extra features will also be included in the wireframes. 
 
 Link to [wireframes](https://github.com/chizzletaz/MSP2-TriviaQuiz/blob/master/assets/documents/Wireframes%20MSP2.pdf)
 
+**Update:**  
+By comparing the wireframes with the end result, you can see the following differences/adjustments:  
+There are only 5 pages.  
+The practice selection page is now a modal.  
+Only the Challenge and the Practice page have the settings for music and sound.  
+The option for toggling between light and dark mode has been omitted and added as a feature left to implement.
+There is no modal pop up after each level.
+
+
 ## **Service Level**
 
 **Colors**  
@@ -122,15 +131,39 @@ This is also a sans-serif typeface, which is geometric, elegant, with a vintage 
 
 
 # **Features**
-In this section, you should go over the different parts of your project, and describe each in a sentence or so.
 
-**Existing Features**  
-Feature 1 - allows users X to achieve Y, by having them fill out Z
-...
-For some/all of your features, you may choose to reference the specific project files that implement them, although this is entirely optional.
+## **Existing Features**  
+Feature 1 - allows users X to achieve Y, by having them fill out Z  
+**All pages:**  
+Responsiveness - allows users to play the game on different devices.
+
+**Landing page:**  
+- A button that opens a modal, where users can choose a game mode and start playing.  
+- A button that allows users to navigate to the high scores page.  
+- A button that opens a modal where the users can read how to play the game.
+
+**Challenge page:**
+- A HUD (Heads Up Display) where users can see which level they are playing on, which question they are on and what their score is.
+- Icons for background music and sound settings. Clicking the icon turns the music/sound on or off. The icons collapse to a settings-icon on smaller screen sizes.
+- A question-area where users are presented with a question.
+- Answer-containers where users can select an answer.
+- A button that allows users to return to the landing page.
+- A button that allows users to go to the next question.
+- An end of game modal where users can enter their name and save their score. Users can only save their score if they have entered a name. If the score is high enough, it is included in the high scores, which can be seen on the high scores page.
+
+**Practice page:**  
+The practice page has the same features as the challenge page plus these extra features:
+- A modal that shows on loading, where users can choose the category and difficulty of the questions.
+- An extra indication in the HUD, where users can see what category and difficulty level they are playing.  
+
+N.B! The practice page doesn’t have an end of game modal.
+
+**High scores page:**  
+- A table where users can see the ranking of the top 5 best scores with the corresponding names.
+- A button that allows users to return to the landing page.
 
 
-**Features Left to Implement**
+## **Features Left to Implement**
 - A timer: the questions have to be answered within a certain time limit, e.g 10 seconds.
 - The score is linked to how fast a user answers the question.
 
