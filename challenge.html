@@ -22,20 +22,24 @@
     <!-- Bootstrap navbar-->
     <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container-fluid">
-            <a href="index.html"><h2 class="white">Triviata - Challenge</h2></a>
+            <a href="index.html">
+                <h2 class="white">Triviata - Challenge</h2>
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span>
-                    <img src="assets/img/settings.png" alt="settings icon" width= "20px">
+                    <img src="assets/img/settings.png" alt="settings icon" width="20px">
                 </span>
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav">
                     <li>
-                        <a id="music-on"><img src="assets/img/music-off.png" alt="music off icon" width="18px" height="16px" onclick="playMusic()"><br>Music</a>
+                        <a id="music-on"><img src="assets/img/music-off.png" alt="music off icon" width="18px"
+                                height="16px" onclick="playMusic()"><br>Music</a>
                     </li>
                     <li class="hidden">
-                        <a id="music-off"><img src="assets/img/music-on.png" alt="music on icon" width="18px" height="16px" onclick="muteMusic()"><br>Music</a>
+                        <a id="music-off"><img src="assets/img/music-on.png" alt="music on icon" width="18px"
+                                height="16px" onclick="muteMusic()"><br>Music</a>
                     </li>
                     <li>
                         <a id="sound-on"><i class="fas fa-volume-mute" onclick="playSound()"></i><br>Sound</a>
@@ -45,7 +49,7 @@
                     </li>
                 </ul>
             </div>
-            <audio  id="music" src="assets/music/Monkeys-Spinning-Monkeys.mp3"></audio>
+            <audio id="music" src="assets/music/Monkeys-Spinning-Monkeys.mp3"></audio>
         </div>
     </nav>
 
@@ -68,61 +72,65 @@
                     <h2 id="score" class="white">0</h2>
                 </div>
             </div>
-            
+
             <div>
                 <h3 id="question"></h3>
             </div>
 
             <div id="answers">
-                    <div class="answer-container">
-                        <p class="answer-text" data-number="1"></p>
-                    </div>
-                    <div class="answer-container">
-                        <p class="answer-text" data-number="2"></p>
-                    </div>
-                    <div class="answer-container">
-                        <p class="answer-text" data-number="3"></p>
-                    </div>
-                    <div class="answer-container">
-                        <p class="answer-text" data-number="4"></p>
-                    </div>
+                <div class="answer-container">
+                    <p class="answer-text" data-number="1"></p>
+                </div>
+                <div class="answer-container">
+                    <p class="answer-text" data-number="2"></p>
+                </div>
+                <div class="answer-container">
+                    <p class="answer-text" data-number="3"></p>
+                </div>
+                <div class="answer-container">
+                    <p class="answer-text" data-number="4"></p>
+                </div>
             </div>
             <div class="controls">
                 <a href="index.html" class="button home"><i class="fas fa-home black"></i></a>
-                <p id="next-question" class="button">Next Question</p> 
+                <p id="next-question" class="button">Next Question</p>
             </div>
         </div>
     </div>
-    
-    <!-- Bootstrap Modal for going to level 2 -->
-<div class="modal fade" id="goToLevel2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-body">
-        <h2>Well done!</h2>
-        <h2>Continue to level 2!</h2>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="goToLevel2()">Next Level</button>
-      </div>
-    </div>
-  </div>
-</div>
 
-<!-- Bootstrap Modal for going to level 3 -->
-<div class="modal fade" id="goToLevel3" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-body">
-        <h2>Good job!</h2>
-        <h2>Continue to level 3!</h2>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="goToLevel3()">Next Level</button>
-      </div>
+    <!-- Bootstrap Modal for going to level 2 -->
+    <div class="modal fade" id="goToLevel2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <h2>Well done!</h2>
+                    <h2>Continue to level 2!</h2>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="goToLevel2()">Next
+                        Level</button>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-</div>
+
+    <!-- Bootstrap Modal for going to level 3 -->
+    <div class="modal fade" id="goToLevel3" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <h2>Good job!</h2>
+                    <h2>Continue to level 3!</h2>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="goToLevel3()">Next
+                        Level</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Bootstrap Modal for End of Game -->
     <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
@@ -138,7 +146,8 @@
                         <label class="black">Enter your name to save your score:</label>
                         <form>
                             <input type="text" name="username" id="username" class="black" placeholder="username">
-                            <button type="submit" class="button" id="saveScoreBtn" onclick="saveHighScore(event)" disabled>
+                            <button type="submit" class="button" id="saveScoreBtn" onclick="saveHighScore(event)"
+                                disabled>
                                 Save
                             </button>
                         </form>

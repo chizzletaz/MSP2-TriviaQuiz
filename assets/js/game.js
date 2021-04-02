@@ -56,7 +56,7 @@ function fetchQuestions(url) {
                 answerOptions.forEach((option, index) => {                       //add answers to formattedQuestions object
                     formattedQuestion["option" + (index + 1)] = option;
                 });
-                
+
                 return formattedQuestion;
             });
             switch (level) {
@@ -228,21 +228,21 @@ function muteSound() {
 }
 
 // credit: my mentor Antonio Rodriguez.
-function checkMusic(){
+function checkMusic() {
     if ((localStorage.getItem("music") === null) || (localStorage.getItem("music") === 'off')) {
         console.log('music is off');
     }
-    else{
+    else {
         console.log('music is on');
         playMusic();
     }
 };
 
-function checkSound(){
+function checkSound() {
     if ((localStorage.getItem("sound") === null) || (localStorage.getItem("sound") === 'off')) {
         console.log('sound is off');
     }
-    else{
+    else {
         console.log('sound is on');
         playSound();
     }

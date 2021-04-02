@@ -6,4 +6,4 @@ const highScores = JSON.parse(localStorage.getItem("highScores")) || [];  //get 
 highScoresTable.innerHTML = highScores.map((score, index) => {
     return `<tr class="high-score"><td class="tac"><span class="rank">${index + 1}</span> </td><td class="tal">${score.name}</td><td class="tar">${score.score}</td></tr>`;
 })
-.join("");
+    .join("");

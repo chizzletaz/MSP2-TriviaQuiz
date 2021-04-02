@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function () {
     $('#gameSelect').modal('show');
 });
 
@@ -37,9 +37,9 @@ function playGame() {
     localStorage.setItem('chosenCategoryName', chosenCategoryName);     //store category and difficulty so they can be recalled later
     localStorage.setItem('chosenDifficultyName', chosenDifficultyName);
     const chosenUrl = `https://opentdb.com/api.php?amount=10&category=${chosenCategoryValue}&difficulty=${chosenDifficultyValue}&type=multiple`
-    
+
     $('#gameSelect').modal('hide');
-    $('#gameSelect').on('hidden.bs.modal', function() {     //code for invoking a function after modal closes.
+    $('#gameSelect').on('hidden.bs.modal', function () {     //code for invoking a function after modal closes.
         fetchQuestions(chosenUrl);                          //Credit: [user4639281](https://stackoverflow.com/questions/39323598/execute-code-after-modal-closes-if-okay-button-clicked)
     });
 };
@@ -57,7 +57,7 @@ function fetchQuestions(url) {
                 const formattedQuestion = {
                     question: loadedQuestion.question                     //question object
                 };
-                
+
                 const answerOptions = [...loadedQuestion.incorrect_answers];    //get the incorrect answers from API
                 formattedQuestion.answer = Math.floor(Math.random() * 3) + 1;   //make the index of the correct answer random
                 answerOptions.splice(formattedQuestion.answer - 1, 0, loadedQuestion.correct_answer);  // add the correct answer to the array of incorrect answers
@@ -98,13 +98,13 @@ function startGame() {
 
 function getNewQuestion() {
     if (availableQuestions.length === 0 || questionCounter >= max_Questions) {
-                        let mostRecentScore = score;
-                        const finalScore = document.getElementById('finalScore');
-                        finalScore.innerText = mostRecentScore;
+        let mostRecentScore = score;
+        const finalScore = document.getElementById('finalScore');
+        finalScore.innerText = mostRecentScore;
 
-                        // go to end modal. credit: https://www.w3schools.com/bootstrap/bootstrap_ref_js_modal.asp
-                        $("#staticBackdrop").modal('show');
-                };
+        // go to end modal. credit: https://www.w3schools.com/bootstrap/bootstrap_ref_js_modal.asp
+        $("#staticBackdrop").modal('show');
+    };
     questionCounter++;
     questionCounterText.innerText = `Question: ${questionCounter}/${max_Questions}`;
     // update the progress bar. credit James Q Quick: https://www.youtube.com/watch?v=4bctmtuZVcM
@@ -170,8 +170,8 @@ answers.forEach(option => {
             choices[numb - 1].parentElement.classList.remove('correct');
 
             selectedChoice.parentElement.classList.remove(classToApply);
-      
-                getNewQuestion();
+
+            getNewQuestion();
 
         }, { once: true });
     });
@@ -216,21 +216,21 @@ function muteSound() {
 }
 
 // credit: my mentor Antonio Rodriguez.
-function checkMusic(){
+function checkMusic() {
     if ((localStorage.getItem("music") === null) || (localStorage.getItem("music") === 'off')) {
         console.log('music is off');
     }
-    else{
+    else {
         console.log('music is on');
         playMusic();
     }
 };
 
-function checkSound(){
+function checkSound() {
     if ((localStorage.getItem("sound") === null) || (localStorage.getItem("sound") === 'off')) {
         console.log('sound is off');
     }
-    else{
+    else {
         console.log('sound is on');
         playSound();
     }

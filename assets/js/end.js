@@ -18,9 +18,9 @@ function saveHighScore(event) {
         score: mostRecentScore,
         name: username.value
     };
-    
+
     highScores.push(score);     //add score to highScores array.
-    highScores.sort((a, b) => b.score -a.score);    //sort the scores from high to low. 
+    highScores.sort((a, b) => b.score - a.score);    //sort the scores from high to low. 
     highScores.splice(5);   //cut off at the highest 5 scores.
 
     localStorage.setItem('highScores', JSON.stringify(highScores));     //stringify because localStorage has to be a string.
