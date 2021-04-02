@@ -53,7 +53,7 @@ Considering that I don’t have enough experience and therefore insight into how
 
 ## **Structure Level**  
 The structure (and later on the wireframes) will already include the extra features. Whether or not they are implemented, will depend on the available time and the difficulty of implementation. 
-During the design and development, I worked out the following ideas.
+During the design and development, I worked out the following ideas:
 
 The overall look is kept the same for consistency:   
 - The colours are kept the same on each page.
@@ -101,11 +101,11 @@ Link to [wireframes](https://github.com/chizzletaz/MSP2-TriviaQuiz/blob/master/a
 
 **Update:**  
 By comparing the wireframes with the end result, you can see the following differences/adjustments:  
-There are only 5 pages.  
-The practice selection page is now a modal.  
-Only the Challenge and the Practice page have the settings for music and sound.  
-The option for toggling between light and dark mode has been omitted and added as a feature left to implement.
-There is no modal pop up after each level.
+- There are only 5 pages.  
+- The practice selection page is now a modal.  
+- Only the Challenge and the Practice page have the settings for music and sound.  
+- The option for toggling between light and dark mode has been omitted and added as a feature left to implement.
+- There is no modal pop up after each level.
 
 
 ## **Service Level**
@@ -118,7 +118,7 @@ The shades used are #eea722 (Marigold), #f25d2d (Portland Orange) and #feeccc (B
 Almond).  
 ![colour palette:](assets/img/colour-palette.png)
 
-Furthermore green (#64bf2c) and red (#f01f0a) are used for the background colour for the right
+Furthermore ![green](https://via.placeholder.com/15/64bf2c/000000?text=+) green(#64bf2c) and ![red](https://via.placeholder.com/15/f03c15/000000?text=+) red(#f01f0a) are used for the background colour for the right
 and wrong answer respectively.
 
 
@@ -166,6 +166,7 @@ N.B! The practice page doesn’t have an end of game modal.
 ## **Features Left to Implement**
 - A timer: the questions have to be answered within a certain time limit, e.g 10 seconds.
 - The score is linked to how fast a user answers the question.
+- Toggle between light and dark mode.
 
 ## **Technologies used**
 
@@ -175,35 +176,22 @@ N.B! The practice page doesn’t have an end of game modal.
 - [Javascript](https://en.wikipedia.org/wiki/JavaScript) for  interactivity
 
 **Frameworks, libraries and programmes used**   
-- [Bootstrap 4.5.3](https://getbootstrap.com/) was used for precoded code-snippets, like navigation bar, modals, carousel and to help with the responsiveness of the website.  
+- [Bootstrap v5.0](https://getbootstrap.com/) was used for precoded code-snippets, like navigation bar, modals, carousel and to help with the responsiveness of the website.
+- [jQuery](https://jquery.com/), a javascript library for easier DOM traversing and manipulation and shortening of javascript.
 - [Balsamiq](https://balsamiq.com/) for making the wireframes.  	
 - [Git](https://git-scm.com/) was used version control.  
 - [GitHub](https://github.com/) for storing and deploying the website.  
 - [GitPod](https://www.gitpod.io/) for coding (IDE) the website.  
-- [Atom](https://atom.io/) for trying out code (IDE), due to limited usage time on gitpod.
-- [Google fonts](https://fonts.google.com/) for the fonts used in the website.  
+- [Visual Studio Code](https://code.visualstudio.com/) for trying out code (IDE), due to limited usage time on gitpod.
+- [Google fonts](https://fonts.google.com/) for the fonts used in the website. 
+- [Open Trivia Database](https://opentdb.com/api_config.php?ref=public-apis), an API that provides questions and answers for this project.
 - [Font Awesome](https://fontawesome.com/) for the icons used on the website.  
 - [Hover.css](https://ianlunn.github.io/Hover/) was used for the hover effect on the navigation-links.  
 - [Chrome Developer Tools](https://developers.google.com/web/tools/chrome-devtools)
 was used to debug and checking/testing the website.
 
 # **Testing**
-In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your user stories from the UX section and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
-Whenever it is feasible, prefer to automate your tests, and if you've done so, provide a brief explanation of your approach, link to the test file(s) and explain how to run them.
-For any scenarios that have not been automated, test the user stories manually and provide as much detail as is relevant. A particularly useful form for describing your testing process is via scenarios, such as:
-Contact form:
-Go to the "Contact Us" page
-Try to submit the empty form and verify that an error message about the required fields appears
-Try to submit the form with an invalid email address and verify that a relevant error message appears
-Try to submit the form with all inputs valid and verify that a success message appears.
-In addition, you should mention in this section how your project looks and works on different browsers and screen sizes.
-You should also mention in this section any interesting bugs or problems you discovered during your testing, even if you haven't addressed them yet.
-If this section grows too long, you may want to split it off into a separate file and link to it from here.
-4. Testing
-	The testing writeup should go through your  site with a fine tooth comb and document clearly everything you have done  to ensure that your site works. Testing is far more than just confirming  that the navigation links work. You also need to consider your sites  responsiveness and browser compatibility. You should go back over the user stories you defined  in the UX section and go through each one, document in detail how your site meets  these pre-identified needs and wants.
-
-Use the HTML an CSS online validators.
-Use Chrome Dev Tools: right click -> inspect -> search/select Lighthouse from the top screen.
+For testing, see [Test.md](Test.md)
 
 ## **Deployment**
 
