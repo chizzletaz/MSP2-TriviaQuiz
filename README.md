@@ -27,6 +27,7 @@ My personal goal is to show the coding skills I learned sofar (HTML, CSS and Jav
 - As a developer I want to give feedback and control to the users before, during and after the game, for a better playing experience.
 - As a developer I want to challenge the user, so they will come back and play some more.
 - As a developer I want my users to be able to play on all devices.
+- As a developer I want my users to have a pleasant game experience.
 
 ## **Scope level**
 Considering that I don’t have enough experience and therefore insight into how much time it costs and how difficult implementing some features are, I’ve decided to plan for a *Minimal Viable Project* first and then add the extra features, depending on how much time is left.  
@@ -48,7 +49,8 @@ Considering that I don’t have enough experience and therefore insight into how
 3. Different player modes -> Add practice mode (the user can choose the category and difficulty level).
 4. Indication of category and difficulty in practice mode.
 5. An option to choose the next question.
-6. Option to switch between dark and light mode.
+6. A modal after each level in challenge mode to notify the user the are going to a higher level.
+7. Option to switch between dark and light mode.
 
 
 ## **Structure Level**  
@@ -132,8 +134,7 @@ This is also a sans-serif typeface, which is geometric, elegant, with a vintage 
 
 # **Features**
 
-## **Existing Features**  
-Feature 1 - allows users X to achieve Y, by having them fill out Z  
+## **Existing Features**    
 **All pages:**  
 Responsiveness - allows users to play the game on different devices.
 
@@ -247,6 +248,9 @@ sounds:
 - Wrong answer: [Gameshow wrong answer fail buzzer bleep](https://www.dreamstime.com/stock-music-sound-effect/wrong-answer.html)
 
 # Acknowledgements
-I received inspiration for this project from X
+I received inspiration for this project from James Quick.  
+I want to thank my mentor Antonio Rodriguez for guiding me through this project and helping me with some javascript solutions.  
+I want to thank Tutor support at CI for clearing some things up about javascript, especially about eventListeners.  
+
 
 

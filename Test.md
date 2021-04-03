@@ -1,49 +1,225 @@
-# **Testing**
+Go to [README file](README.md)
 
-For any scenarios that have not been automated, test the user stories manually and provide as much detail as is relevant.   
-A particularly useful form for describing your testing process is via scenarios, such as:
-Contact form:
-Go to the "Contact Us" page
-Try to submit the empty form and verify that an error message about the required fields appears
-Try to submit the form with an invalid email address and verify that a relevant error message appears
-Try to submit the form with all inputs valid and verify that a success message appears.
+# **Testing**
 
 ## Testing user stories
 ### First time users:
 **1. As a first time user, I want to navigate easily across the website.**  
-1. The user can return to the landing page by either useing the 'Triviata' text on top of the challenge, practice and high scores page or use the button with the home-icon. 
-1. go to any page but the landing page.  
-2. click on ‘Triviata’ at the top of the page and verify that you are directed to the landing page.
-
-Home button:  
-1. Go to any page but the landing page.
-2. Click on the button with the house-icon and verify that you are directed to the landing page.
-
-Start Playing button:  
-1. On the landing page, click on the ‘Start Playing’ button.
-2. Click on the ‘Challenge’ button and verify that you are directed to the challenge game page.
-3. Repeat step 1 and click on the 'Practice' button and verify that you are directed to the practice game page.
+- The user can return to the landing page by either using the 'Triviata' text on top of the challenge, practice and high scores page or use the button with the home-icon. 
+- The user can use buttons to navigate to the game pages or the high scores page.
 
 **2. As a first time user, I want to know what the game is about, so I can play the game with ease.**
-1. On the landing page, click on the button that says ‘How to play’ and verify that a modal pops up with the explanation of the game.
+- On the landing page there is a button named ‘How to play’. When the user clicks this button a modal opens with the explanation of the game.
 
-**Returning users:**  
-
+### Returning users:  
 **1. As a user, I want to play the game on different screen sizes.**  
-1. 
-As a user, I want to have some control over the game, so I can play the game in my own pace.
-As a user, I want to see/hear if my answer is correct or not.
-As a user, I want to see the right answer, when I gave a wrong answer, so I can learn from my mistakes.
-As a user, I want to see how many points I have.
-As a user, I want to save my score and see the high scores, so I challenge myself to play better.
-As a user, I want to choose different game modes, so the game is more versatile.
+- The user can use a mobile device, a tablet or a desktop computer to play the game. See [below](## Testing browser compatibility) for testing.
+
+**2. As a user, I want to have some control over the game, so I can play the game in my own pace.**  
+- During the game the user can use the ‘next question’ button to go to the next question.
+- The user can return to the landing page whenever he/she wants.
+When playing in challenge mode, after each round a modal pops up where the user can choose to go to the next level. 
+
+**3. As a user, I want to know if my answer is correct or not.**  
+- When the user gives an answer, the background colour of the answer turns green or red for a right or wrong answer respectively.
+- When the user gives a right answer, a right-answer sound is played. 
+
+-  When the user gives a wrong answer, a wrong-answer sounds is played.
+
+**4. As a user, I want to see the right answer, when I gave a wrong answer, so I can learn from my mistakes.**
+- When the user gives a wrong answer, the right answer is shown with a green background.
+
+**5. As a user, I want to see how many points I have.**  
+- On the challenge and practice pages the user can see his/her score at the top of the page.
+
+**6. As a user, I want to save my score and see the high scores, so I challenge myself to play better.**  
+- After playing the challenge game, the user can save his/her score. 
+- If the score is high enough, it is added to the high scores page.
+- The user can go to the high scores page directly after playing the game or by clicking the ‘High Scores’ button on the landing page.
+
+**7. As a user, I want to choose different game modes, so the game is more versatile.**  
+- The landing page has a ‘Start playing’ button. When clicked, a modal opens and allows the user to choose between ‘Challenge’ mode or ‘Practice’ mode.
 
 **developer stories:**  
-As a developer I want to give feedback and control to the users before, during and after the game, for a better playing experience.
-As a developer I want to challenge the user, so they will come back and play some more.
-As a developer I want my users to be able to play on all devices.
+**1. As a developer I want to give feedback and control to the users, for a better and pleasant playing experience.**  
+- The challenge page has a Heads Up Display (HUD) at the top of the page where the level, the question the users are on and the score is displayed.
+- The practice page also has the category and the difficulty level displayed in the HUD.
+- On the challenge and practice page users have the option to use background music and sound effects. The users can turn the background music and the sound effects on or off.
+- On the practice page the users can choose the category and difficulty level they want to play.
+- When the users finish the first level on the challenge page, a modal pops up. The users get a stimulation message and the notification they are going to the next level. The users continue to the next level by clicking the ‘Next Level’ button.
+
+**2. As a developer I want to challenge the users, so they will play another game or they will come back another time.**  
+- The challenge page has three levels. The questions increase with difficulty every time a new level is played.
+- The users can save their score and check out if their score made it to the high scores.
+
+**3. As a developer I want my users to be able to play on all devices.**  
+- The game is made responsive, so the users can play on a mobile device, a tablet or a desktop.
 
 ## Manual testing features
+*Navigation to the landing page:*  
+Expected: The logo text and the home button directs the user to the landing page.
+Testing:
+1. Go to any page but the landing page.  
+2. Click on ‘Triviata’-text at the top of the page and verify you are directed to the landing page.
+3. Go to any page but the landing page.
+4. Click on the button with the house-icon and verify you are directed to the landing page.
+
+Result: The logo text and the home button directs the user to the landing page.
+
+*Start playing modal:*  
+Expected: A playing mode can be chosen and the chosen game starts when the user chooses a playing mode.  
+Testing:
+1. On the landing page, click on the ‘Start Playing’ button.
+2. Click on the ‘Challenge’ button. 
+3. Verify that you are directed to the challenge game page and the game starts.
+4. Go back to the landing page and click on the 'Practice' button.
+5. Verify that you are directed to the practice game page and the game starts.
+
+Result: A playing mode can be chosen and the chosen game starts when the user chooses a playing mode.
+
+*Explanation of the game:*  
+Expected: Instructions are displayed when the ‘How to play’ button is clicked.  
+Testing:
+1. Go to the landing page.
+2. Click on the button that says ‘How to play’.  
+
+Result: A modal pops up with the explanation of the game.
+
+*Indication of the right or wrong answer:*  
+Expected: When giving a right answer, the given answer-container turns green and a correct-anwer-sound is played, when the sound is turned on. When giving a wrong answer, the answer-container turns red and an incorrect-answer-sound is played, when the sound is turned on.  
+Testing:
+1. Go to the Challenge page.
+2. Verify that, in the top right corner, the ‘sound off’ icon is shown. 
+3. Choose an answer and click on it.
+4. Verify that the selected answer turns green when it ’s right or turns red when it’s wrong.
+5. Repeat step 4 till you have selected a right and a wrong answer at least once.
+6. Turn the sound effects on by clicking the sound-off-icon.
+7. Repeat steps 3 to 5 and verify that a sound is played when selecting an answer.
+
+Result: When giving a right answer, the given answer-container turns green and a correct-anwer-sound is played, when the sound is turned on. When giving a wrong answer, the answer-container turns red and an incorrect-answer-sound is played, when the sound is turned on.
+
+*Showing the right answer:*  
+Expected: When a wrong answer is given, the right answer is shown in green.  
+Testing:
+1. Go to the challenge page.
+2. Select a wrong answer (or try again until you give a wrong answer).
+3. Verify that the right answer is shown in green.
+4. Go to the Practice page.
+5. Repeat steps 2 and 3.
+
+Result: When a wrong answer is given, the right answer is shown in green.
+
+*Next Question button:*  
+Expected: When clicking the ‘Next Question’ button, a new question with answers is presented.  
+Testing:
+1. Go to the challenge page.
+2. elect an answer.
+3. Click the ‘Next Question’ button and verify that a new question and new answers are given.
+4. Go to the practice page.
+5. Repeat steps 2 and 3.
+
+Result: When clicking the ‘Next Question’ button, a new question with answers is presented.
+
+HUD:
+Expected: During the game, information about the game is displayed: the level the user is on, the question progress and the score.
+Testing:
+Level indicator:
+Go to the challenge page.
+Verify that in the top left corner the level is displayed.
+Play 10 questions and click the ‘Next Level’ button.
+Verify that the level indicator increases to 2. 
+Repeat step 3 and verify the level indicator increases to 3.
+Question progress indicator:
+Go to the challenge page.
+Verify that the question progress indicator says: Question 1 of 10 and the progress bar is filled by 10%.
+Play a question.
+Verify that the question progress indicator increases by 1 and the progress bar is filled 10% extra.
+Repeat steps 2 and 3 for the remaining questions.
+Go to the practice page and repeat steps 2 to 5.
+Score indicator:
+Go the challenge page.
+Verify that the score indicator says 0.
+Play a question.
+Verify that when given a wrong answer the score remains the same and when given a right answer the score increases with 10.
+Repeat steps 3 and 4 for level 2 and verify that the score increases with 20.
+Repeat steps 3 and 4 for level 3 and verify that the score increases with 30.
+Go to the practice page.
+Repeat steps 2, 3 and 4.
+Result: During the game, information about the game is displayed: the level the user is on, the question progress and the score.
+
+*High scores page:*  
+Expected: Navigation to the high scores page works. The high score page shows the 5 best scores with name and rank.  
+Testing:
+1. Click on the ‘High Scores’ button on the landing page and verify you are directed to the high scores page.
+2. Remember if there are names and scores displayed and if so, remember the lowest score.
+3. Go to the challenge page.
+4. Play a full game (three levels).
+5. Verify that a modal pops up, where you can enter you name and save your score.
+6. Enter your name and click ‘Save’.
+7. Compare your score with the lowest score in step 2.
+8. If your score is higher than the lowest score, verify that your score is displayed in the High Scores. 
+9. If there were no scores in the High Scores list. verify that your score is displayed in rank number 1.
+10. Repeat steps 3 to 8 five more times and verify the High Scores page shows the 5 highest scores.
+11. Repeat step 3 to 5.
+12. Click on the ‘High Scores’ button and verify you are directed to the high scores page.
+
+Result: Navigation to the high scores page works. The high score page shows the 5 best scores with name and rank.
+
+
+*Music and sounds settings:*  
+Expected: The background music and sound effects can be turned on and off. The selected choice is stored.  
+Testing:
+1. Go to the challenge page.
+2. Verify the default settings are that music and sound are turned off.
+3. Click the music icon to turn on the music and verify the music is playing.
+4. Return to the landing page and verify the music stops playing.
+5. Go to the challenge page and verify that the music starts playing.
+6. Return to the landing page.
+7. Go to the practice page and verify that the music starts playing.
+8. Click the music icon to turn off the music.
+9. Go to the practice page and verify that the music stays mute.
+10. Go to the challenge page and verify that the music stays mute.
+11. Click on the sound icon to turn on the sound effects.
+12. Select an answer and verify a sound plays.
+13. Return to the landing page.
+14. Go to the challenge page. 
+15. Select an answer and verify a sound plays.
+16. Go to the practice page.
+17. Select an answer and verify a sound plays.
+18. Click on the sound icon to turn off the sound effects.
+19. Go to the practice page, select an answer and verify no sound plays.
+20. Go to the challenge page, select an answer and verify no sound plays.
+
+Result: The background music and sound effects can be turned on and off. The selected choice is stored.
+
+*Save score:*  
+Expected: After playing a game in challenge mode, the score can be saved when a name is entered.  
+Testing:
+1. Go to the challenge page.
+2. Play a full game.
+3. Verify a modal pops up where you can enter your name and save your score.
+4. Without entering a name, click save.
+5. Verify the save button can’t be clicked.
+6. Enter a name and click the save button.
+7. Click the ‘High Scores’ button and verify your score is added to the high scores.
+
+Result: After playing a game in challenge mode, the score can be saved when a name is entered.
+
+*Practice page modal:*  
+Expected: When playing practice mode, a category and difficulty level can be chosen. The chosen category and difficulty level are displayed in the HUD at the top of the page.  
+Testing:
+1. Click on the ‘Start Playing’ button.
+2. Click on ‘Practice’.
+3. Verify a modal pops up where you can choose a category and a difficulty level.
+4. Select a category and click the ‘Start’ button.
+5. Verify the HUB displays the category you chose.
+6. Return to the lading page.
+7. Go to the practice page.
+8. Select a difficulty level and click the ‘Start’ button.
+9. Verify the HUB displays the difficulty level you chose.
+
+Result: When playing practice mode, a category and difficulty level can be chosen. The chosen category and difficulty level are displayed in the HUD at the top of the page.
+
 
 ## Code validation
 HTML and CSS online validators.
