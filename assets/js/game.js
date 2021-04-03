@@ -82,7 +82,7 @@ const correct_PointsL1 = 10;
 const correct_PointsL2 = 20;
 const correct_PointsL3 = 30;
 
-const max_Questions = 3;    //will be 10 when everything functions.
+const max_Questions = 1;    //will be 10 when everything functions.
 
 function startGame() {
     questionCounter = 0;
