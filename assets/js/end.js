@@ -25,4 +25,5 @@ function saveHighScore(event) {
 
     localStorage.setItem('highScores', JSON.stringify(highScores));     //stringify because localStorage has to be a string.
     window.location.assign('index.html');   //go home after saving the score.
+    alert('Your score has been saved!');
 }
