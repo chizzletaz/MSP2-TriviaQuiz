@@ -226,21 +226,35 @@ was used to debug and checking/testing the website.
 For testing results, see [Test.md](Test.md)
 
 ## **Deployment**
+This project was developed using the Gitpod IDE, committed to git and pushed to GitHub using the built-in function of Gitpod.
 
+### Deploying the Github Repository to GitHub pages
 To deploy this website to GitHub, I followed the these steps:
 
-1. Go to GitHub.com and on the left side click on the repository: chizzletaz/Triviata.
-2. In the repository click on the ‘Settings’-tab at the top.
-3. Scroll down to ‘GitHub Pages’.
-4. Under ‘Source’ you see the word ‘None’ with a dropdown menu: select ‘master branch’.
-5. Click ‘Save’, this will give you a URL of the website (see above ‘Source’).
+1. Login to GitHub.com.
+2. Go to repositories on the left side and click on the repository named: chizzletaz/Triviata
+![repository](/assets/img/examples/github-repositories.png)
+3. In the repository click on the ‘Settings’-tab at the top.
+![Settings-tab](assets/img/examples/github-settings.png)
+4. Scroll down to ‘GitHub Pages’ section
+![GitHub Pages section](assets/img/examples/github-pages.png).
+5. Under ‘Source’ you see the word ‘None’ with a dropdown menu: select ‘master’
+![master](assets/img/examples/github-master.png).
+6. Click ‘Save’ and scroll back down to GitHub Pages. 
+Here you will find the URL of the deployed website
+![URL of the deployed website](assets/img/examples/github-url.png).
 
-Local Clone:
-1. Go to GitHub.com and on the left side click on the repository.
-2. Click on the ‘Code’ button.
-3. To clone using HTTPS, copy the link that is displayed.
-4. Open a terminal in your preferred IDE (e.g. Atom)
-5. Use  the ‘git clone’ command and add the link that you copied in step 3.  For Atom: Toggle command palette (cmd-shift-p (macOS) or shift-p (Linux/Windows) and search ‘git clone’: Add the link and 
+Every time commits and pushes are sent to GitHub, the GitHub Pages site is updated shortly after.
+
+For more information about deploying to GitHub Pages check [here](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site)
+
+### Making a Local Clone:
+1. Follow this link to [the GitHub Repository](https://github.com/chizzletaz/Triviata)
+2. Click on the ‘Code’ button 
+![Code button](assets/img/examples/github-clone.png)
+3. To clone using HTTPS, copy the link that is displayed by clicking on the copy icon ![save icon](assets/img/examples/github-copy.png).
+4. Open a terminal in your preferred IDE (e.g. VSCode or Atom)
+5. Use  the ‘git clone’ command and add the link that you copied in step 3.
 6. A clone will be created locally.
 
 For more info on how to clone a repository check [here](https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
@@ -282,7 +296,7 @@ sounds:
 - Wrong answer: [Gameshow wrong answer fail buzzer bleep](https://www.dreamstime.com/stock-music-sound-effect/wrong-answer.html)
 
 # Acknowledgements
-I received inspiration for this project from James Quick.  
+I 've taken a lot of inspiration for this project from the [Youtube tutorial](https://www.youtube.com/watch?v=u98ROZjBWy8&list=PLDlWc9AfQBfZIkdVaOQXi1tizJeNJipEx) of James Q Quick.  
 I want to thank my mentor Antonio Rodriguez for guiding me through this project and helping me with some javascript solutions.  
 I want to thank Tutor support at CI for clearing some things up about javascript, especially about eventListeners.  
 
