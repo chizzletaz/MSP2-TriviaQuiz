@@ -7,7 +7,7 @@ In practice mode, the user plays only one round of 10 questions. The category an
 	* [Strategic level](#strategic-level)
         * [User stories](#user-stories)
         * [Developer stories](#developer-stories)  
-	* [Scope level](scope-level) 
+	* [Scope level](#scope-level) 
         * [Requirements](#requirements) 
 	* [Structure level](#structure-level)
         * [Interaction Design and Information Design](#interaction-design-and-information-design)
@@ -15,15 +15,20 @@ In practice mode, the user plays only one round of 10 questions. The category an
 	* [Skeleton level](#skeleton-level)
         * [Wireframes](#wireframes) 
         * [Update](#update) 
-	* [Surface level](#surface-level)
+	* [Service Level](#service-level)
         * [Colors](#colors)
-        * [Fonts](#fonts)
+        * [Typography](#typography)
 - [Features](#features)
     * [Existing Features](#existing-features)
     * [Features left to implement](#features-left-to-implement)
 - [Technologies Used](#technologies-used)
+    * [Languages](#languages-used)
+    * [Frameworks and libraries](#frameworks-and-libraries-used)
+    * [Tools and Programmes](#tools-and-programmes-used)
 - [Testing](#testing)
 - [Deployment](#deployment)
+    * [Deploying to GitHub Pages](#deploying-to-github-pages)
+    * [Making a Local Clone](#making-a-local-clone)
 - [Credits](#credits)
 
 ***
@@ -47,7 +52,7 @@ My personal goal is to show the coding skills I learned sofar (HTML, CSS and Jav
 - As a user, I want to save my score and see the high scores, so I challenge myself to play better.
 - As a user, I want to choose different game modes, so the game is more versatile.
 
-### **Developer stories:**
+### **Developer stories**
 - As a developer I want to give feedback and control to the users before, during and after the game, for a better playing experience.
 - As a developer I want to challenge the user, so they will come back and play some more.
 - As a developer I want my users to be able to play on all devices.
@@ -130,9 +135,10 @@ will have an overview of the top 5 players with names and scores.
 ## **Skeleton Level**
 As mentioned above, the extra features will also be included in the wireframes. A comparison of the wireframes with the endproduct will show the implemented extra features. Also the implemented extra features will be updated in the ‘Features’ section below.
 
-Link to [wireframes](https://github.com/chizzletaz/MSP2-TriviaQuiz/blob/master/assets/documents/Wireframes%20MSP2.pdf)
+### Wireframes
+Link to the [wireframes](https://github.com/chizzletaz/MSP2-TriviaQuiz/blob/master/assets/documents/Wireframes%20MSP2.pdf)
 
-**Update:**  
+### **Update**  
 By comparing the wireframes with the end result, you can see the following differences/adjustments:  
 - There are only 5 pages.  
 - The practice selection page is now a modal.  
@@ -143,7 +149,7 @@ By comparing the wireframes with the end result, you can see the following diffe
 
 ## **Service Level**
 
-**Colors**  
+### **Colors**  
 The main colours are #aa00fe (Vivid Violet) and #7000c4 (Purple). These are used as a gradient
 for the background colour. 
 For secondary colours I’ve used shades of orange, as this complements the purple colour well.
@@ -155,7 +161,7 @@ Furthermore ![green](https://via.placeholder.com/15/64bf2c/000000?text=+) green(
 and wrong answer respectively.
 
 
-**Fonts**  
+### **Typography**  
 As a main font I've chosen Montserrat. This is a sans-serif typeface, which due to it's clarity and legibility, is good to use for the main text on all screen sizes. 
 I've used this particular font to convey simplicity and minimalism and because I found this font to suit the game best.
 
@@ -202,25 +208,31 @@ N.B! The practice page doesn’t have an end of game modal.
 
 # **Technologies used**
 
-**languages used**  
+### **Languages used**  
 - [HTML5](https://en.wikipedia.org/wiki/HTML) for markup  
 - [CSS](https://en.wikipedia.org/wiki/CSS) for styling
 - [Javascript](https://en.wikipedia.org/wiki/JavaScript) for  interactivity
 
-**Frameworks, libraries and programmes used**   
-- [Bootstrap v5.0](https://getbootstrap.com/) was used for precoded code-snippets, like navigation bar, modals, carousel and to help with the responsiveness of the website.
-- [jQuery](https://jquery.com/), a javascript library for easier DOM traversing and manipulation and shortening of javascript.
-- [Balsamiq](https://balsamiq.com/) for making the wireframes.  	
-- [Git](https://git-scm.com/) was used version control.  
-- [GitHub](https://github.com/) for storing and deploying the website.  
-- [GitPod](https://www.gitpod.io/) for coding (IDE) the website.  
-- [Visual Studio Code](https://code.visualstudio.com/) for trying out code (IDE), due to limited usage time on gitpod.
+### **Frameworks and libraries used**   
+- [Bootstrap v5.0](https://getbootstrap.com/)  for precoded code-snippets, like navigation bar, modals, carousel and to help with the responsiveness of the website.
+- [jQuery](https://jquery.com/), a javascript library for easier DOM traversing and manipulation and shortening of javascript. 	
 - [Google fonts](https://fonts.google.com/) for the fonts used in the website. 
 - [Open Trivia Database](https://opentdb.com/api_config.php?ref=public-apis), an API that provides questions and answers for this project.
 - [Font Awesome](https://fontawesome.com/) for the icons used on the website.  
-- [Hover.css](https://ianlunn.github.io/Hover/) was used for the hover effect on the navigation-links.  
+
+### **Tools and Programmes used**
+- [Balsamiq](https://balsamiq.com/) for making the wireframes. 
 - [Chrome Developer Tools](https://developers.google.com/web/tools/chrome-devtools)
-was used to debug and checking/testing the website.
+ to debug and checking/testing the website.
+- [Git](https://git-scm.com/) for version control.  
+- [GitHub](https://github.com/) for storing and deploying the website.  
+- [GitPod](https://www.gitpod.io/) for coding (IDE) the website.  
+- [Visual Studio Code](https://code.visualstudio.com/) for trying out code (IDE), due to limited usage time on gitpod.
+- [W3C Markup Validation Service](https://validator.w3.org/) to check for markup validity
+- [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) to check the CSS-code.
+- [JSHint](https://jshint.com/) to check the Javascript code.
+- [Favicon]( http://antifavicon.com/) to make the favicon for the website.
+- 
 
 # **Testing**
 For testing results, see [Test.md](Test.md)
@@ -228,7 +240,7 @@ For testing results, see [Test.md](Test.md)
 ## **Deployment**
 This project was developed using the Gitpod IDE, committed to git and pushed to GitHub using the built-in function of Gitpod.
 
-### Deploying the Github Repository to GitHub pages
+### Deploying to GitHub pages
 To deploy this website to GitHub, I followed the these steps:
 
 1. Login to GitHub.com.
@@ -248,7 +260,7 @@ Every time commits and pushes are sent to GitHub, the GitHub Pages site is updat
 
 For more information about deploying to GitHub Pages check [here](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site)
 
-### Making a Local Clone:
+### Making a Local Clone
 1. Follow this link to [the GitHub Repository](https://github.com/chizzletaz/Triviata)
 2. Click on the ‘Code’ button 
 ![Code button](assets/img/examples/github-clone.png)
