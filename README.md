@@ -223,7 +223,7 @@ N.B! The practice page doesn’t have an end of game modal.
 was used to debug and checking/testing the website.
 
 # **Testing**
-For testing, see [Test.md](Test.md)
+For testing results, see [Test.md](Test.md)
 
 ## **Deployment**
 
@@ -258,15 +258,18 @@ For more info on how to clone a repository check [here](https://docs.github.com/
 - How to [prevent pull-to-refresh](https://developers.google.com/web/updates/2017/11/overscroll-behavior) on (most) mobile devices.
 
 ### Content
-The text for section Y was copied from the Wikipedia article Z
+The text for this site was written by me.
 
 ### Media
 Images  
 - [Background image](https://wallpaper-house.com/wallpaper-id-488333.php) of index.html page.  
 - [Trophy image](https://iconarchive.com/show/noto-emoji-activities-icons-by-google/52725-trophy-icon.html)  
+
+Icons
 - Icon music on: Icon by <a href="https://freeicons.io/profile/6156">Reda</a> on <a href="https://freeicons.io">freeicons.io</a>  
 - Icon music off: Icon by <a href="https://freeicons.io/profile/6156">Reda</a> on <a href="https://freeicons.io">freeicons.io</a>
-Icon [settings](https://www.iconfinder.com/icons/4200781/cogwheel_configuration_gear_settings_icon)                        
+Icon [settings](https://www.iconfinder.com/icons/4200781/cogwheel_configuration_gear_settings_icon)  
+- All the other icons come from [Fontawesome](https://fontawesome.com/).                      
 
 Music  
 - [background music](https://www.chosic.com/download-audio/?t=27247)
