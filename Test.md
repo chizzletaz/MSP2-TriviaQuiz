@@ -40,7 +40,7 @@ When playing in challenge mode, after each round a modal pops up where the user 
 **7. As a user, I want to choose different game modes, so the game is more versatile.**  
 - The landing page has a ‘Start playing’ button. When clicked, a modal opens and allows the user to choose between ‘Challenge’ mode or ‘Practice’ mode.
 
-**developer stories:**  
+### **developer stories:**  
 **1. As a developer I want to give feedback and control to the users, for a better and pleasant playing experience.**  
 - The challenge page has a Heads Up Display (HUD) at the top of the page where the level, the question the users are on and the score is displayed.
 - The practice page also has the category and the difficulty level displayed in the HUD.
@@ -56,8 +56,8 @@ When playing in challenge mode, after each round a modal pops up where the user 
 - The game is made responsive, so the users can play on a mobile device, a tablet or a desktop.
 
 ## Manual testing features
-*Navigation to the landing page:*  
-Expected: The logo text and the home button directs the user to the landing page.
+**Navigation to the landing page:**  
+Expected: The logo text and the home button direct the user to the landing page.
 Testing:
 1. Go to any page but the landing page.  
 2. Click on ‘Triviata’-text at the top of the page and verify you are directed to the landing page.
@@ -66,7 +66,7 @@ Testing:
 
 Result: The logo text and the home button directs the user to the landing page.
 
-*Start playing modal:*  
+**Start playing modal:** 
 Expected: A playing mode can be chosen and the chosen game starts when the user chooses a playing mode.  
 Testing:
 1. On the landing page, click on the ‘Start Playing’ button.
@@ -77,7 +77,7 @@ Testing:
 
 Result: A playing mode can be chosen and the chosen game starts when the user chooses a playing mode.
 
-*Explanation of the game:*  
+**Explanation of the game:**  
 Expected: Instructions are displayed when the ‘How to play’ button is clicked.  
 Testing:
 1. Go to the landing page.
@@ -85,7 +85,7 @@ Testing:
 
 Result: A modal pops up with the explanation of the game.
 
-*Indication of the right or wrong answer:*  
+**Indication of the right or wrong answer:**  
 Expected: When giving a right answer, the given answer-container turns green and a correct-anwer-sound is played, when the sound is turned on. When giving a wrong answer, the answer-container turns red and an incorrect-answer-sound is played, when the sound is turned on.  
 Testing:
 1. Go to the Challenge page.
@@ -98,7 +98,7 @@ Testing:
 
 Result: When giving a right answer, the given answer-container turns green and a correct-anwer-sound is played, when the sound is turned on. When giving a wrong answer, the answer-container turns red and an incorrect-answer-sound is played, when the sound is turned on.
 
-*Showing the right answer:*  
+**Showing the right answer:**  
 Expected: When a wrong answer is given, the right answer is shown in green.  
 Testing:
 1. Go to the challenge page.
@@ -109,7 +109,7 @@ Testing:
 
 Result: When a wrong answer is given, the right answer is shown in green.
 
-*Next Question button:*  
+**Next Question button:**  
 Expected: When clicking the ‘Next Question’ button, a new question with answers is presented.  
 Testing:
 1. Go to the challenge page.
@@ -120,34 +120,39 @@ Testing:
 
 Result: When clicking the ‘Next Question’ button, a new question with answers is presented.
 
-HUD:
-Expected: During the game, information about the game is displayed: the level the user is on, the question progress and the score.
+**Level indication:**
+Expected: During the challenge game the level the user is on is displayed and increases with each level.
 Testing:
-Level indicator:
-Go to the challenge page.
-Verify that in the top left corner the level is displayed.
-Play 10 questions and click the ‘Next Level’ button.
-Verify that the level indicator increases to 2. 
-Repeat step 3 and verify the level indicator increases to 3.
-Question progress indicator:
-Go to the challenge page.
-Verify that the question progress indicator says: Question 1 of 10 and the progress bar is filled by 10%.
-Play a question.
-Verify that the question progress indicator increases by 1 and the progress bar is filled 10% extra.
-Repeat steps 2 and 3 for the remaining questions.
-Go to the practice page and repeat steps 2 to 5.
-Score indicator:
-Go the challenge page.
-Verify that the score indicator says 0.
-Play a question.
-Verify that when given a wrong answer the score remains the same and when given a right answer the score increases with 10.
-Repeat steps 3 and 4 for level 2 and verify that the score increases with 20.
-Repeat steps 3 and 4 for level 3 and verify that the score increases with 30.
-Go to the practice page.
-Repeat steps 2, 3 and 4.
-Result: During the game, information about the game is displayed: the level the user is on, the question progress and the score.
+1. Go to the challenge page.
+2. Verify that in the top left corner the level is displayed as 'Level: 1'
+3. Play 10 questions and click the ‘Next Level’ button.
+4. Verify that the level indicator increases to 2. 
+5. Repeat step 3 and verify the level indicator increases to 3.
+Result: During the challenge game the level the user is on is displayed and increases with each level.
 
-*High scores page:*  
+**Question progress indication:**
+Expected: During the game the question the user is on is indicated with text and a progress bar and is update after each question.
+1. Go to the challenge page.
+2. Verify that the question progress indicator says: Question 1 of 10 and the progress bar is filled by 10%.
+3. Play a question.
+4. Verify that the question progress indicator increases by 1 and the progress bar is filled 10% extra.
+5. Repeat steps 2 and 3 for the remaining questions.
+6. Go to the practice page and repeat steps 2 to 5.
+Result: During the game the question the user is on is indicated with text and a progress bar and is update after each question.
+
+**Score indication:**
+Expected: During the game the score is indicated and when a right answer is given, the score increases by 10, 20 or 30 depending on which level is played.
+1. Go the challenge page.
+2. Verify that the score indicator says 0.
+3. Play a question.
+4. Verify that when given a wrong answer the score remains the same and when given a right answer the score increases with 10.
+5. epeat steps 3 and 4 for level 2 and verify that the score increases with 20.
+6. Repeat steps 3 and 4 for level 3 and verify that the score increases with 30.
+7. Go to the practice page.
+8. Repeat steps 2, 3 and 4.
+Result: During the game the score is indicated and when a right answer is given, the score increases by 10, 20 or 30 depending on which level is played.
+
+**High scores page:**  
 Expected: Navigation to the high scores page works. The high score page shows the 5 best scores with name and rank.  
 Testing:
 1. Click on the ‘High Scores’ button on the landing page and verify you are directed to the high scores page.
@@ -166,7 +171,7 @@ Testing:
 Result: Navigation to the high scores page works. The high score page shows the 5 best scores with name and rank.
 
 
-*Music and sounds settings:*  
+**Music and sounds settings:** 
 Expected: The background music and sound effects can be turned on and off. The selected choice is stored.  
 Testing:
 1. Go to the challenge page.
@@ -192,7 +197,7 @@ Testing:
 
 Result: The background music and sound effects can be turned on and off. The selected choice is stored.
 
-*Save score:*  
+**Save score:**  
 Expected: After playing a game in challenge mode, the score can be saved when a name is entered.  
 Testing:
 1. Go to the challenge page.
@@ -205,7 +210,7 @@ Testing:
 
 Result: After playing a game in challenge mode, the score can be saved when a name is entered.
 
-*Practice page modal:*  
+**Practice page modal:**  
 Expected: When playing practice mode, a category and difficulty level can be chosen. The chosen category and difficulty level are displayed in the HUD at the top of the page.  
 Testing:
 1. Click on the ‘Start Playing’ button.
