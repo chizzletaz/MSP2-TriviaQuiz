@@ -239,11 +239,33 @@ Result: When playing practice mode, a category and difficulty level can be chose
 
 ## Code validation
 [W3C Markup Validation Service](https://validator.w3.org/) is used to check for markup validity of the web document.
-Running the code through the validator gives:
+Running the code through the validator gives:  
+### For index.html:
+- No errors or warnings to show.
+![Index.html validation](assets/img/examples/html-index.png)
 
+### For challenge.html:
+- 5 errors for bad value for the attribute 'width' and 'height'.
+![Challenge.html validation1](assets/img/examples/html-challenge-img.png)
+This can be resolved by removing the px from the width and height attribute of img tag. After removing the px, the errors are gone.
+
+- 3 errors for an empty heading.
+![Challenge.html validation2](assets/img/examples/html-challenge-empty-heading.png)  
+The heading is empty because the content is added by Javascript. For this reason the errors are kept in.
+
+### For practice.html:
+- An error for an empty heading.
+![Challenge.html validation2](assets/img/examples/html-practice.png)  
+The heading is empty because the content is added by Javascript. For this reason the errors are kept in. 
+
+### For highscores.html:
+- An error for a bad value for the attribute 'width' and 'height'.
+![highscores.html validation](assets/img/examples/html-highscores.png)
+This can be resolved by changing 'width="20%"' to 'style="width:20%"'.
+After the change no errors or warnings are shown.
+---
 [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) is used to check the CSS of the web document.
 Running the code throught the validator by direct input gives
-
 
 
 ## Testing browser compatibility
