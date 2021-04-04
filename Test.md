@@ -1,6 +1,17 @@
 Go to [README file](README.md)
 
 # **Testing**
+## Table of Contents
+- [Testing User stories](#testing-user-stories)  
+    * [First time users](#first-time-users)
+    * [Returning users](#returning-users)
+    * [Developer stories](#developer-stories)
+- [Manual testing features](#manual-testing-features)
+- [Code Validation](#code-validation)  
+- [Testing across web browsers](#testing-across-web-browsers)  
+- [Testing Responsiveness](#testing-responsiveness)  
+- [Bugs and Problems](#bugs-and-problems)  
+***
 
 ## Testing user stories
 ### First time users:
@@ -40,7 +51,7 @@ When playing in challenge mode, after each round a modal pops up where the user 
 **7. As a user, I want to choose different game modes, so the game is more versatile.**  
 - The landing page has a ‘Start playing’ button. When clicked, a modal opens and allows the user to choose between ‘Challenge’ mode or ‘Practice’ mode.
 
-### **developer stories:**  
+### **Developer stories:**  
 **1. As a developer I want to give feedback and control to the users, for a better and pleasant playing experience.**  
 - The challenge page has a Heads Up Display (HUD) at the top of the page where the level, the question the users are on and the score is displayed.
 - The practice page also has the category and the difficulty level displayed in the HUD.
@@ -227,13 +238,19 @@ Result: When playing practice mode, a category and difficulty level can be chose
 
 
 ## Code validation
-HTML and CSS online validators.
-Use Chrome Dev Tools: right click -> inspect -> search/select Lighthouse from the top screen.
+[W3C Markup Validation Service](https://validator.w3.org/) is used to check for markup validity of the web document.
+Running the code through the validator gives:
+
+[W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) is used to check the CSS of the web document.
+Running the code throught the validator by direct input gives
+
+
 
 ## Testing browser compatibility
+I've tested the site on Safari, Chrome and Mozilla Firefox.
 
 ## Testing responsiveness
-In addition, you should mention in this section how your project looks and works on different browsers and screen sizes.
+To test the responsiveness of the  website, I've used [Chrome Dev Tools](https://github.com/chizzletaz/MilestoneProject1/blob/master/assets/img/extra/responsiveness_chrome_dev_tools.png) and [Responsinator](https://www.responsinator.com/). 
 
 ## Bugs and problems
 
