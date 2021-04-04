@@ -229,7 +229,7 @@ For testing results, see [Test.md](Test.md)
 
 To deploy this website to GitHub, I followed the these steps:
 
-1. Go to GitHub.com and on the left side click on the repository:chizzletaz/MilestoneProject1.
+1. Go to GitHub.com and on the left side click on the repository: chizzletaz/Triviata.
 2. In the repository click on the ‘Settings’-tab at the top.
 3. Scroll down to ‘GitHub Pages’.
 4. Under ‘Source’ you see the word ‘None’ with a dropdown menu: select ‘master branch’.
