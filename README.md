@@ -1,20 +1,44 @@
 # Triviata
-Triviata is a trivia game. When playing the game, the user can choose between challenge mode and practice mode. In challenge mode the user plays three rounds with increasing difficulty and with questions from every category. In practice mode, the user can choose the category and difficulty level.
+Triviata is a fun trivia game. When playing the game, the user can choose between challenge mode and practice mode. In challenge mode the user plays three rounds of 10 questions. Every round the difficulty of the questions increases. The questions presented are given randomly from every category. 
+In practice mode, the user plays only one round of 10 questions. The category and difficulty level can be chosen by the user.
 
 # Table of Content
+- [User Experience (UX)](#user-experience-(ux))  
+	* [Strategic level](#strategic-level)
+        * [User stories](#user-stories)
+        * [Developer stories](#developer-stories)  
+	* [Scope level](scope-level) 
+        * [Requirements](#requirements) 
+	* [Structure level](#structure-level)
+        * [Interaction Design and Information Design](#interaction-design-and-information-design)
+        * [The pages](#the-pages)
+	* [Skeleton level](#skeleton-level)
+        * [Wireframes](#wireframes) 
+        * [Update](#update) 
+	* [Surface level](#surface-level)
+        * [Colors](#colors)
+        * [Fonts](#fonts)
+- [Features](#features)
+    * [Existing Features](#existing-features)
+    * [Features left to implement](#features-left-to-implement)
+- [Technologies Used](#technologies-used)
+- [Testing](#testing)
+- [Deployment](#deployment)
+- [Credits](#credits)
 
-# UX
+***
+# **User Experience (UX)**
 ## **Strategic level**
 This website is for people who want to play a fun or challenging game and at the same time test their knowledge.
 My personal goal is to show the coding skills I learned sofar (HTML, CSS and Javascript).
 
 
-### **user stories**
-*first time users:*  
+### **User stories**
+*First time users:*  
 - As a first time user, I want to navigate easily across the website.  
 - As a first time user, I want to know what the game is about, so I can play the game with ease.  
 
-*returning users:*
+*Returning users:*
 - As a user, I want to play the game on different screen sizes.
 - As a user, I want to have some control over the game, so I can play the game in my own pace.
 - As a user, I want to see/hear if my answer is correct or not.
@@ -23,7 +47,7 @@ My personal goal is to show the coding skills I learned sofar (HTML, CSS and Jav
 - As a user, I want to save my score and see the high scores, so I challenge myself to play better.
 - As a user, I want to choose different game modes, so the game is more versatile.
 
-### **developer stories:**
+### **Developer stories:**
 - As a developer I want to give feedback and control to the users before, during and after the game, for a better playing experience.
 - As a developer I want to challenge the user, so they will come back and play some more.
 - As a developer I want my users to be able to play on all devices.
@@ -31,7 +55,8 @@ My personal goal is to show the coding skills I learned sofar (HTML, CSS and Jav
 
 ## **Scope level**
 Considering that I don’t have enough experience and therefore insight into how much time it costs and how difficult implementing some features are, I’ve decided to plan for a *Minimal Viable Project* first and then add the extra features, depending on how much time is left.  
-**The requirements for the Minimal Viable Project:**
+### **Requirements**   
+**Minimal Viable Project:**
 1. An explanation of the game.
 2. Good navigation indications by use of buttons and icons.
 3. A responsive design.
@@ -54,7 +79,9 @@ Considering that I don’t have enough experience and therefore insight into how
 
 
 ## **Structure Level**  
-The structure (and later on the wireframes) will already include the extra features. Whether or not they are implemented, will depend on the available time and the difficulty of implementation. 
+The structure (and later on the wireframes) will already include the extra features. Whether or not they are implemented, will depend on the available time and the difficulty of implementation.
+
+### **Interaction Design and Information Design**
 During the design and development, I worked out the following ideas:
 
 The overall look is kept the same for consistency:   
@@ -73,9 +100,13 @@ The user is given feedback, in order to enhance a pleasant user experience:
 All the information should be easily visible:
 - Visual aids are used, like icons and complementary colours.
 
-
+### **The pages**
 The website will have 5 pages:  
-A landing page, a practice selection page, a game page for practice mode, a game page for challenge mode and a high scores page.
+- A landing page 
+- A practice selection page 
+- A game page for practice mode 
+- A game page for challenge mode 
+- A high scores page.
 
 Each page will have the same header, with options to change sound, music and light/dark mode.
 Except for the landing page, all pages have a button to go back home to the landing page.
@@ -164,12 +195,12 @@ N.B! The practice page doesn’t have an end of game modal.
 - A button that allows users to return to the landing page.
 
 
-## **Features Left to Implement**
+## **Features left to implement**
 - A timer: the questions have to be answered within a certain time limit, e.g 10 seconds.
 - The score is linked to how fast a user answers the question.
 - Toggle between light and dark mode.
 
-## **Technologies used**
+# **Technologies used**
 
 **languages used**  
 - [HTML5](https://en.wikipedia.org/wiki/HTML) for markup  
