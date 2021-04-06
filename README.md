@@ -2,6 +2,8 @@
 Triviata is a fun trivia game. When playing the game, the user can choose between challenge mode and practice mode. In challenge mode the user plays three rounds of 10 questions. Every round the difficulty of the questions increases. The questions presented are given randomly from every category. 
 In practice mode, the user plays only one round of 10 questions. The category and difficulty level can be chosen by the user.
 
+##### This website is the second 'Milestone Project' for the Full Stack Software Developer Diploma, which is about Interactive Frontend Development. The focus lies on making an interactive frontend website, which responds to the user's interaction. 
+
 # Table of Content
 - [User Experience (UX)](#user-experience-(ux))  
 	* [Strategic level](#strategic-level)
@@ -46,14 +48,14 @@ My personal goal is to show the coding skills I learned sofar (HTML, CSS and Jav
 *Returning users:*
 - As a user, I want to play the game on different screen sizes.
 - As a user, I want to have some control over the game, so I can play the game in my own pace.
-- As a user, I want to see/hear if my answer is correct or not.
+- As a user, I want to know if my answer is correct or not.
 - As a user, I want to see the right answer, when I gave a wrong answer, so I can learn from my mistakes.
 - As a user, I want to see how many points I have.
 - As a user, I want to save my score and see the high scores, so I challenge myself to play better.
 - As a user, I want to choose different game modes, so the game is more versatile.
 
 ### **Developer stories**
-- As a developer I want to give feedback and control to the users before, during and after the game, for a better playing experience.
+- As a developer I want to give feedback and control to the users before, for a better playing experience.
 - As a developer I want to challenge the user, so they will come back and play some more.
 - As a developer I want my users to be able to play on all devices.
 - As a developer I want my users to have a pleasant game experience.
@@ -79,7 +81,7 @@ Considering that I don’t have enough experience and therefore insight into how
 3. Different player modes -> Add practice mode (the user can choose the category and difficulty level).
 4. Indication of category and difficulty in practice mode.
 5. An option to choose the next question.
-6. A modal after each level in challenge mode to notify the user the are going to a higher level.
+6. A modal after each level in challenge mode to notify the users they are going to a higher level.
 7. Option to switch between dark and light mode.
 
 
@@ -113,18 +115,22 @@ The website will have 5 pages:
 - A game page for challenge mode 
 - A high scores page.
 
-Each page will have the same header, with options to change sound, music and light/dark mode.
+Each page will have the same header, with options to change sound, music and light/dark mode.  
 Except for the landing page, all pages have a button to go back home to the landing page.
 
 **The landing page**  
-will have an option to see the explanation of the game. 
-There will be a start button, which opens a link to choose a play mode. There is a link to go to the high scores page. The settings are displayed at the top of the page.
+will have an option to see the explanation of the game.   
+There will be a start button, which opens a link to choose a play mode.   
+There is a link to go to the high scores page.   
+The settings are displayed at the top of the page.
 
 **The practice selection page**  
 has the option for the user to choose the category and difficulty level of the game.
 
 **The game page for challenge mode**  
-will have a question and answer area. There will be an indicator of the score and which question the user is at. After round 1 and round 2 a modal will pop up to indicate that the user is going to another level. When all the three rounds are finished, a modal pops up. In the modal there will be an endscore, the option to save the user’s score, the option to play again and a link to the high scores page. 
+will have a question and answer area.   
+There will be an indicator of the score and which question the user is on.   
+After round 1 and round 2 a modal will pop up to indicate that the user is going to another level.   When all the three rounds are finished, a modal pops up. In the modal there will be an endscore, the option to save the user’s score, the option to play again and a link to the high scores page. 
 
 **The game page for practice mode**  
 will be the same as the challenge mode page, except that there is only 1 round.
@@ -133,7 +139,7 @@ will be the same as the challenge mode page, except that there is only 1 round.
 will have an overview of the top 5 players with names and scores.
 
 ## **Skeleton Level**
-As mentioned above, the extra features will also be included in the wireframes. A comparison of the wireframes with the endproduct will show the implemented extra features. Also the implemented extra features will be updated in the ‘Features’ section below.
+As mentioned above, the extra features will also be included in the wireframes. A comparison of the wireframes with the endproduct will show the implemented extra features (see Update below). Also the implemented extra features will be updated in the ‘Features’ section below.
 
 ### Wireframes
 Link to the [wireframes](https://github.com/chizzletaz/MSP2-TriviaQuiz/blob/master/assets/documents/Wireframes%20MSP2.pdf)
@@ -163,17 +169,17 @@ and wrong answer respectively.
 
 ### **Typography**  
 As a main font I've chosen Montserrat. This is a sans-serif typeface, which due to it's clarity and legibility, is good to use for the main text on all screen sizes. 
-I've used this particular font to convey simplicity and minimalism and because I found this font to suit the game best.
+I've used this particular font to convey simplicity and minimalism and because I found this font suited the game best.
 
-For the title and game info indicators(level, score, etc) I've used the Josefin Sans font.
-This is also a sans-serif typeface, which is geometric, elegant, with a vintage feeling. I liked the contrast between the typefaces. 
+For the titles and game info indicators(level, score, etc) I've used the Josefin Sans font.
+This is also a sans-serif typeface, which is geometric, elegant, with a vintage feeling. I like the contrast between the typefaces. 
 
 
 # **Features**
 
 ## **Existing Features**    
 **All pages:**  
-Responsiveness - allows users to play the game on different devices.
+Responsiveness allows users to play the game on different devices.
 
 **Landing page:**  
 - A button that opens a modal, where users can choose a game mode and start playing.  
@@ -194,7 +200,7 @@ The practice page has the same features as the challenge page plus these extra f
 - A modal that shows on loading, where users can choose the category and difficulty of the questions.
 - An extra indication in the HUD, where users can see what category and difficulty level they are playing.  
 
-N.B! The practice page doesn’t have an end of game modal.
+N.B! The practice page doesn’t have a save option in the end of game modal.
 
 **High scores page:**  
 - A table where users can see the ranking of the top 5 best scores with the corresponding names.
@@ -311,6 +317,6 @@ sounds:
 I 've taken a lot of inspiration for this project from the [Youtube tutorial](https://www.youtube.com/watch?v=u98ROZjBWy8&list=PLDlWc9AfQBfZIkdVaOQXi1tizJeNJipEx) of James Q Quick.  
 I want to thank my mentor Antonio Rodriguez for guiding me through this project and helping me with some javascript solutions.  
 I want to thank Tutor support at CI for clearing some things up about javascript, especially about eventListeners.  
-
+I want to thank my fellow Slack members for anwering my questions and peer-reviewing this project.
 
 
