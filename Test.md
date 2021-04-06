@@ -236,7 +236,7 @@ Testing:
 
 Result: When playing practice mode, a category and difficulty level can be chosen. The chosen category and difficulty level are displayed in the HUD at the top of the page.
 
-
+---
 ## Code validation
 [W3C Markup Validation Service](https://validator.w3.org/) is used to check for markup validity of the web document.
 Running the code through the validator gives:  
@@ -279,7 +279,7 @@ I can't find a reason why this error occurs. Maybe because this property isn't a
 ### For highscore.css:
 - No errors are found.
 ![style.css validation](assets/img/examples/css-highscores.png)
-
+---
 [JSHint](https://jshint.com/) is used to check the validity of the Javascript of the web document.
 Running the code through the validator gives:
 ### For start.js:
@@ -303,12 +303,14 @@ Running the code through the validator gives:
 ---
 ## Testing browser compatibility
 I've tested the site on Safari, Chrome and Mozilla Firefox.
-The testing was done using developer tools in the browser and 
+The testing was done by checking all elements, functionalities and links.
+No issues arose during testing.  
 
+---
 ## Testing responsiveness
-To test the responsiveness of the  website, I've used [Chrome Dev Tools](https://github.com/chizzletaz/MilestoneProject1/blob/master/assets/img/extra/responsiveness_chrome_dev_tools.png) and [Responsinator](https://www.responsinator.com/). 
-The testing was done by adjusting the width of the page from 280px to 1200px.
-This was done one each page.  
+To test the responsiveness of the  website, I've used [Chrome Dev Tools](https://github.com/chizzletaz/MilestoneProject1/blob/master/assets/img/extra/responsiveness_chrome_dev_tools.png) and [Responsinator](https://www.responsinator.com/) to test the site at different screen resolutions.   
+The testing was done on widths down to a screen resolution of 280px. All the elements on each page were checked.  
+The following issues arose:
 - Issue: At a width of 280px, the size of the buttons on the landing page go outside the screen.   
 ![button responsive wrong](assets/img/examples/responsive-button-wrong.png)
 - Fix: reduce the width of the button to 260px.  
