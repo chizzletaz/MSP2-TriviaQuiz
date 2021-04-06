@@ -308,9 +308,15 @@ The testing was done using developer tools in the browser and
 ## Testing responsiveness
 To test the responsiveness of the  website, I've used [Chrome Dev Tools](https://github.com/chizzletaz/MilestoneProject1/blob/master/assets/img/extra/responsiveness_chrome_dev_tools.png) and [Responsinator](https://www.responsinator.com/). 
 The testing was done by adjusting the width of the page from 280px to 1200px.
-This was done one each page.
-
-
+This was done one each page.  
+- Issue: At a width of 280px, the size of the buttons on the landing page go outside the screen.   
+![button responsive wrong](assets/img/examples/responsive-button-wrong.png)
+- Fix: reduce the width of the button to 260px.  
+![button responsive fix](assets/img/examples/responsive-button-fix.png)
+- Issue: At a width of 280px, the text of the 'Next Question' button doesn't wrap nicely and goes outside the button.  
+![next question button responsive wrong](assets/img/examples/responsive-next-question-button-wrong.png)  
+- Fix: reduce the font-size of the text to 18px.  
+![next question button responsive fix](assets/img/examples/responsive-next-question-fix.png)
 
 ## Bugs and problems
 
