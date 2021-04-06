@@ -1,3 +1,4 @@
+/*jshint esversion: 6 */
 window.onload = checkToken();
 
 function getToken() {
@@ -7,10 +8,10 @@ function getToken() {
         })
         .then(newToken => {
             token = newToken.token;
-            object = { token: token, timestamp: new Date().getTime() }   //Credit:dotspencer @ https://gist.github.com/dotspencer/a99e004a31cbd93fa8f7828bece58708
+            object = { token: token, timestamp: new Date().getTime() };   //Credit:dotspencer @ https://gist.github.com/dotspencer/a99e004a31cbd93fa8f7828bece58708
             localStorage.setItem("key", JSON.stringify(object));
         });
-};
+}
 //Credit:dotspencer @ https://gist.github.com/dotspencer/a99e004a31cbd93fa8f7828bece58708
 function checkToken() {
     var object = JSON.parse(localStorage.getItem("key"));
@@ -26,6 +27,6 @@ function checkToken() {
         }
         else {
             console.log("Token is still valid");
-        };
-    };
-};
+        }
+    }
+}

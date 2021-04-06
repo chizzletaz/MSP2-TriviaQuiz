@@ -1,3 +1,4 @@
+/*jshint esversion: 6 */
 const username = document.getElementById("username");
 const saveScoreBtn = document.getElementById("saveScoreBtn");
 
@@ -7,7 +8,7 @@ const highScores = JSON.parse(localStorage.getItem('highScores')) || []; //items
 //credit: James Q Quick: https://www.youtube.com/watch?v=o3MF_JmQxYg
 username.addEventListener('keyup', () => {
     saveScoreBtn.disabled = !username.value;  /* if nothing is typed in the inputbox, the saveScoreBtn is disabled.*/
-})
+});
 
 // Credit: James Q Quick: https://www.youtube.com/watch?v=DFhmNLKwwGw
 function saveHighScore(event) {

@@ -1,3 +1,4 @@
+/*jshint esversion: 6 */
 $(document).ready(function () {
     $('#gameSelect').modal('show');
 });
@@ -36,13 +37,13 @@ function playGame() {
 
     localStorage.setItem('chosenCategoryName', chosenCategoryName);     //store category and difficulty so they can be recalled later
     localStorage.setItem('chosenDifficultyName', chosenDifficultyName);
-    const chosenUrl = `https://opentdb.com/api.php?amount=10&category=${chosenCategoryValue}&difficulty=${chosenDifficultyValue}&type=multiple`
+    const chosenUrl = `https://opentdb.com/api.php?amount=10&category=${chosenCategoryValue}&difficulty=${chosenDifficultyValue}&type=multiple`;
 
     $('#gameSelect').modal('hide');
     $('#gameSelect').on('hidden.bs.modal', function () {     //code for invoking a function after modal closes.
         fetchQuestions(chosenUrl);                          //Credit: [user4639281](https://stackoverflow.com/questions/39323598/execute-code-after-modal-closes-if-okay-button-clicked)
     });
-};
+}
 
 /* get questions from API - credit: James Q Quick: https://www.youtube.com/watch?v=3aKOQn2NPFs */
 function fetchQuestions(url) {
@@ -50,7 +51,7 @@ function fetchQuestions(url) {
     checkSound();
     fetch(url)
         .then(response => {
-            return response.json()
+            return response.json();
         })
         .then(loadedQuestions => {
             questions = loadedQuestions.results.map(loadedQuestion => {   //format the data from the API to the format that we need, an Array of objects.
@@ -73,7 +74,7 @@ function fetchQuestions(url) {
         .catch(error => {
             console.log(error);
         });
-};
+}
 
 // Constants 
 const correct_PointsL1 = 10;
@@ -94,7 +95,7 @@ function startGame() {
     loader.classList.add('hidden');
     game.classList.remove('hidden');
 
-};
+}
 
 function getNewQuestion() {
     if (availableQuestions.length === 0 || questionCounter >= max_Questions) {
@@ -104,7 +105,7 @@ function getNewQuestion() {
 
         // go to end modal. credit: https://www.w3schools.com/bootstrap/bootstrap_ref_js_modal.asp
         $("#staticBackdrop").modal('show');
-    };
+    }
     questionCounter++;
     questionCounterText.innerText = `Question: ${questionCounter}/${max_Questions}`;
     // update the progress bar. credit James Q Quick: https://www.youtube.com/watch?v=4bctmtuZVcM
@@ -118,12 +119,12 @@ function getNewQuestion() {
     //Add answers to the challenge.html page
     answers.forEach(answer => {
         const number = answer.dataset.number;
-        answer.innerHTML = currentQuestion['option' + number]
+        answer.innerHTML = currentQuestion['option' + number];
     });
 
     //remove used question from available questions
     availableQuestions.splice(questionIndex, 1);
-};
+}
 
 /* Add eventlistener to which answer is given */
 answers.forEach(option => {
@@ -137,12 +138,12 @@ answers.forEach(option => {
             if (soundOn.parentElement.classList.value === 'hidden') {
                 let audioCorrect = new Audio('assets/music/correct_answer.mp3');
                 audioCorrect.play();
-            };
+            }
         }
         else if (soundOn.parentElement.classList.value === 'hidden') {
             let audioIncorrect = new Audio('assets/music/incorrect_answer.mp3');
             audioIncorrect.play();
-        };
+        }
 
         if (classToApply === 'correct') {       /* increment Score according to the level the user is playing */
             switch (chosenDifficultyName) {
@@ -156,7 +157,7 @@ answers.forEach(option => {
                     incrementScore(correct_PointsL3);
                     break;
             }
-        };
+        }
 
         //Add green colour to correct answer and red colour to incorrect answer.
         selectedChoice.parentElement.classList.add(classToApply);
@@ -187,7 +188,7 @@ function showRightAnswer() {
     const numb = currentQuestion.answer;
     const choices = document.querySelectorAll('[data-number]');
     choices[numb - 1].parentElement.classList.add('correct');
-};
+}
 
 function playMusic() {
     music.play();
@@ -224,7 +225,7 @@ function checkMusic() {
         console.log('music is on');
         playMusic();
     }
-};
+}
 
 function checkSound() {
     if ((localStorage.getItem("sound") === null) || (localStorage.getItem("sound") === 'off')) {
@@ -234,5 +235,5 @@ function checkSound() {
         console.log('sound is on');
         playSound();
     }
-};
+}
 
