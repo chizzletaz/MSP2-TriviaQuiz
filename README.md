@@ -56,7 +56,7 @@ My personal goal is to show the coding skills I learned sofar (HTML, CSS and Jav
 
 ### **Developer stories**
 - As a developer I want to give feedback and control to the users before, for a better playing experience.
-- As a developer I want to challenge the user, so they will come back and play some more.
+- As a developer I want to challenge the user, so they will play another game or they will come back another time.
 - As a developer I want my users to be able to play on all devices.
 - As a developer I want my users to have a pleasant game experience.
 

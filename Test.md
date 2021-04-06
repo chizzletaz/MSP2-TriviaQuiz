@@ -1,4 +1,4 @@
-Go to [README file](README.md)
+Go back to [README file](README.md)
 
 # **Testing**
 ## Table of Contents
@@ -24,7 +24,7 @@ Go to [README file](README.md)
 
 ### Returning users:  
 **1. As a user, I want to play the game on different screen sizes.**  
-- The user can use a mobile device, a tablet or a desktop computer to play the game. See [below](## Testing browser compatibility) for testing.
+- The user can use a mobile device, a tablet or a desktop computer to play the game. See [below](#testing-browser-compatibility) for testing.
 
 **2. As a user, I want to have some control over the game, so I can play the game in my own pace.**  
 - During the game the user can use the ‘next question’ button to go to the next question.
@@ -33,9 +33,8 @@ When playing in challenge mode, after each round a modal pops up where the user 
 
 **3. As a user, I want to know if my answer is correct or not.**  
 - When the user gives an answer, the background colour of the answer turns green or red for a right or wrong answer respectively.
-- When the user gives a right answer, a right-answer sound is played. 
-
--  When the user gives a wrong answer, a wrong-answer sounds is played.
+- When the user gives a right answer, a right-answer sound is played, when sound is on. 
+- When the user gives a wrong answer, a wrong-answer sounds is played, when sound is on.
 
 **4. As a user, I want to see the right answer, when I gave a wrong answer, so I can learn from my mistakes.**
 - When the user gives a wrong answer, the right answer is shown with a green background.
@@ -57,7 +56,7 @@ When playing in challenge mode, after each round a modal pops up where the user 
 - The practice page also has the category and the difficulty level displayed in the HUD.
 - On the challenge and practice page users have the option to use background music and sound effects. The users can turn the background music and the sound effects on or off.
 - On the practice page the users can choose the category and difficulty level they want to play.
-- When the users finish the first level on the challenge page, a modal pops up. The users get a stimulation message and the notification they are going to the next level. The users continue to the next level by clicking the ‘Next Level’ button.
+- When the users finish the first level on the challenge page, a modal pops up. The users get an encouraging message and a notification they are going to the next level. The users continue to the next level by clicking the ‘Next Level’ button.
 
 **2. As a developer I want to challenge the users, so they will play another game or they will come back another time.**  
 - The challenge page has three levels. The questions increase with difficulty every time a new level is played.
@@ -68,23 +67,23 @@ When playing in challenge mode, after each round a modal pops up where the user 
 
 ## Manual testing features
 **Navigation to the landing page:**  
-Expected: The logo text and the home button direct the user to the landing page.
+Expected: The logo text and the home button direct the user to the landing page.  
 Testing:
 1. Go to any page but the landing page.  
 2. Click on ‘Triviata’-text at the top of the page and verify you are directed to the landing page.
 3. Go to any page but the landing page.
 4. Click on the button with the house-icon and verify you are directed to the landing page.
 
-Result: The logo text and the home button directs the user to the landing page.
+Result: The logo text and the home button direct the user to the landing page.
 
-**Start playing modal:** 
+**Start playing modal:**   
 Expected: A playing mode can be chosen and the chosen game starts when the user chooses a playing mode.  
 Testing:
 1. On the landing page, click on the ‘Start Playing’ button.
 2. Click on the ‘Challenge’ button. 
-3. Verify that you are directed to the challenge game page and the game starts.
+3. Verify that you are directed to the challenge game page and that the game starts.
 4. Go back to the landing page and click on the 'Practice' button.
-5. Verify that you are directed to the practice game page and the game starts.
+5. Verify that you are directed to the practice game page and that the game starts.
 
 Result: A playing mode can be chosen and the chosen game starts when the user chooses a playing mode.
 
@@ -92,12 +91,13 @@ Result: A playing mode can be chosen and the chosen game starts when the user ch
 Expected: Instructions are displayed when the ‘How to play’ button is clicked.  
 Testing:
 1. Go to the landing page.
-2. Click on the button that says ‘How to play’.  
+2. Click on the button that says ‘How to play’.
+3. Verify that a modal pops up with a text explaining how to play the game.  
 
-Result: A modal pops up with the explanation of the game.
+Result: Instructions are displayed when the ‘How to play’ button is clicked.
 
 **Indication of the right or wrong answer:**  
-Expected: When giving a right answer, the given answer-container turns green and a correct-anwer-sound is played, when the sound is turned on. When giving a wrong answer, the answer-container turns red and an incorrect-answer-sound is played, when the sound is turned on.  
+Expected: When giving a right answer, the given answer-container turns green and a correct-anwer-sound is played (if the sound is turned on). When giving a wrong answer, the answer-container turns red and an incorrect-answer-sound is played (if the sound is turned on).  
 Testing:
 1. Go to the Challenge page.
 2. Verify that, in the top right corner, the ‘sound off’ icon is shown. 
@@ -107,7 +107,7 @@ Testing:
 6. Turn the sound effects on by clicking the sound-off-icon.
 7. Repeat steps 3 to 5 and verify that a sound is played when selecting an answer.
 
-Result: When giving a right answer, the given answer-container turns green and a correct-anwer-sound is played, when the sound is turned on. When giving a wrong answer, the answer-container turns red and an incorrect-answer-sound is played, when the sound is turned on.
+Result: When giving a right answer, the given answer-container turns green and a correct-anwer-sound is played (if the sound is turned on). When giving a wrong answer, the answer-container turns red and an incorrect-answer-sound is played (if the sound is turned on).
 
 **Showing the right answer:**  
 Expected: When a wrong answer is given, the right answer is shown in green.  
@@ -124,57 +124,58 @@ Result: When a wrong answer is given, the right answer is shown in green.
 Expected: When clicking the ‘Next Question’ button, a new question with answers is presented.  
 Testing:
 1. Go to the challenge page.
-2. elect an answer.
+2. Select an answer.
 3. Click the ‘Next Question’ button and verify that a new question and new answers are given.
 4. Go to the practice page.
 5. Repeat steps 2 and 3.
 
 Result: When clicking the ‘Next Question’ button, a new question with answers is presented.
 
-**Level indication:**
+**Level indication:**  
 Expected: During the challenge game the level the user is on is displayed and increases with each level.
 Testing:
 1. Go to the challenge page.
 2. Verify that in the top left corner the level is displayed as 'Level: 1'
 3. Play 10 questions and click the ‘Next Level’ button.
 4. Verify that the level indicator increases to 2. 
-5. Repeat step 3 and verify the level indicator increases to 3.
+5. Repeat step 3 and verify the level indicator increases to 3.  
 Result: During the challenge game the level the user is on is displayed and increases with each level.
 
-**Question progress indication:**
+**Question progress indication:**  
 Expected: During the game the question the user is on is indicated with text and a progress bar and is update after each question.
 1. Go to the challenge page.
-2. Verify that the question progress indicator says: Question 1 of 10 and the progress bar is filled by 10%.
+2. Verify that the question progress indicator says 'Question 1 of 10' and the progress bar is filled by 10%.
 3. Play a question.
 4. Verify that the question progress indicator increases by 1 and the progress bar is filled 10% extra.
 5. Repeat steps 2 and 3 for the remaining questions.
-6. Go to the practice page and repeat steps 2 to 5.
+6. Go to the practice page and repeat steps 2 to 5.  
 Result: During the game the question the user is on is indicated with text and a progress bar and is update after each question.
 
-**Score indication:**
-Expected: During the game the score is indicated and when a right answer is given, the score increases by 10, 20 or 30 depending on which level is played.
+**Score indication:**   
+Expected: During the game the score is indicated and when a right answer is given, the score increases by 10, 20 or 30 depending on which level is being played.
 1. Go the challenge page.
 2. Verify that the score indicator says 0.
 3. Play a question.
 4. Verify that when given a wrong answer the score remains the same and when given a right answer the score increases with 10.
-5. epeat steps 3 and 4 for level 2 and verify that the score increases with 20.
+5. Repeat steps 3 and 4 for level 2 and verify that the score increases with 20.
 6. Repeat steps 3 and 4 for level 3 and verify that the score increases with 30.
 7. Go to the practice page.
 8. Repeat steps 2, 3 and 4.
+
 Result: During the game the score is indicated and when a right answer is given, the score increases by 10, 20 or 30 depending on which level is played.
 
 **High scores page:**  
 Expected: Navigation to the high scores page works. The high score page shows the 5 best scores with name and rank.  
 Testing:
 1. Click on the ‘High Scores’ button on the landing page and verify you are directed to the high scores page.
-2. Remember if there are names and scores displayed and if so, remember the lowest score.
+2. Note if there are names and scores displayed and if so, remember the lowest score.
 3. Go to the challenge page.
 4. Play a full game (three levels).
 5. Verify that a modal pops up, where you can enter you name and save your score.
 6. Enter your name and click ‘Save’.
 7. Compare your score with the lowest score in step 2.
 8. If your score is higher than the lowest score, verify that your score is displayed in the High Scores. 
-9. If there were no scores in the High Scores list. verify that your score is displayed in rank number 1.
+9. If there were no scores in the High Scores list, verify that your score is displayed at rank number 1.
 10. Repeat steps 3 to 8 five more times and verify the High Scores page shows the 5 highest scores.
 11. Repeat step 3 to 5.
 12. Click on the ‘High Scores’ button and verify you are directed to the high scores page.
@@ -182,7 +183,7 @@ Testing:
 Result: Navigation to the high scores page works. The high score page shows the 5 best scores with name and rank.
 
 
-**Music and sounds settings:** 
+**Music and sounds settings:**   
 Expected: The background music and sound effects can be turned on and off. The selected choice is stored.  
 Testing:
 1. Go to the challenge page.
@@ -249,12 +250,12 @@ Running the code through the validator gives:
 ![Challenge.html validation1](assets/img/examples/html-challenge-img.png)
 This can be resolved by removing the px from the width and height attribute of img tag. After removing the px, the errors are gone.
 
-- 3 errors for an empty heading.
+- 3 errors for an empty heading.  
 ![Challenge.html validation2](assets/img/examples/html-challenge-empty-heading.png)  
 The heading is empty because the content is added by Javascript. For this reason the errors are kept in.
 
 ### For practice.html:
-- An error for an empty heading.
+- An error for an empty heading.  
 ![Challenge.html validation2](assets/img/examples/html-practice.png)  
 The heading is empty because the content is added by Javascript. For this reason the errors are kept in. 
 
@@ -267,23 +268,23 @@ After the change no errors or warnings are shown.
 [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) is used to check the CSS of the web document.
 Running the code through the validator gives:
 ### For style.css:
-- No errors are found.
+- No errors are found.  
 ![style.css validation](assets/img/examples/css-style.png)
 ### For game.css:
 - An error that states that the property 'overscroll-behaviour-y' doesn't exist: 'contain'.
-![game.css validation](assets/img/examples/css-game.png)
+![game.css validation](assets/img/examples/css-game.png)  
 I can't find a reason why this error occurs. Maybe because this property isn't a standard CSS yet.
 ### For practice.css:
-- No errors are found.
+- No errors are found.  
 ![style.css validation](assets/img/examples/css-practice.png)
 ### For highscore.css:
-- No errors are found.
+- No errors are found.  
 ![style.css validation](assets/img/examples/css-highscores.png)
 ---
-[JSHint](https://jshint.com/) is used to check the validity of the Javascript of the web document.
+[JSHint](https://jshint.com/) is used to check the validity of the Javascript of the web document.    
 Running the code through the validator gives:
 ### For start.js:
-- No errors, just some warnings about semi-colons and an error 'Expected an assignment or function call and instead saw an expression.'
+- No errors, just some warnings about semi-colons and an error 'Expected an assignment or function call and instead saw an expression.'  
 ![start.js validation](assets/img/examples/js-start.png)
 
 ### For game.js:
@@ -315,7 +316,7 @@ The following issues arose:
 ![button responsive wrong](assets/img/examples/responsive-button-wrong.png)
 - Fix: reduce the width of the button to 260px.  
 ![button responsive fix](assets/img/examples/responsive-button-fix.png)
-- Issue: At a width of 280px, the text of the 'Next Question' button doesn't wrap nicely and goes outside the button.  
+- Issue: At a width of 280px, the text of the 'Next Question' button doesn't wrap nicely and almost goes outside the button.  
 ![next question button responsive wrong](assets/img/examples/responsive-next-question-button-wrong.png)  
 - Fix: reduce the font-size of the text to 18px.  
 ![next question button responsive fix](assets/img/examples/responsive-next-question-fix.png)
@@ -325,19 +326,20 @@ The following issues arose:
 SOLVED
 Making a function: when clicking 'next question'-button, the green and red backgrounds of the answers 
 are removed and a new question is loaded.
-
-function goToNextQuestion() {
-    nextQuestion.addEventListener('click', () => {
-        let answers = document.getElementsByClassName('answer-container')
-        answers.forEach(answer => {
-            answer.classList.remove('correct');
-            answer.classList.remove('incorrect');
-        });
-        getNewQuestion();
-    }); 
-}
+```
+function goToNextQuestion() {  
+    nextQuestion.addEventListener('click', () => {  
+        let answers = document.getElementsByClassName('answer-container')  
+        answers.forEach(answer => {  
+            answer.classList.remove('correct');  
+            answer.classList.remove('incorrect');  
+        });  
+        getNewQuestion();  
+    });  
+}  
+```
 Doesn't work.
-
+```
 function goToNextQuestion() {
     nextQuestion.addEventListener('click', () => {
         const numb = currentQuestion.answer;
@@ -346,10 +348,11 @@ function goToNextQuestion() {
         getNewQuestion();
     }); 
 }
-
+```
 function is working partially. The red background (incorrect answer) isn't removed.
 
 putting the eventListener inside the eventListener to which answer is given:
+```
 nextQuestion.addEventListener('click', () => {
             const numb = currentQuestion.answer;
             const choices = document.querySelectorAll('[data-number]');
@@ -359,33 +362,32 @@ nextQuestion.addEventListener('click', () => {
             
             getNewQuestion();
 });
-
-This works, but the end-modal is shown 1 question too soon (after 2 instead of 3 questions).
-When using console.log(availableQuestions.length), after question 1 the number is 9, after question 2, 
-the number is 8 and goes directly to 7. 
-After consulting with Tutor assistance, the issue seemed that after each question I was adding another
-eventListener. 
+```
+This works, but the end-modal is shown 1 question too soon (after 2 instead of 3 questions).  
+When using `console.log(availableQuestions.length)`, after question 1 the number is 9, after question 2, the number is 8 and goes directly to 7.   
+After consulting with Tutor assistance, the issue seemed that after each question I was adding another eventListener. 
 The solution was to remove the eventListener after use. 
+
 According to [Developer.Mozilla](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener)
 you can add {once: true}, this indicates that the listener should be invoked at most once after being added. 
 If true, the listener would be automatically removed when invoked.
 
 ---
 SOLVED
-The user can turn on/off the sound and/or background music. The functions for this work, however,
-when a user changes the default setting and refreshes the page, the user's changes don't stay and the default settings return.
-Fix: with help of my tutor Antonio Rodriguez, we fixed the problem. 
-By adding functions that check whether the music and sound is on or off and adding these functions to the fetchQuestion function.
+The user can turn on/off the sound and/or background music. The functions for this work, however, when a user changes the default setting and refreshes the page, the user's changes don't stay and the default settings return.  
+Fix: with help of my tutor Antonio Rodriguez, we fixed the problem.   
+By adding the functions `checkSound()` and `checkMusic()` that check whether the music and sound is on or off and adding these functions to the fetchQuestion function. 
+
 The default setting is that music and sound are off. If the user changes the setings, the setting is set to localStorage.
 Upon loading the challenge or practice page, the checkMusic and checkSound function check the settings and change the default
 setting if neccesary.
 
 ---
 SOLVED
-I made three levels of the game. After the number of questions for level 1, the game automatically goes to level 2 (and from level 2
-to level 3). 
-However at the end the questionindicator adds another question and the progressBar goes [outside](/workspace/MSP2-TriviaQuiz/assets/documents/questionindicator-flaw.png) it's container.
-Fix: I've put the condition to go the next level (if (availableQuestions.length === 0 || questionCounter >= max_Questions) {....) before the function getNewQuestion 
+I made three levels of the game. After the number of questions for level 1, the game automatically goes to level 2 (and from level 2 to level 3).   
+However at the end the questionindicator adds another question and the progressBar goes outside it's container.
+![outside](assets/documents/questionindicator-flaw.png)  
+Fix: I've put the condition to go the next level `(if (availableQuestions.length === 0 || questionCounter >= max_Questions) {....)` before the function getNewQuestion 
 (inside the nextQuestion-eventListener), in stead of in the function getNewQuestion itself. This seems to have solved the problem.
 
 ---
@@ -395,17 +397,19 @@ To do this I made a function that gets a Session Token from the API and adds it 
 In order to get the Session Token before fetching the questions, the window.onload should load the getToken function first.
 So the fetchQuestions function is put inside the getToken function.
 
-This works, but now every time a new level is reached, a new session token is retrieved. This could still give the same questions,
-because the condition that the same question is not used is valid per token.
+This works, but now every time a new level is reached, a new session token is retrieved. This could still give the same questions, because the condition that the same question is not used is only valid per token.
 
 Idea: Get the token on loading the index.html page and set to localStorage.
-This works. However, everytime the user goes to the home page, a new Session Token is retrieved.
+This works.   
+However, everytime the user goes to the home page, a new Session Token is retrieved.
 
-According to the API documentation, a session token is deleted (i.e. unusable) after 6 hours.
+According to the API documentation, a session token is deleted (i.e. unusable) after 6 hours.  
 IDEA:Check the time stamp of the token: if it is older than 6 hours; get a new token. 
-Else use the token in localStorage. 
-Using and modifying the localStorage example with timestamp [Credit:dotspencer](https://gist.github.com/dotspencer/a99e004a31cbd93fa8f7828bece58708),
-I added the a timestamp to the token and saved it as an object to localStorage.
-In the game.js the token is retrieved to be used in the game.
-Issue: the first time there is no key in localStorage, this gives an error. So I made a function for checking the token and invoking this function on
+Else use the token in localStorage.   
+Using and modifying the localStorage example with timestamp [Credit:dotspencer](https://gist.github.com/dotspencer/a99e004a31cbd93fa8f7828bece58708).  
+I've added a timestamp to the token and saved it as an object to localStorage.  
+In the game.js the token is retrieved to be used in the game.  
+
+Issue: the first time there is no key in localStorage, this gives an error.   
+Fix: I created a function that check wether there is a token and invoking this function on
 window.onload.
