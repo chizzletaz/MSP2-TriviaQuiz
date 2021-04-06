@@ -265,14 +265,52 @@ This can be resolved by changing 'width="20%"' to 'style="width:20%"'.
 After the change no errors or warnings are shown.
 ---
 [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) is used to check the CSS of the web document.
-Running the code throught the validator by direct input gives
+Running the code through the validator gives:
+### For style.css:
+- No errors are found.
+![style.css validation](assets/img/examples/css-style.png)
+### For game.css:
+- An error that states that the property 'overscroll-behaviour-y' doesn't exist: 'contain'.
+![game.css validation](assets/img/examples/css-game.png)
+I can't find a reason why this error occurs. Maybe because this property isn't a standard CSS yet.
+### For practice.css:
+- No errors are found.
+![style.css validation](assets/img/examples/css-practice.png)
+### For highscore.css:
+- No errors are found.
+![style.css validation](assets/img/examples/css-highscores.png)
 
+[JSHint](https://jshint.com/) is used to check the validity of the Javascript of the web document.
+Running the code through the validator gives:
+### For start.js:
+- No errors, just some warnings about semi-colons and an error 'Expected an assignment or function call and instead saw an expression.'
+![start.js validation](assets/img/examples/js-start.png)
 
+### For game.js:
+- No errors, just some warnings about semi-colons.  
+![start.js validation](assets/img/examples/js-game.png)
+
+### For practice.js:
+- No errors, just some warnings about semi-colons.  
+![start.js validation](assets/img/examples/js-practice.png)
+
+### For end.js:
+- No errors, just some warnings about semi-colons.  
+![start.js validation](assets/img/examples/js-end.png)
+
+### For highscores.js:
+- No errors or warning are shown.
+---
 ## Testing browser compatibility
 I've tested the site on Safari, Chrome and Mozilla Firefox.
+The testing was done using developer tools in the browser and 
 
 ## Testing responsiveness
 To test the responsiveness of the  website, I've used [Chrome Dev Tools](https://github.com/chizzletaz/MilestoneProject1/blob/master/assets/img/extra/responsiveness_chrome_dev_tools.png) and [Responsinator](https://www.responsinator.com/). 
+The testing was done by adjusting the width of the page from 280px to 1200px.
+This was done one each page.
+
+
 
 ## Bugs and problems
 
