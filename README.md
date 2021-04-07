@@ -1,8 +1,11 @@
 # Triviata
-Triviata is a fun trivia game. When playing the game, the user can choose between challenge mode and practice mode. In challenge mode the user plays three rounds of 10 questions. Every round the difficulty of the questions increases. The questions presented are given randomly from every category. 
+Triviata is a fun trivia game. When playing the game, the user can choose between challenge mode and practice mode. In challenge mode the user plays three rounds of 10 questions.  
+Every round the difficulty of the questions increases. The questions presented are given randomly from every category.   
 In practice mode, the user plays only one round of 10 questions. The category and difficulty level can be chosen by the user.
 
 ##### This website is the second 'Milestone Project' for the Full Stack Software Developer Diploma, which is about Interactive Frontend Development. The focus lies on making an interactive frontend website, which responds to the user's interaction. 
+
+### A live version can be viewed [here](https://chizzletaz.github.io/Triviata/)
 
 # Table of Content
 - [User Experience (UX)](#user-experience-(ux))  
@@ -139,7 +142,7 @@ will be the same as the challenge mode page, except that there is only 1 round.
 will have an overview of the top 5 players with names and scores.
 
 ## **Skeleton Level**
-As mentioned above, the extra features will also be included in the wireframes. A comparison of the wireframes with the endproduct will show the implemented extra features (see Update below). Also the implemented extra features will be updated in the ‘Features’ section below.
+As mentioned above, the extra features will also be included in the wireframes. A comparison of the wireframes with the endproduct will show the implemented extra features. Also the implemented extra features will be updated in the ‘Features’ section below.
 
 ### Wireframes
 Link to the [wireframes](https://github.com/chizzletaz/MSP2-TriviaQuiz/blob/master/assets/documents/Wireframes%20MSP2.pdf)
@@ -150,7 +153,6 @@ By comparing the wireframes with the end result, you can see the following diffe
 - The practice selection page is now a modal.  
 - Only the Challenge and the Practice page have the settings for music and sound.  
 - The option for toggling between light and dark mode has been omitted and added as a feature left to implement.
-- There is no modal pop up after each level.
 
 
 ## **Service Level**
