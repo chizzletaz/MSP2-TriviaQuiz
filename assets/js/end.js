@@ -4,7 +4,7 @@ const saveScoreBtn = document.getElementById("saveScoreBtn");
 
 const highScores = JSON.parse(localStorage.getItem('highScores')) || []; //items in localStorage are strings -> user JSON.parse() credit: James Q Quick: https://www.youtube.com/watch?v=DFhmNLKwwGw
 
-//remove disables from Save-button when user types in name.
+//remove 'disabled' from Save-button when the user types in a name.
 //credit: James Q Quick: https://www.youtube.com/watch?v=o3MF_JmQxYg
 username.addEventListener('keyup', () => {
     saveScoreBtn.disabled = !username.value;  /* if nothing is typed in the inputbox, the saveScoreBtn is disabled.*/
