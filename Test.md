@@ -273,7 +273,7 @@ Running the code through the validator gives:
 ### For game.css:
 - An error that states that the property 'overscroll-behaviour-y' doesn't exist: 'contain'.
 ![game.css validation](assets/img/examples/css-game.png)  
-I can't find a reason why this error occurs. Maybe because this property isn't a standard CSS yet.
+I can't find a reason why W3C gives this error. According to [Mozilla Docs](https://developer.mozilla.org/en-US/docs/Web/CSS/overscroll-behavior), it is a valid property. Maybe this property hasn't been adopted by W3C yet.
 ### For practice.css:
 - No errors are found.  
 ![style.css validation](assets/img/examples/css-practice.png)

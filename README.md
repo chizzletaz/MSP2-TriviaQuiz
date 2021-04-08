@@ -1,4 +1,6 @@
 # Triviata
+![Preview image](assets/img/examples/example1.png)
+
 Triviata is a fun trivia game. When playing the game, the user can choose between challenge mode and practice mode. In challenge mode the user plays three rounds of 10 questions.  
 Every round the difficulty of the questions increases. The questions presented are given randomly from every category.   
 In practice mode, the user plays only one round of 10 questions. The category and difficulty level can be chosen by the user.
@@ -267,6 +269,14 @@ Here you will find the URL of the deployed website
 Every time commits and pushes are sent to GitHub, the GitHub Pages site is updated shortly after.
 
 For more information about deploying to GitHub Pages check [here](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site)
+
+### Forking the GitHub Repository
+A fork is a copy of a repository. Forking a repository allows you to freely experiment with changes without affecting the original project.
+Do achieve this follow these steps:
+1. Login to GitHub.com and follow this link to [the GitHub Repository](https://github.com/chizzletaz/Triviata).
+2. At the top right of the page, click on the fork button.
+![fork button](assets/img/examples/forking.png)
+3. You now have a copy of the repository in your GitHub account.
 
 ### Making a Local Clone
 1. Follow this link to [the GitHub Repository](https://github.com/chizzletaz/Triviata)
