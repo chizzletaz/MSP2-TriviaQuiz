@@ -44,6 +44,9 @@ In practice mode, the user plays only one round of 10 questions. The category an
 This website is for people who want to play a fun or challenging game and at the same time test their knowledge.
 My personal goal is to show the coding skills I learned sofar (HTML, CSS and Javascript).
 
+I've based this project on the [youtube tutorial](https://www.youtube.com/watch?v=u98ROZjBWy8&list=PLDlWc9AfQBfZIkdVaOQXi1tizJeNJipEx) of James Q Quick.
+This was especially helpfull in terms of understanding how to use and integrate Javascript in my project.
+From there I added more features and changed the layout and design to make it more my own project.
 
 ### **User stories**
 *First time users:*  
@@ -67,6 +70,7 @@ My personal goal is to show the coding skills I learned sofar (HTML, CSS and Jav
 
 ## **Scope level**
 Considering that I don’t have enough experience and therefore insight into how much time it costs and how difficult implementing some features are, I’ve decided to plan for a *Minimal Viable Project* first and then add the extra features, depending on how much time is left.  
+
 ### **Requirements**   
 **Minimal Viable Project:**
 1. An explanation of the game.
