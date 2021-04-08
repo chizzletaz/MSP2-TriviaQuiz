@@ -1,4 +1,5 @@
 /*jshint esversion: 6 */
+
 $(document).ready(function () {
     $('#gameSelect').modal('show');
 });

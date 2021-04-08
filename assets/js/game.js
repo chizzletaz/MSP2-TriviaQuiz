@@ -1,4 +1,5 @@
 /*jshint esversion: 6 */
+
 const question = document.getElementById('question');
 const answers = Array.from(document.getElementsByClassName('answer-text'));
 
@@ -228,27 +229,6 @@ function muteSound() {
     localStorage.setItem('sound', 'off');
 }
 
-// credit: my mentor Antonio Rodriguez.
-function checkMusic() {
-    if ((localStorage.getItem("music") === null) || (localStorage.getItem("music") === 'off')) {
-        console.log('music is off');
-    }
-    else {
-        console.log('music is on');
-        playMusic();
-    }
-}
-
-function checkSound() {
-    if ((localStorage.getItem("sound") === null) || (localStorage.getItem("sound") === 'off')) {
-        console.log('sound is off');
-    }
-    else {
-        console.log('sound is on');
-        playSound();
-    }
-}
-
 // LEVEL 2
 function startGame2() {
     questionCounter = 0;
@@ -274,4 +254,25 @@ function goToLevel2() {
 
 function goToLevel3() {
     fetchQuestions(urlHard);
+}
+
+// credit: my mentor Antonio Rodriguez.
+function checkMusic() {
+    if ((localStorage.getItem("music") === null) || (localStorage.getItem("music") === 'off')) {
+        console.log('music is off');
+    }
+    else {
+        console.log('music is on');
+        playMusic();
+    }
+}
+
+function checkSound() {
+    if ((localStorage.getItem("sound") === null) || (localStorage.getItem("sound") === 'off')) {
+        console.log('sound is off');
+    }
+    else {
+        console.log('sound is on');
+        playSound();
+    }
 }
